@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.8" jmeter="2.13 r1665067">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="Test Plan" enabled="true">
+      <stringProp name="TestPlan.comments">This plan uses multiple threads to execute a task a specific number of times. 
+
+This is helpful when multiple threads are required to put things in parallel, but the total count of things to be done is constant.
+You can vary the number of threads (in the &apos;Thread Group&apos; depending on the processing power of your machine.
+</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">true</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="BRANCH_COUNT_PER_THREAD" elementType="Argument">
+            <stringProp name="Argument.name">BRANCH_COUNT_PER_THREAD</stringProp>
+            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="HISTORY_RECS_PER_ACCOUNT" elementType="Argument">
+            <stringProp name="Argument.name">HISTORY_RECS_PER_ACCOUNT</stringProp>
+            <stringProp name="Argument.value">10</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="ACCOUNT_RECS_PER_BRANCH" elementType="Argument">
+            <stringProp name="Argument.name">ACCOUNT_RECS_PER_BRANCH</stringProp>
+            <stringProp name="Argument.value">50</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="FILLER" elementType="Argument">
+            <stringProp name="Argument.name">FILLER</stringProp>
+            <stringProp name="Argument.value">0123456789012345678901234567890123456789012345678901234567890123456789012345678901</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TABLE_BRANCHES" elementType="Argument">
+            <stringProp name="Argument.name">TABLE_BRANCHES</stringProp>
+            <stringProp name="Argument.value">S01.BRANCHES</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TABLE_ACCOUNTS" elementType="Argument">
+            <stringProp name="Argument.name">TABLE_ACCOUNTS</stringProp>
+            <stringProp name="Argument.value">S01.ACCOUNTS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TABLE_HISTORY" elementType="Argument">
+            <stringProp name="Argument.name">TABLE_HISTORY</stringProp>
+            <stringProp name="Argument.value">S01.HISTORY</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="JDBC_URL" elementType="Argument">
+            <stringProp name="Argument.name">JDBC_URL</stringProp>
+            <stringProp name="Argument.value">jdbc:h2:tcp://localhost/perfSandboxDb</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="TABLE_TELLERS" elementType="Argument">
+            <stringProp name="Argument.name">TABLE_TELLERS</stringProp>
+            <stringProp name="Argument.value">S01.TELLERS</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="FILLER_SMALL" elementType="Argument">
+            <stringProp name="Argument.name">FILLER_SMALL</stringProp>
+            <stringProp name="Argument.value">0123456789012345678912</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="THREAD_COUNT" elementType="Argument">
+            <stringProp name="Argument.name">THREAD_COUNT</stringProp>
+            <stringProp name="Argument.value">20</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="SCHEMA" elementType="Argument">
+            <stringProp name="Argument.name">SCHEMA</stringProp>
+            <stringProp name="Argument.value">S01</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <JDBCDataSource guiclass="TestBeanGUI" testclass="JDBCDataSource" testname="JDBC Connection WITHOUT SCHEMA" enabled="true">
+        <stringProp name="dataSource">PERF_SANDBOX_POOL</stringProp>
+        <stringProp name="poolMax">${THREAD_COUNT}</stringProp>
+        <stringProp name="timeout">10000</stringProp>
+        <stringProp name="trimInterval">60000</stringProp>
+        <boolProp name="autocommit">true</boolProp>
+        <stringProp name="transactionIsolation">DEFAULT</stringProp>
+        <boolProp name="keepAlive">true</boolProp>
+        <stringProp name="connectionAge">5000</stringProp>
+        <stringProp name="checkQuery">Select 1</stringProp>
+        <stringProp name="dbUrl">${JDBC_URL}</stringProp>
+        <stringProp name="driver">org.h2.Driver</stringProp>
+        <stringProp name="username"></stringProp>
+        <stringProp name="password"></stringProp>
+      </JDBCDataSource>
+      <hashTree/>
+      <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+        <boolProp name="ResultCollector.error_logging">true</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <ResultCollector guiclass="SummaryReport" testclass="ResultCollector" testname="Summary Report" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+      </ResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.TransactionsPerSecondGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="jp@gc - Transactions per Second" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>false</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">1000</longProp>
+        <boolProp name="graph_aggregated">true</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+      </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="Results Thread Group" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <stringProp name="LoopController.loops">1</stringProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">0</stringProp>
+        <longProp name="ThreadGroup.start_time">1463381402000</longProp>
+        <longProp name="ThreadGroup.end_time">1463381402000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="RESULT_BRANCHES" enabled="true">
+          <stringProp name="dataSource">PERF_SANDBOX_POOL</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT COUNT(*) TABLE_COUNT FROM ${TABLE_BRANCHES}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">TABLE_COUNT</stringProp>
+          <stringProp name="resultVariable">RESULT_BRANCHES</stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as Object</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="RESULT_ACCOUNTS" enabled="true">
+          <stringProp name="dataSource">PERF_SANDBOX_POOL</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT COUNT(*) TABLE_COUNT FROM ${TABLE_ACCOUNTS} ;
+</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">TABLE_COUNT</stringProp>
+          <stringProp name="resultVariable">RESULT_ACCOUNTS</stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as Object</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <JDBCSampler guiclass="TestBeanGUI" testclass="JDBCSampler" testname="RESULT_HISTORY" enabled="true">
+          <stringProp name="dataSource">PERF_SANDBOX_POOL</stringProp>
+          <stringProp name="queryType">Select Statement</stringProp>
+          <stringProp name="query">SELECT COUNT(*) TABLE_COUNT FROM ${TABLE_HISTORY}</stringProp>
+          <stringProp name="queryArguments"></stringProp>
+          <stringProp name="queryArgumentsTypes"></stringProp>
+          <stringProp name="variableNames">TABLE_COUNT</stringProp>
+          <stringProp name="resultVariable">RESULT_HISTORY</stringProp>
+          <stringProp name="queryTimeout"></stringProp>
+          <stringProp name="resultSetHandler">Store as Object</stringProp>
+        </JDBCSampler>
+        <hashTree/>
+        <BSFSampler guiclass="TestBeanGUI" testclass="BSFSampler" testname="Output Table Counts to STDOUT" enabled="true">
+          <stringProp name="filename"></stringProp>
+          <stringProp name="parameters"></stringProp>
+          <stringProp name="script">System.out.println(&quot;&quot;);
+ArrayList result = vars.getObject(&quot;RESULT_BRANCHES&quot;);
+for (HashMap table : result) {
+    for (Object column : table.keySet()) {
+        	System.out.println( vars.get(&quot;TABLE_BRANCHES&quot;) + &quot;=&quot; + table.get(column) );
+    }
+}
+
+result = vars.getObject(&quot;RESULT_ACCOUNTS&quot;);
+for (HashMap table : result) {
+    for (Object column : table.keySet()) {
+        	System.out.println( vars.get(&quot;TABLE_ACCOUNTS&quot;) + &quot;=&quot; + table.get(column) );
+    }
+}
+
+result = vars.getObject(&quot;RESULT_HISTORY&quot;);
+for (HashMap table : result) {
+    for (Object column : table.keySet()) {
+        	System.out.println( vars.get(&quot;TABLE_HISTORY&quot;) + &quot;=&quot; + table.get(column) );
+    }
+}
+System.out.println(&quot;#####END OF DB LOAD #####&quot;);</stringProp>
+          <stringProp name="scriptLanguage">beanshell</stringProp>
+        </BSFSampler>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+    <WorkBench guiclass="WorkBenchGui" testclass="WorkBench" testname="WorkBench" enabled="true">
+      <boolProp name="WorkBench.save">true</boolProp>
+    </WorkBench>
+    <hashTree/>
+  </hashTree>
+</jmeterTestPlan>
