@@ -48,7 +48,7 @@ Notes about running the tests
   2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
   ```
   3. In a separate window, cd to the exact same folder as above, 02, and execute the './load-02a.sh' script.
-  <span style="font-family: 'Courier New';">
+  <span style="font-family: 'mono-spaced';">
   Eriks-MBP:02 erikostermueller$ ./load-02a.sh 
 Creating summariser <summary>
 Created the tree successfully using x02a.jmx
