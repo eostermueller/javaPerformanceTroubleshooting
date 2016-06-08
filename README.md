@@ -32,7 +32,7 @@ These Performance examples should run on any platform.  Only MacOs has been test
 
 ## Step 3: Configure Environment / Install and Load Database.
   <p>
-[Step 3](http://g.recordit.co/V7vOn5fR1J.gif "Animated GIF of install" target="_blank")  
+[Step 3 Screencast](http://g.recordit.co/V7vOn5fR1J.gif "Animated GIF of install" target="_blank")  
 
 1. Edit the "bin/setenv.sh".  Make sure the environment variables in the file are set for all command prompts/shells you work with.
 2. Download the latest H2 .zip file (http://www.h2database.com/h2-2016-05-26.zip) to the db folder.
