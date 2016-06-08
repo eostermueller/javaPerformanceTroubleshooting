@@ -3,6 +3,9 @@ font-family:mono-spaced;
 }
 # perfSandbox
 Live Demonstrations of Java Performance Problems
+<span class='mymono'>
+  2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
+</span>
 
 # Install Instructions
 
