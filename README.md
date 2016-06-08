@@ -16,11 +16,10 @@ These Performance examples should run on any platform.  Only MacOs has been test
 1. Clone or download the repo from github.com:  https://github.com/eostermueller/perfSandbox
 2. Build the war file
 
-  <pre><code>
-  bash
+  <pre>
   cd warProject
   mvn clean package
-  </code></pre>
+  </pre>
   ...and be sure to look for the "[INFO] BUILD SUCCESS" message and look for the output war file:
   <pre><code>
   warProject/target/perfSandbox.war
