@@ -25,7 +25,9 @@ These Performance examples should run on any platform.  Only MacOs has been test
   warProject/target/perfSandbox.war
   </code></pre>
   <p>
-  <a href="http://g.recordit.co/yb8Otyglc2.gif" target="_blank">
+  Here is a link t the screencast:
+[Link](http://g.recordit.co/yb8Otyglc2.gif "Screencast" target="_blank")  
+  
   
 
 ## Step 3: Configure Environment / Install and Load Database.
