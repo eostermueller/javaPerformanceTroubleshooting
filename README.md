@@ -13,6 +13,9 @@ These Performance examples should run on any platform.  Only MacOs has been test
 3. JMeter, 2.13 greater (http://jmeter.apache.org)
 
 ## Step 2: Install and Build War File
+  <p>
+[Link](http://g.recordit.co/yb8Otyglc2.gif "Step 2 Screencast" target="_blank")  
+
 1. Clone or download the repo from github.com:  https://github.com/eostermueller/perfSandbox
 2. Build the war file
 
@@ -24,13 +27,13 @@ These Performance examples should run on any platform.  Only MacOs has been test
   <pre><code>
   warProject/target/perfSandbox.war
   </code></pre>
-  <p>
-  Here is a link t the screencast:
-[Link](http://g.recordit.co/yb8Otyglc2.gif "Screencast" target="_blank")  
   
   
 
 ## Step 3: Configure Environment / Install and Load Database.
+  <p>
+[Link](http://g.recordit.co/V7vOn5fR1J.gif "Step 3 Screencast" target="_blank")  
+
 1. Edit the "bin/setenv.sh".  Make sure the environment variables in the file are set for all command prompts/shells you work with.
 2. Download the latest H2 .zip file (http://www.h2database.com/h2-2016-05-26.zip) to the db folder.
 3. cd to the db folder and unzip the file.
