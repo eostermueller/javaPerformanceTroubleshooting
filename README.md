@@ -1,3 +1,6 @@
+.mymono {
+font-family:mono-spaced;
+}
 # perfSandbox
 Live Demonstrations of Java Performance Problems
 
@@ -44,9 +47,9 @@ Notes about running the tests
 2. What to start/restart and when:
   1. once you start the H2 db with 'db/startDb.sh', just leave it running.
   2. 'cd' to a numbered folder, say 02, and start the .war file with ./startPsWar-02.sh.  Wait for the startup to complete:
-  ```
+  <span class='mymono'>
   2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
-  ```
+  </span>
   3. In a separate window, cd to the exact same folder as above, 02, and execute the './load-02a.sh' script.
   <span style="font-family: 'mono-spaced';">
   Eriks-MBP:02 erikostermueller$ ./load-02a.sh 
