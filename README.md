@@ -48,7 +48,7 @@ Notes about running the tests
   2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
   ```
   3. In a separate window, cd to the exact same folder as above, 02, and execute the './load-02a.sh' script.
-  ```
+  <span style="font-family: 'Courier New';">
   Eriks-MBP:02 erikostermueller$ ./load-02a.sh 
 Creating summariser <summary>
 Created the tree successfully using x02a.jmx
@@ -58,4 +58,4 @@ summary +      1 in     1s =    1.1/s Avg:   631 Min:   631 Max:   631 Err:     
 summary +      5 in   7.1s =    0.7/s Avg:  3322 Min:  2485 Max:  4035 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
 summary =      6 in     8s =    0.8/s Avg:  2873 Min:   631 Max:  4035 Err:     0 (0.00%)
 summary +      8 in     9s =    0.9/s Avg:  3396 Min:  3236 Max:  3504 Err:     0 (0.00%) Active: 3 Started: 3 Finished: 0
-```
+</span>
