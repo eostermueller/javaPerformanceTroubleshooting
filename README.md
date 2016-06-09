@@ -48,7 +48,7 @@ Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to 
 
 
 
-| | script | description | notes | stop |
+| | script | description | notes | to stop the process |
 |---|---|---|---|---|
 | 1| ./db/startDb.sh | H2 DB | This same process must be started for all sandboxes (00_warmup, 01, 02, etc...) | Use Ctrl+C |
 | 2| 00_warmup/startPsWar-warmup.sh | Spring Boot Jetty Web Server | Startup Script specific to the 00_warmup sandbox | Use Ctrl+C |
