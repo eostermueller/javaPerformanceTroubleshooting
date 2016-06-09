@@ -44,7 +44,7 @@ These Performance examples should run on any platform.  Only MacOs has been test
 [Step 4 Screencast](http://g.recordit.co/GWDvnNfw3A.gif "Animated GIF to run one sandbox test" target="_blank")  
 
 
-Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to run a sandbox test.  optionally, I use tmux to create 4 ssh windows in a single osx "Terminal" instance.
+Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to run a sandbox test.  optionally, I use [tmux](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/ tmux blog with install instructions) to create 4 ssh windows in a single osx "Terminal" instance.
 
 
 
