@@ -49,7 +49,7 @@ Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to 
 
 
 | | script | description | notes | stop |
-|---|---|---|---|
+|---|---|---|---|---|
 | 1| ./db/startDb.sh | H2 DB | This same process must be started for all sandboxes (00_warmup, 01, 02, etc...) | Use Ctrl+C |
 | 2| 00_warmup/startPsWar-warmup.sh | Spring Boot Jetty Web Server | Startup Script specific to the 00_warmup sandbox | Use Ctrl+C |
 | 3| 00_warmup/load-00-warmup.sh | JMeter load (via cmd line) | Load script specific to the 00_warmup sandbx | Use Ctrl+C |
@@ -62,9 +62,9 @@ Running tests requires three different command prompts.  For *nix systems, I sug
 ...and I recommend opening a fourth window for troubleshooting.
 
 Notes about running the tests
-1. Each numbered folder (00, 01, 02, etc...) contains a few tests.  Look for the 'readme-??.txt' files that ask a few questions about the performance problems.
+1. Each numbered folder (00_warmup, 01, 02, 03 etc...) contains a few tests.  Look for the 'readme-??.txt' files that ask a few questions about the performance problems.
 2. What to start/restart and when:
-  1. once you start the H2 db with 'db/startDb.sh', just leave it running.
+  1. once you start the H2 db with 'db/startDb.sh', just leave it running until the next time you shut down your machine.
   2. 'cd' to a numbered folder, say 02, and start the .war file with ./startPsWar-02.sh.  Wait for the startup to complete:
   <pre><code>
   2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
