@@ -41,6 +41,9 @@ These Performance examples should run on any platform.  Only MacOs has been test
 5. While still in the 'db' folder, run "./loadDb.sh" to populate the H2 database. This script will take a few minutes to run, depending on your hardware.
 
 ## Step 4: Run the performance tests
+[Step 4 Screencast](http://g.recordit.co/GWDvnNfw3A.gif "Animated GIF to run one sandbox test" target="_blank")  
+
+
 Start by running the "00_warmup" test.
 
 
