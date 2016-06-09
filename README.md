@@ -41,6 +41,13 @@ These Performance examples should run on any platform.  Only MacOs has been test
 5. While still in the 'db' folder, run "./loadDb.sh" to populate the H2 database. This script will take a few minutes to run, depending on your hardware.
 
 ## Step 4: Run the performance tests
+Start by running the "00_warmup" test.
+
+| script | description | notes |
+| ./db/startDb.sh | H2 DB | This same process must be started for all sandboxes (00_warmup, 01, 02, etc...) |
+| 00_warmup/startPsWar-warmup.sh | Spring Boot Jetty Web Server | Startup Script specific to the 00_warmup sandbox |
+| 00_warmup/load-00-warmup.sh | JMeter load (via cmd line) | Load script specific to the 00_warmup sandbx |
+| none | none | Used for checking things out, like using JAVA_HoME/bin/jps to confirm which java processes are running |
 
 Running tests requires three different command prompts.  For *nix systems, I suggest using tmux (https://tmux.github.io/) to manage these windows.  You will need one window for each of the following.
 1. Running H2 database ('db/startDb.sh').
