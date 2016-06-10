@@ -38,16 +38,7 @@ These Performance examples should run on any platform.  Only MacOs has been test
 2. Download the latest H2 .zip file (http://www.h2database.com/h2-2016-05-26.zip) to the db folder.
 3. cd to the db folder and unzip the file.
 4. chmd +x *.sh and start the database:  ./startDb.sh
-5. While still in the 'db' folder, run "./loadDb.sh" to populate the H2 database. This script will take a few minutes to run, depending on your hardware.  The output will end with this:
-   <pre>
-summary = 1881122 in    71s = 26530.9/s Avg:     0 Min:     0 Max:   203 Err:     0 (0.00%)
-summary + 811585 in    30s = 27053.7/s Avg:     0 Min:     0 Max:    81 Err:     0 (0.00%) Active: 20 Started: 20 Finished: 0
-summary = 2692707 in   101s = 26686.4/s Avg:     0 Min:     0 Max:   203 Err:     0 (0.00%)
-
-\BRANCHES=100
-\ACCOUNTS=250000
-\HISTORY=2500000
-\#####END OF DB LOAD #####
+5. While still in the 'db' folder, run "./loadDb.sh" to populate the H2 database. This script will take a few minutes to run, depending on your hardware.  
 </pre>
 
 
