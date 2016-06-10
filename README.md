@@ -46,7 +46,7 @@ These Performance examples should run on any platform.  Only MacOs has been test
 [Step 4 Screencast](http://g.recordit.co/GWDvnNfw3A.gif "Animated GIF to run one sandbox test" target="_blank")  
 
 
-Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to run a sandbox test.  optionally, I use [tmux](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/ "a tmux blog post with install instructions for mac/linux") to create 4 ssh windows in a single osx "Terminal" instance.
+Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to run a sandbox test.  Optionally,  use [tmux](http://www.hamvocke.com/blog/a-quick-and-easy-guide-to-tmux/ "a tmux blog post with install instructions for mac/linux") for mac/linux to create 4 ssh windows in a single osx "Terminal" instance.
 
 
 
@@ -57,21 +57,16 @@ Start by running the "00_warmup" test.  You will need 3 or 4 command prompts to 
 | 3| 00_warmup/load-00-warmup.sh | JMeter load (via cmd line) | Load script specific to the 00_warmup sandbx | Use Ctrl+C |
 | 4| none | none | Used for checking things out, like using JAVA_HoME/bin/jps to confirm which java processes are running ||
 
-Running tests requires three different command prompts.  For *nix systems, I suggest using tmux (https://tmux.github.io/) to manage these windows.  You will need one window for each of the following.
-1. Running H2 database ('db/startDb.sh').
-2. Running war file (look for startPsWar-??.sh scripts)
-3. Applying load (with JMeter) to stress the war.
-...and I recommend opening a fourth window for troubleshooting.
 
 Notes about running the tests
-1. Each numbered folder (00_warmup, 01, 02, 03 etc...) contains a few tests.  Look for the 'readme-??.txt' files that ask a few questions about the performance problems.
+1. The 00_warmup folder has just one "load*.sh" script.  But the other numbered folders (01, 02, 05 etc...) have a few "load*.sh" files.  Look for the 'readme-??.txt' files that ask a few questions about the performance problems.
 2. What to start/restart and when:
-  1. once you start the H2 db with 'db/startDb.sh', just leave it running until the next time you shut down your machine.
+  1. Once you start the H2 db with 'db/startDb.sh', just leave it running until the next time you shut down your machine.
   2. 'cd' to a numbered folder, say 02, and start the .war file with ./startPsWar-02.sh.  Wait for the startup to complete:
   <pre><code>
   2016-06-06 02:34:55.128  INFO 97318 --- [           main] c.g.e.perfSandbox.PerformanceSandboxApp  : Started PerformanceSandboxApp in 9.013 seconds (JVM running for 9.576)
   </code></pre>
-  3. In a separate window, cd to the exact same folder as above, 02, and execute the './load-02a.sh' script.
+  3. Compare performance of the two 'load*.sh' scripts in the 02 folder.  Start in a separate window, cd to the exact same folder as above, 02, and execute the './load-02a.sh' script.  Let it run for 10-20 seconds to get a feel for the performance.  Use Ctrl+C to stop the load script.  Then run   './load-02b.sh'
   <pre><code>
   Eriks-MBP:02 erikostermueller$ ./load-02a.sh 
 Creating summariser <summary>
