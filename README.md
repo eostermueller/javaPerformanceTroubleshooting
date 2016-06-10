@@ -1,5 +1,5 @@
-# perfSandbox
-Live Demonstrations of Java Performance Problems
+# Performance Golf!
+__Live Demonstrations of Java Performance Problems__
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
@@ -10,4 +10,3 @@ The scorecard below determines which approach has the least amount of tooling/in
 * 1 stroke for proprietary tools/techniques, aka specific to a particular vendor.  Ex: Oracle AWR report.  Even ‘EXPLAIN PLAN’ solutions are proprietary.
 * 2 strokes: use of high overhead tool, one rarely used in production.  Ex:  java profiler
 * 2 stokes for any tool with a $$ licensing cost.
-* 
