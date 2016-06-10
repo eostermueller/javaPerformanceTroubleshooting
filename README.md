@@ -44,10 +44,10 @@ summary = 1881122 in    71s = 26530.9/s Avg:     0 Min:     0 Max:   203 Err:   
 summary + 811585 in    30s = 27053.7/s Avg:     0 Min:     0 Max:    81 Err:     0 (0.00%) Active: 20 Started: 20 Finished: 0
 summary = 2692707 in   101s = 26686.4/s Avg:     0 Min:     0 Max:   203 Err:     0 (0.00%)
 
-BRANCHES=100
-ACCOUNTS=250000
-HISTORY=2500000
-#####END OF DB LOAD #####
+\BRANCHES=100
+\ACCOUNTS=250000
+\HISTORY=2500000
+\#####END OF DB LOAD #####
 </pre>
 
 
