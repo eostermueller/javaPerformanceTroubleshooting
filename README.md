@@ -1,5 +1,5 @@
 # Performance Golf!
-__Live Demonstrations of Java Performance Problems__
+[[Install/Run Instructions|Install and Run]] for Live Demonstrations of Java Performance Problems
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
