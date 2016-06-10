@@ -18,6 +18,6 @@ The scorecard below determines which approach has the least amount of tooling/in
 ## Example Two -- 7 strokes :-(
 A modern, commercial profiler (YourKit, JProfiler, etc...) would easily solve the high CPU problem in example 1.  But look how many strokes (2+2+2+1=7!) are taken off with this approach:
   * 2 strokes because a JVM restart is required (2 strokes) to hook up the tool
-  * 2 strokens because profilers are generally tools with so much overhead that no one operates in a live production environment
+  * 2 strokes because profilers are generally tools with so much overhead that no one operates in a live production environment
   * 2 strokes because there are licensing costs.
   * 1 stroke to install profiling the tool
