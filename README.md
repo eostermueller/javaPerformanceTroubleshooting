@@ -3,7 +3,7 @@
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
-The scorecard below determines which approach has the least amount of tooling/instrumentation.  Lowest score wins!  
+This scorecard determines the approach with the least amount of tooling/instrumentation.  Lowest score wins!  
 
 * 2 stokes if JVM restart is required to hook up your monitoring tool of choice.
 * 2 strokes: use of high overhead tool, one rarely used in production.  Ex:  java profiler
