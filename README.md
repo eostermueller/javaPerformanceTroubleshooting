@@ -8,7 +8,7 @@ This scorecard determines the approach with the least amount of tooling/instrume
 * 2 stokes if JVM restart is required to hook up your monitoring tool of choice.
 * 2 strokes: use of high overhead tool, one rarely used in production.  Ex:  java profiler
 * 2 stokes for any tool with any $$ licensing cost.
-* 1 stroke for every separate install process. No strokes for JVM and OS tools. 
+* 1 stroke for every separate install process. No strokes for JVM and pre-installed OS tools. 
 * 1 stroke for tools/techniques specific to a particular Database vendor.  Ex: Oracle AWR report.  Even ‘EXPLAIN PLAN’ solutions are proprietary.
 
 ## Example One -- zero strokes :-D
