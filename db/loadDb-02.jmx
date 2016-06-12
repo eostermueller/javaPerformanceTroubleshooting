@@ -13,7 +13,7 @@ You can vary the number of threads (in the &apos;Thread Group&apos; depending on
         <collectionProp name="Arguments.arguments">
           <elementProp name="BRANCH_COUNT_PER_THREAD" elementType="Argument">
             <stringProp name="Argument.name">BRANCH_COUNT_PER_THREAD</stringProp>
-            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.value">25</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="HISTORY_RECS_PER_ACCOUNT" elementType="Argument">
@@ -63,7 +63,7 @@ You can vary the number of threads (in the &apos;Thread Group&apos; depending on
           </elementProp>
           <elementProp name="THREAD_COUNT" elementType="Argument">
             <stringProp name="Argument.name">THREAD_COUNT</stringProp>
-            <stringProp name="Argument.value">20</stringProp>
+            <stringProp name="Argument.value">4</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SCHEMA" elementType="Argument">
