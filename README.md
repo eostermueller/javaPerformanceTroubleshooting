@@ -3,6 +3,10 @@
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
+## Motivations
+Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.  This repo is one step towards building crowd-sourced approaches (perhaps on codegolf.stackexchange.com?) to the best and easiest tools/techniques to dectecting/fixing performance problems.
+
+## How to Play
 This scorecard determines the approach with the least amount of tooling/instrumentation.  Lowest score wins!  
 
 * 2 strokes if JVM restart is required to hook up your monitoring tool of choice.
