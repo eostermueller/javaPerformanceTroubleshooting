@@ -1,5 +1,9 @@
 # Performance Golf!
-NEW!  Just committed MS-Windows batch files.  Now you can performanceGolf from MS-Win, Mac, or Linux!
+```
+NEW!  Just committed MS-Windows batch files.  
+Now you can performanceGolf from MS-Win, Mac, or Linux!
+```
+
 [Install/Run Instructions](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) for Live Demonstrations of Java Performance Problems
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
