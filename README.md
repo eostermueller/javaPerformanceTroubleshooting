@@ -1,5 +1,5 @@
 # Performance Golf!
-[Install/Run Instructions](https://github.com/eostermueller/perfSandbox/wiki/Install-and-Run) for Live Demonstrations of Java Performance Problems
+[Install/Run Instructions](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) for Live Demonstrations of Java Performance Problems
 
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
