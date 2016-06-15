@@ -4,6 +4,7 @@
 How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
 
 ## Motivations
+This is a crowd-sourced approach to easier and better performance troubleshooting.
 Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.  This repo is one step towards building crowd-sourced approaches (perhaps on codegolf.stackexchange.com?) to the best and easiest tools/techniques to dectecting/fixing performance problems.
 
 ## How to Play
