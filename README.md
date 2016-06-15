@@ -10,7 +10,7 @@ How quickly can you identify a particular Java performance problem using the lea
 
 ## Motivations
 This is a crowd-sourced approach to easier and better performance troubleshooting.
-Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.  This repo is one step towards building crowd-sourced approaches (perhaps on codegolf.stackexchange.com?) to the best and easiest tools/techniques to dectecting/fixing performance problems.
+Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.  ```codegolf.stackexchange.com``` is used to upvote the best solutions with the least amount of tooling/instrumentation.  There are currently 5 different challenges in this repo, and there is one ```codegolf.stackexchange.com``` post for each.
 
 ## How to Play
 This scorecard determines the approach with the least amount of tooling/instrumentation.  Lowest score wins!  
