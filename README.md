@@ -7,7 +7,7 @@ Now you can performanceGolf from MS-Win, Mac, or Linux!
 1. Start by [installing](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) the live demonstrations of Java Performance Problems in this repo.
 
 2. Pick one of the six holes of golf to play.
-3. One at a time, run the 'a' load test and the 'b' load test for that hole.  Compare the performance of the two.  Which has better response time / throughput?
+3. One at a time, run the 'a' load test and the 'b' load test the hole you selected.  Compare the performance of the two tests.  Which has better response time / throughput?  The scripts/tests for each hole reside in a single folder (EX: 02_secondHole).  See instructions above for more detail.
 4. Using the least amount of tooling/instrumentation (see the Scorecard below), identify the performance problem of the slower test.
 5. Post your results for that hole of golf to ```codegolf.stackexchange.com```.
 
