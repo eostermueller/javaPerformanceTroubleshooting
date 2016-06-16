@@ -12,7 +12,7 @@ This is a crowd-sourced approach to easier and better performance troubleshootin
 
 1. Start by [installing](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) the live demonstrations of Java Performance Problems in this repo.
 
-2. Pick one of the six holes of golf to play.  You can do this by picking one of the six numbered folders in the repo.  For example, 02_secondHole.
+2. Pick one of the six holes of golf to play.  You can do this by picking one of the six numbered folders in the repo.  For example, ```02_secondHole```.
 
 3. One at a time, run the 'a' load test and the 'b' load test for the hole you selected.  The a & b tests are two different implementations of the same REST/SOA service.  See instructions above for how to run the tests.  
 
