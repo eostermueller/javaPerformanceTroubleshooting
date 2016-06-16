@@ -4,9 +4,11 @@ NEW!  Support for MS-Windows.
 Now you can performanceGolf from MS-Win, Mac, or Linux!
 ```
 
-[Install/Run Instructions](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) for Live Demonstrations of Java Performance Problems
+1. Start by [installing](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) the six live demonstrations of Java Performance Problems in this repo.
 
-How quickly can you identify a particular Java performance problem using the least amount of tooling/instrumentation?
+2. Pick one of the six holes of golf to play.
+3. One at a time, run the 'a' load test and the 'b' load test for that hole.  Compare the performance of the two.  Which has better response time / throughput?
+4. Using the least amount of tooling/instrumentation (see the Scorecard below), identify the performance problem of the slower test.
 
 ## Motivations
 This is a crowd-sourced approach to easier and better performance troubleshooting.
