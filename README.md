@@ -9,12 +9,11 @@ Now you can performanceGolf from MS-Win, Mac, or Linux!
 2. Pick one of the six holes of golf to play.
 3. One at a time, run the 'a' load test and the 'b' load test for that hole.  Compare the performance of the two.  Which has better response time / throughput?
 4. Using the least amount of tooling/instrumentation (see the Scorecard below), identify the performance problem of the slower test.
+5. Post your results for that hole of golf to ```codegolf.stackexchange.com```.
 
 ## Motivations
-This is a crowd-sourced approach to easier and better performance troubleshooting.
+This is a crowd-sourced approach to easier and better performance troubleshooting.  Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.
 
-
-Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.  ```codegolf.stackexchange.com``` is used to upvote the best troubleshooting technique with the least amount of tooling/instrumentation.  There are currently 5 different challenges in this repo, and there is one ```codegolf.stackexchange.com``` post for each.
 
 ## Scorecard
 This scorecard determines the approach with the least amount of tooling/instrumentation.  Lowest score wins!  
