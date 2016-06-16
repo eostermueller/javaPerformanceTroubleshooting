@@ -24,7 +24,7 @@ This is a crowd-sourced approach to easier and better performance troubleshootin
   * Post a description of the tools/techniques you used to detect the performance problem.  Must be detailed enough so that others can reproduce your work.
   * Tally the number of strokes for your approach, using the "Scorecard" below.  All solutions must specify the # of strokes incurred.
 
-7. Upvote the solutions that best identify the performance problem __and__ have the fewest strokes (see Scorecard, below).
+7. Upvote the solutions that best identify the performance problem __and__ have the fewest strokes (see Scorecard, below).  Similar solutions on different platforms (Mac/Linux/MS-Win) deserve roughly the same number of upvotes.
 
 
 ## Scorecard
