@@ -1,8 +1,14 @@
-# Performance Golf!
+# Let's Play Performance Golf!  FORE!
 ```
 NEW!  Support for MS-Windows.
 Now you can performanceGolf from MS-Win, Mac, or Linux!
 ```
+
+
+## Motivations
+This is a crowd-sourced approach to easier and better performance troubleshooting.  Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.
+
+## How to play?
 
 1. Start by [installing](https://github.com/eostermueller/performanceGolf/wiki/Install-and-Run) the live demonstrations of Java Performance Problems in this repo.
 
@@ -12,10 +18,6 @@ Now you can performanceGolf from MS-Win, Mac, or Linux!
 5. Using the least amount of tooling/instrumentation (see the Scorecard below), identify the performance problem of the slower test.
 6. Post your results for that hole of golf to ```codegolf.stackexchange.com```.  
 7. Upvote the solutions that best identify the performance problem __and__ have the fewest strokes (see Scorecard, below).
-
-
-## Motivations
-This is a crowd-sourced approach to easier and better performance troubleshooting.  Performance problems are everywhere, so java technicians need access to easy-to-use diagnostic tools at every step of the SDLC.
 
 
 ## Scorecard
