@@ -17,9 +17,9 @@ Performance problems are everywhere, so java technicians need access to easy-to-
 ## Scorecard
 This scorecard determines the approach with the least amount of tooling/instrumentation.  Lowest score wins!  
 
-* 2 strokes if JVM restart is required to hook up your monitoring tool of choice.
-* 2 strokes for use of high overhead tool, one rarely used in production.  Ex:  java profiler
-* 2 stokes for any tool with any $$ licensing cost.
+* 1 stroke if JVM restart is required to hook up your monitoring tool of choice.
+* 1 stroke for use of high overhead tool, one rarely used in production.  Ex:  java profiler
+* 1 stroke for any tool with any $$ licensing cost.
 * 1 stroke for every separate install process. No strokes for JVM and pre-installed OS tools. 
 * 1 stroke for tools/techniques specific to a particular Database vendor.  Ex: Oracle AWR report.  Even ‘EXPLAIN PLAN’ solutions are proprietary.
 
