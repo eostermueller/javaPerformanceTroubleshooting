@@ -1,6 +1,6 @@
 # Performance Golf!
 ```
-NEW!  Just committed MS-Windows batch files.  
+NEW!  Support for MS-Windows.
 Now you can performanceGolf from MS-Win, Mac, or Linux!
 ```
 
