@@ -3,7 +3,7 @@ SET dir=%dir:~0,-1%
 
 call %dir%\..\bin\setenv.cmd
 
-SET PS_WAR=%dir%\..\warProject\target\perfSandbox.war
+SET PG_WAR=%dir%\..\warProject\target\performanceGolf.war
 
 
-%JAVA_HOME%\bin\java -jar %PS_WAR%
+%JAVA_HOME%\bin\java -jar %PG_WAR%

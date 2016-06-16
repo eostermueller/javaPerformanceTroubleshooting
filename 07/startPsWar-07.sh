@@ -1,8 +1,8 @@
 #!/bin/sh
 dir=$(dirname "$0")
 
-export PS_WAR=$dir/../warProject/target/perfSandbox.war
+export PG_WAR=$dir/../warProject/target/performanceGolf.war
 . $dir/../bin/setenv.sh
 
 
-$JAVA_HOME/bin/java -jar $PS_WAR
+$JAVA_HOME/bin/java -jar $PG_WAR
