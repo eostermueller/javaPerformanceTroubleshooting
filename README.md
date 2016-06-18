@@ -21,7 +21,7 @@ This is a crowd-sourced approach to easier and better performance troubleshootin
 5. Using the least amount of tooling/instrumentation, identify the performance problem of the slower test.  Hook it up your self and run the tests.  These [TCP Port numbers and other info](https://github.com/eostermueller/performanceGolf/wiki/Environment)  will be helpful when troubleshooting.
 
 6. At ```codegolf.stackexchange.com```, there is one "Stack Exchange Challenge" for each hole of golf.  [Please upvote this stackexchange.com 'meta challenge'](http://meta.codegolf.stackexchange.com/questions/2140/sandbox-for-proposed-challenges/9381#9381) to provide the approval for a full-blown challenge.  Post the following two things for your solution to that challenge:
-  * Post a description of the tools/techniques you used to detect the performance problem.  Must be detailed enough so that others can reproduce your work.
+  * Post a description of the tools/techniques you used to detect the performance problem.  Must be detailed enough so that others can reproduce your work.  Performance golf always compares two different loads -- a & b.  The solution must identify the inefficient code in the slower of the two examples.  It must also show the absense of that inefficient processing in the faster of the two examples.
   * Tally the number of strokes for your approach, using the "Scorecard" below.  All solutions must specify the # of strokes incurred.
 
 7. Upvote the solutions that best identify the performance problem __and__ have the fewest strokes (see Scorecard, below).  Similar solutions on different platforms (Mac/Linux/MS-Win) deserve roughly the same number of upvotes.
