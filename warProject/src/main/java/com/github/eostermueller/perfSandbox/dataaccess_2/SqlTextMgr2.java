@@ -11,7 +11,7 @@ public class SqlTextMgr2 extends BaseSqlTextMgr {
 	public String getMultipleAccountsSql(int numAccountCriteria) {
 		this.m_stats.m_accountAndHistorySql.incrementAndGet();
 		StringBuilder sb = new StringBuilder();
-		sb.append( "SELECT a.aid, a.bid, a.abalance, a.filler FROM "
+		sb.append( "SELECT a.aid, a.bid, a.abalance, a.filler, a.filler01, a.filler02, a.filler03, a.filler04, a.filler05, a.filler06, a.filler07, a.filler08, a.filler09, a.filler10, a.filler11, a.filler12, a.filler13, a.filler14, a.filler15, a.filler16, a.filler17, a.filler18, a.filler19, a.filler20 FROM "
 				+ m_tableNames.getAccountTable() 
 				+ " a WHERE aid in (");
 		

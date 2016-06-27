@@ -87,6 +87,107 @@ public class SerializationUtil {
 			eleFiller.appendChild(doc.createTextNode(account.filler));
 			accountEle.appendChild(eleFiller);
 		}
+		if (account.filler01 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"01");
+                        eleFiller.appendChild(doc.createTextNode(account.filler01));
+                        accountEle.appendChild(eleFiller);
+		}
+                if (account.filler02 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"02");
+                        eleFiller.appendChild(doc.createTextNode(account.filler02));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler03 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"03");
+                        eleFiller.appendChild(doc.createTextNode(account.filler03));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler04 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"04");
+                        eleFiller.appendChild(doc.createTextNode(account.filler04));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler05 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"05");
+                        eleFiller.appendChild(doc.createTextNode(account.filler05));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler06 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"06");
+                        eleFiller.appendChild(doc.createTextNode(account.filler06));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler07 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"07");
+                        eleFiller.appendChild(doc.createTextNode(account.filler07));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler08 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"08");
+                        eleFiller.appendChild(doc.createTextNode(account.filler08));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler09 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"09");
+                        eleFiller.appendChild(doc.createTextNode(account.filler09));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler10 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"10");
+                        eleFiller.appendChild(doc.createTextNode(account.filler10));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler11 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"11");
+                        eleFiller.appendChild(doc.createTextNode(account.filler11));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler12 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"12");
+                        eleFiller.appendChild(doc.createTextNode(account.filler12));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler13 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"13");
+                        eleFiller.appendChild(doc.createTextNode(account.filler13));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler14 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"14");
+                        eleFiller.appendChild(doc.createTextNode(account.filler14));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler15 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"15");
+                        eleFiller.appendChild(doc.createTextNode(account.filler15));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler16 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"16");
+                        eleFiller.appendChild(doc.createTextNode(account.filler16));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler17 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"17");
+                        eleFiller.appendChild(doc.createTextNode(account.filler17));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler18 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"18");
+                        eleFiller.appendChild(doc.createTextNode(account.filler18));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler19 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"19");
+                        eleFiller.appendChild(doc.createTextNode(account.filler19));
+                        accountEle.appendChild(eleFiller);
+                }
+                if (account.filler20 !=null) {
+                        Element eleFiller = doc.createElement(TAG_NAME_FILLER+"20");
+                        eleFiller.appendChild(doc.createTextNode(account.filler20));
+                        accountEle.appendChild(eleFiller);
+                }
+
 		
 		for(Transaction t : account.transactions)
 			writeTransaction(doc, accountEle,t);

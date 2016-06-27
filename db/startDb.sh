@@ -5,8 +5,8 @@ dir=$(dirname "$0")
 ## To change the location, change BASE_DIR environment variable (below)
 ## to an existing folder where you want the data to be created.
 
-export BASE_DIR=$dir/data
-#export BASE_DIR=/Volumes/eto-external-drive/h2/data
+#export BASE_DIR=$dir/data
+export BASE_DIR=/Volumes/eto-external-drive/h2/wideData
 
 
 $JAVA_HOME/bin/java -cp $dir/h2/bin/h2*.jar org.h2.tools.Server -baseDir $BASE_DIR

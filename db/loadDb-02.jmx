@@ -156,10 +156,31 @@ CREATE TABLE ${TABLE_TELLERS} (
 ALTER TABLE ${TABLE_TELLERS} add primary key (tid);
 
 CREATE TABLE ${TABLE_ACCOUNTS} (
-        aid int not null,
-        bid int,
-        abalance int,
-        filler char(84));
+        AID int not null,
+        BID int,
+        ABALANCE int,
+        FILLER char(84),
+        FILLER01 char(84),
+        FILLER02 char(84),
+        FILLER03 char(84),
+        FILLER04 char(84),
+        FILLER05 char(84),
+        FILLER06 char(84),
+        FILLER07 char(84),
+        FILLER08 char(84),
+        FILLER09 char(84),
+        FILLER10 char(84),
+        FILLER11 char(84),
+        FILLER12 char(84),
+        FILLER13 char(84),
+        FILLER14 char(84),
+        FILLER15 char(84),
+        FILLER16 char(84),
+        FILLER17 char(84),
+        FILLER18 char(84),
+        FILLER19 char(84),
+        FILLER20 char(84)
+);
         
 ALTER TABLE ${TABLE_ACCOUNTS} add primary key (aid);
 
@@ -260,16 +281,56 @@ CREATE INDEX HIST_ACCOUNT ON ${TABLE_HISTORY}(aid);
 	AID,
 	BID,
 	ABALANCE,
-	FILLER
+	FILLER,
+        filler01 ,
+        filler02 ,
+        filler03 ,
+        filler04 ,
+        filler05 ,
+        filler06 ,
+        filler07 ,
+        filler08 ,
+        filler09 ,
+        filler10 ,
+        filler11 ,
+        filler12 ,
+        filler13 ,
+        filler14 ,
+        filler15 ,
+        filler16 ,
+        filler17 ,
+        filler18 ,
+        filler19 ,
+        filler20 	
 ) VALUES (
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
 	?,
 	?,
 	?,
 	?
 )
 	</stringProp>
-              <stringProp name="queryArguments">${CURRENT_ACCOUNT_COUNT},${CURRENT_BRANCH_COUNT},${MY_ACCOUNT_BALANCE},${FILLER}</stringProp>
-              <stringProp name="queryArgumentsTypes">INTEGER,INTEGER,DOUBLE,VARCHAR</stringProp>
+              <stringProp name="queryArguments">${CURRENT_ACCOUNT_COUNT},${CURRENT_BRANCH_COUNT},${MY_ACCOUNT_BALANCE},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER}</stringProp>
+              <stringProp name="queryArgumentsTypes">INTEGER,INTEGER,DOUBLE,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR</stringProp>
               <stringProp name="variableNames"></stringProp>
               <stringProp name="resultVariable"></stringProp>
               <stringProp name="queryTimeout"></stringProp>

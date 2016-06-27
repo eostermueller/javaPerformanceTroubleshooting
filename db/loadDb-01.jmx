@@ -159,7 +159,28 @@ CREATE TABLE ${TABLE_ACCOUNTS} (
         aid int not null,
         bid int,
         abalance int,
-        filler char(84));
+        FILLER char(84),
+        FILLER01 char(84),
+        FILLER02 char(84),
+        FILLER03 char(84),
+        FILLER04 char(84),
+        FILLER05 char(84),
+        FILLER06 char(84),
+        FILLER07 char(84),
+        FILLER08 char(84),
+        FILLER09 char(84),
+        FILLER10 char(84),
+        FILLER11 char(84),
+        FILLER12 char(84),
+        FILLER13 char(84),
+        FILLER14 char(84),
+        FILLER15 char(84),
+        FILLER16 char(84),
+        FILLER17 char(84),
+        FILLER18 char(84),
+        FILLER19 char(84),
+        FILLER20 char(84)
+);
         
 ALTER TABLE ${TABLE_ACCOUNTS} add primary key (aid);
 

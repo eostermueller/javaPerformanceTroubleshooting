@@ -10,7 +10,8 @@ public class SqlTextMgr5 extends BaseSqlTextMgr {
 	
 	public String getAccountPkInquirySql() {
 		this.m_stats.m_accountPkInquirySql.incrementAndGet();
-		String sql = "SELECT aid, bid, abalance, filler from " + m_tableNames.getAccountTable() + " WHERE aid = ?";
+		//String sql = "SELECT aid, bid, abalance, filler from " + m_tableNames.getAccountTable() + " WHERE aid = ?";
+		String sql = "SELECT aid, bid, abalance, filler, filler01, filler02, filler03, filler04, filler05, filler06, filler07, filler08, filler09, filler10, filler11, filler12, filler13, filler14, filler15, filler16, filler17, filler18, filler19, filler20 from " + m_tableNames.getAccountTable() + " WHERE aid = ?";
 		logSql(sql);
 		return sql;
 	}

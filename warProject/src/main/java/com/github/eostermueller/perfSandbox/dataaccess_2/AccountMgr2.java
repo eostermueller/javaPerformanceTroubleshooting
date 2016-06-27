@@ -67,6 +67,26 @@ public class AccountMgr2 {
 		a.branchId = rs.getInt(2);
 		a.balance = rs.getLong(3);
 		a.filler = rs.getString(4);
+		a.filler01 = rs.getString(5);
+		a.filler02 = rs.getString(6);
+		a.filler03 = rs.getString(7);
+		a.filler04 = rs.getString(8);
+		a.filler05 = rs.getString(9);
+		a.filler06 = rs.getString(10);
+		a.filler07 = rs.getString(11);
+		a.filler08 = rs.getString(12);
+		a.filler09 = rs.getString(13);
+		a.filler10 = rs.getString(14);
+		a.filler11 = rs.getString(15);
+		a.filler12 = rs.getString(16);
+		a.filler13 = rs.getString(17);
+		a.filler14 = rs.getString(18);
+		a.filler15 = rs.getString(19);
+		a.filler16 = rs.getString(20);
+		a.filler17 = rs.getString(21);
+		a.filler18 = rs.getString(22);
+		a.filler19 = rs.getString(23);
+		a.filler20 = rs.getString(24);
 		return a;
 	}
 	private void getTransactions(Accounts accounts) throws PerfSandboxException  {
