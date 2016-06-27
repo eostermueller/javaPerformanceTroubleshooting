@@ -144,7 +144,7 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		return this.m_maxAccountId_01.longValue();
 	}
 	public long getMaxAccountId_02() {
-		return this.m_maxAccountId_01.longValue();
+		return this.m_maxAccountId_02.longValue();
 	}
 	/*
 	 * @param numAccounts - number of random accounts to create.
