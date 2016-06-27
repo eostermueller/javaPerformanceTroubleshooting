@@ -20,6 +20,8 @@ import com.github.eostermueller.perfSandbox.model.Transaction;
 public class AccountMgr4 {
 	public AccountMgr4(PerfSandboxSingleton val) {
 		this.pgBench = val;
+		this.m_sqlTextMgr4.setLogger(val);
+		
 		this.m_pkInquiry4 = new PkInquiry4(val);
 		
 	}
