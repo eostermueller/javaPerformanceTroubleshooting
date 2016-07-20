@@ -2,6 +2,7 @@ package com.github.eostermueller.perfSandbox;
 
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,6 +34,10 @@ import com.github.eostermueller.perfSandbox.model.SerializationUtil;
 
 @RestController
 public class Controller  {
+	private static final int BRANCH_SCENARIO_00 = 0;
+	private static final int BRANCH_SCENARIO_01 = 1;
+	private static final int BRANCH_SCENARIO_02 = 2;
+	private static final int DEFAULT_BRANCH_INQ_PER_ROUND_TRIP = 5;
 	@Autowired
 	public Controller(PerfSandboxSingleton val) throws PerfSandboxException {
 		if (val==null) {
@@ -145,6 +150,8 @@ public class Controller  {
     @RequestMapping(value="/config", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
     String config(
     			@RequestParam(value="db", required=false) Integer intDb,
+    			@RequestParam(value="branchScenarioNum", required=false) Integer intBranchScenarioNum,
+    			@RequestParam(value="branchInqPerRoundTrip", required=false) Integer intBranchInqPerRoundTrip,
     			@RequestParam(value="scenarioNum", required=false) Integer intScenarioNum,
     			@RequestParam(value="logSql", required=false) Boolean ynLogSql
     			) throws IOException, PerfSandboxException {
@@ -158,9 +165,16 @@ public class Controller  {
     	if (intDb!=null)
     		perfSandbox.setDb(intDb.intValue());
     	
+    	if (intBranchScenarioNum!=null) {
+    		int branchInqPerRoundTrip = DEFAULT_BRANCH_INQ_PER_ROUND_TRIP;
+    		if (intBranchInqPerRoundTrip!=null)
+    			branchInqPerRoundTrip = intBranchInqPerRoundTrip.intValue();
+			perfSandbox.setBranchScenarioNum(intBranchScenarioNum.intValue(), branchInqPerRoundTrip);
+    	}
+    	
 		StringBuilder sb = new StringBuilder();
 		sb.append("<Config>");
-		sb.append( formatStats( "", 0, perfSandbox.getNumScenario(),perfSandbox.getLogSql(), perfSandbox.getDb() ) );
+		sb.append( perfSandbox.formatStats() );
 		sb.append("</Config>");
 		return sb.toString();
 		
@@ -217,7 +231,15 @@ public class Controller  {
     }
     public Accounts internalInquiry2(List<Long> accountIds_criteria, int scenario) throws PerfSandboxException {
 		Accounts accounts = null;
-		
+
+		if (this.perfSandbox.getBranchInquiry() != null)
+			try {
+				this.perfSandbox.getBranchInquiry().randomBranchInquiries();
+			} catch (SQLException e1) {
+				e1.printStackTrace();
+				throw new PerfSandboxException(e1);
+			}
+
 		switch(scenario) {
 		case SCENARIO_0_NO_DB_ACCESS:
 			break;
@@ -275,7 +297,7 @@ public class Controller  {
 			ByteArrayOutputStream baos = new ByteArrayOutputStream();
 			as.setOutputStream(baos);
 			as.serialize(accounts);
-			sb.append( formatStats( stats, (end-start), scenario, ynLogSql, perfSandbox.getDb()) );
+			sb.append( perfSandbox.formatStats( stats, (end-start)) );
 			sb.append( as.getOutputStream().toString() );
 			sb.append("</Root>");
 		} catch (ParserConfigurationException e) {
