@@ -10,6 +10,9 @@ public class BaseSqlTextMgr {
 	public void setLogger(Logger logger) {
 		this.m_logger = logger;
 	}
+	public TableNames getTableNames() {
+		return this.m_tableNames;
+	}
 	protected TableNames m_tableNames = new TableNames();
 	@Autowired
 	private PerfSandboxSingleton pgBench = null;
@@ -17,6 +20,9 @@ public class BaseSqlTextMgr {
        public String getMaxAccountId() {
                 return "select max(aid) from " + m_tableNames.getAccountTable();
         }
+       public String getMaxBranchId() {
+           return "select max(bid) from " + m_tableNames.getBranchTable();
+   }
 
 
 	public String getBranchCount() {

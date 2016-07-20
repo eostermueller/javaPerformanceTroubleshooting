@@ -20,6 +20,8 @@ import org.springframework.stereotype.Component;
 import javax.annotation.PostConstruct;
 import javax.sql.DataSource;
 
+import com.github.eostermueller.perfSandbox.cache.CachedBranchInquiryImpl;
+import com.github.eostermueller.perfSandbox.cache.UncachedBranchInquiryImpl;
 import com.github.eostermueller.perfSandbox.dataaccess.BaseSqlTextMgr;
 import com.github.eostermueller.perfSandbox.dataaccess.PerfSandboxUtil;
 import com.github.eostermueller.perfSandbox.dataaccess_5.ListInquiry;
@@ -35,6 +37,7 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	public HttpServer getHttpServer() {
 		return this.httpServer;
 	}
+	private BranchInquiry branchInquiry = null;
 	public AtomicBoolean backendStarted = new AtomicBoolean(false);
 	public PerfSandboxSingleton() {
 		
@@ -56,10 +59,34 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 			long maxAccountId_02 = queryForMaxAccountId(this.dataSource02.getConnection());
 			this.setMaxAccountId_01( maxAccountId_01 );
 			this.setMaxAccountId_02( maxAccountId_02 );
+			long maxBranchId_01 = queryForMaxBranchId(this.dataSource01.getConnection());
+			long maxBranchId_02 = queryForMaxBranchId(this.dataSource02.getConnection());
+			this.setMaxBranchId_01( maxBranchId_01 );
+			this.setMaxBranchId_02( maxBranchId_02 );
 		} catch (PerfSandboxException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+	private long queryForMaxBranchId(Connection con) throws PerfSandboxException {
+		BaseSqlTextMgr bstm = new BaseSqlTextMgr();
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		long countOfBranches = -1L;
+		try {
+			ps = con.prepareStatement( bstm.getMaxBranchId() );
+			rs = ps.executeQuery();
+			rs.next();
+			countOfBranches = rs.getLong(1);
+			
+		} catch (SQLException e) {
+			throw new PerfSandboxException(e);
+		} finally {
+			PerfSandboxUtil.closeQuietly(rs);
+			PerfSandboxUtil.closeQuietly(ps);
+			PerfSandboxUtil.closeQuietly(con);
+		}
+		return countOfBranches;		
 	}
 	/**
 	 * 
@@ -84,25 +111,21 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 			PerfSandboxUtil.closeQuietly(ps);
 			PerfSandboxUtil.closeQuietly(con);
 		}
-		return countOfAccounts;
-		
+		return countOfAccounts;		
 	}
 	
-	/**
-	 * I've set this default of 100 because in the JMeter loadDb.jmx, we have:
-	 * BRANCH_COUNT_PER_THREAD=5
-	 * THREAD_COUNT=20
-	 */
-	public AtomicInteger m_branchCount = new AtomicInteger(100);
 	
 	private AtomicLong m_maxAccountId_01 = new AtomicLong(20);
 	private AtomicLong m_maxAccountId_02 = new AtomicLong(20);
+	private AtomicLong m_maxBranchId_01 = new AtomicLong(20);
+	private AtomicLong m_maxBranchId_02 = new AtomicLong(20);
 
 	private PkInquiry m_pkInquiry_3 = null;
 
 	private ListInquiry m_listInquiry_3 = null;
 
 	private AtomicInteger m_numScenario = new AtomicInteger(1);
+	private AtomicInteger m_numBranchScenario = new AtomicInteger(0);
 	private AtomicBoolean m_logSql = new AtomicBoolean(false);
 	
 	private void initDataSources() {
@@ -122,6 +145,15 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	    	rc = this.dataSource01;
 	    else if (this.getDb()==2)
 	    	rc = this.dataSource02;
+	    
+	    return rc;
+	}
+	public int getMaxBranchId() throws SQLException {
+		int rc = -1;
+	    if (this.getDb()==1)
+	    	rc = this.getMaxBranchId_01();
+	    else if (this.getDb()==2)
+	    	rc = this.getMaxBranchId_02();
 	    
 	    return rc;
 	}
@@ -145,6 +177,12 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	}
 	public long getMaxAccountId_02() {
 		return this.m_maxAccountId_02.longValue();
+	}
+	public int getMaxBranchId_01() {
+		return this.m_maxBranchId_01.intValue();
+	}
+	public int getMaxBranchId_02() {
+		return this.m_maxBranchId_01.intValue();
 	}
 	/*
 	 * @param numAccounts - number of random accounts to create.
@@ -189,21 +227,17 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		if (this.getLogSql())
 			System.out.println(msg);
 	}
-	public int getBranchCount() {
-		return this.m_branchCount.get();
-	}
 	public int getNumScenario() {
 		return this.m_numScenario.get();
+	}
+	public int getBranchScenarioNum() {
+		return this.m_numBranchScenario.get();
 	}
 	public void setLogSql(boolean val) {
 		this.m_logSql.set(val);
 	}
 	public boolean getLogSql() {
 		return this.m_logSql.get();
-	}
-	public void setBranchCount(int val) {
-		this.m_branchCount.set(val);
-		log("Set branchCount to [" + val + "]");
 	}
 	
 	public void setMaxAccountId_01(long val) {
@@ -214,6 +248,15 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		this.m_maxAccountId_02.set(val);
 		log("Set maxAccounts to [" + val + "]");
 	}
+	public void setMaxBranchId_01(long val) {
+		this.m_maxBranchId_01.set(val);
+		log("Set maxBranch to [" + val + "]");
+	}
+	public void setMaxBranchId_02(long val) {
+		this.m_maxBranchId_02.set(val);
+		log("Set maxBranch to [" + val + "]");
+	}
+	
 	public void setNumScenario(int val) {
 		this.m_numScenario.set(val);
 		log("Set Scenario Num to [" + val + "]");
@@ -237,4 +280,88 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	public int getDb() {
 		return this.db;
 	}
+	public BranchInquiry getBranchInquiry() {
+		return this.branchInquiry;
+	}
+	public void setBranchScenarioNum(int intBranchScenarioNum, int numBranchInquiriesPerRoundTrip) {
+		if (branchInquiry!=null)
+			this.branchInquiry.shutdown();
+		
+		switch (intBranchScenarioNum) {
+		case 0:
+			this.m_numBranchScenario.set(intBranchScenarioNum);
+			this.branchInquiry = null;
+			break;
+		case 1:
+			this.m_numBranchScenario.set(intBranchScenarioNum);
+			this.branchInquiry = new UncachedBranchInquiryImpl() {
+				public DataSource getDataSource() throws SQLException {
+					return PerfSandboxSingleton.this.getDataSource();
+				}
+				public int getMaxBranchId() throws SQLException {
+					return PerfSandboxSingleton.this.getMaxBranchId();
+				}
+			};
+			break;
+		case 2:
+			this.m_numBranchScenario.set(intBranchScenarioNum);
+			this.branchInquiry = new CachedBranchInquiryImpl(){
+				public DataSource getDataSource() throws SQLException {
+					return PerfSandboxSingleton.this.getDataSource();
+				}
+				public int getMaxBranchId() throws SQLException {
+					return PerfSandboxSingleton.this.getMaxBranchId();
+				}
+			};
+			break;
+		default:
+			this.m_numBranchScenario.set(-1);
+			throw new RuntimeException("branchScenarios [" + intBranchScenarioNum + "] was received. 0, 1 and 2 are supported");
+		}
+		
+		if (this.branchInquiry !=null) {
+			BaseSqlTextMgr bstm = new BaseSqlTextMgr();
+			this.branchInquiry.setTableName(bstm.getTableNames().getBranchTable());
+			branchInquiry.setInquiryCount(numBranchInquiriesPerRoundTrip);
+		}
+		
+	}
+	public String formatStats() {
+		StringBuilder sb = new StringBuilder();
+		sb.append("<PgBenchStats>");
+		//sb.append( this.formatStats(sb) );
+		 this.formatStats(sb);
+		sb.append("</PgBenchStats>");
+		return sb.toString();
+	}
+	public String formatStats(String stats, long duration) {
+		StringBuilder sb = new StringBuilder();
+		sb.append("<PgBenchStats>");
+		sb.append( stats );
+		sb.append("<Duration>").append(duration).append("</Duration>");
+		//sb.append( this.formatStats(sb));
+		this.formatStats(sb);
+		sb.append("</PgBenchStats>");
+		return sb.toString();
+	}
+	public String formatStats(StringBuilder sb) {
+		sb.append("<Scenario>").append(Integer.toString(getNumScenario())).append("</Scenario>");
+		sb.append("<LogSql>").append(getLogSql()).append("</LogSql>");
+		sb.append("<Db>").append(getDb()).append("</Db>");
+		int branchScenario = this.getBranchScenarioNum();
+		sb.append("<BranchScenario>").append( branchScenario ).append("</BranchScenario>");
+		int branchInquiryPerRoundTrip = -1;
+		long totalPhysicalBranchInq = -1;
+		
+		if (branchScenario > 0 && this.branchInquiry !=null) {
+			branchInquiryPerRoundTrip = this.branchInquiry.getInquiryCount();
+			totalPhysicalBranchInq  = this.branchInquiry.getTotalPhysicalCount();
+		}
+		
+		sb.append("<BranchInquiryPerRoundTrip>").append( branchInquiryPerRoundTrip ).append("</BranchInquiryPerRoundTrip>");
+		sb.append("<BranchInquiryPhysicalCount>").append( totalPhysicalBranchInq ).append("</BranchInquiryPhysicalCount>");
+		
+		return sb.toString();
+	}
+	
 }
