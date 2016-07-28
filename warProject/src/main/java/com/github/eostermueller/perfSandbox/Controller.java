@@ -204,6 +204,8 @@ public class Controller  {
     public String getStats(int scenario) {
 		String stats = null;
 		switch(scenario) {
+		case SCENARIO_0_NO_DB_ACCESS:
+			break;
 		case SCENARIO_1_SINGLE_QUERY:
 			AccountMgr1 acctMgr1 = new AccountMgr1(perfSandbox);
 			stats = acctMgr1.m_sqlTextMgr1.m_stats.getXmlStats();
@@ -225,7 +227,7 @@ public class Controller  {
 			stats = acctMgr5.m_sqlTextMgr5.m_stats.getXmlStats();
 			break;
 		default:
-				throw new RuntimeException("Found URL Parameter [" + PARAM_SCENARIO_NUM + "=" + scenario + "].  Was expecting a value of 1-5." );
+				throw new RuntimeException("Found URL Parameter [" + PARAM_SCENARIO_NUM + "=" + scenario + "].  Was expecting a value of 0-5." );
 		}
     	return stats;
     }

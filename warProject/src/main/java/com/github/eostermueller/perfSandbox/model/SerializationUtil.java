@@ -44,8 +44,10 @@ public class SerializationUtil {
 		Element rootElement = doc.createElement(TAG_NAME_ACCOUNTS);
 		doc.appendChild(rootElement);		
 
-		for(Account a : accounts.getAccounts())
-			writeAccount(doc, rootElement, a);
+		if (accounts!=null) {
+			for(Account a : accounts.getAccounts())
+				writeAccount(doc, rootElement, a);
+		}
 		
 		writeToOutput(doc);
 	} 
