@@ -19,7 +19,7 @@
           </elementProp>
           <elementProp name="SCENARIO_NUM" elementType="Argument">
             <stringProp name="Argument.name">SCENARIO_NUM</stringProp>
-            <stringProp name="Argument.value">1</stringProp>
+            <stringProp name="Argument.value">0</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="BACKEND_PORT" elementType="Argument">
@@ -29,7 +29,7 @@
           </elementProp>
           <elementProp name="BACKEND_DELAY_MS" elementType="Argument">
             <stringProp name="Argument.name">BACKEND_DELAY_MS</stringProp>
-            <stringProp name="Argument.value">5000</stringProp>
+            <stringProp name="Argument.value">500</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
         </collectionProp>
@@ -106,7 +106,7 @@
           <intProp name="LoopController.loops">-1</intProp>
         </elementProp>
         <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">10</stringProp>
         <longProp name="ThreadGroup.start_time">1463941680000</longProp>
         <longProp name="ThreadGroup.end_time">1463941680000</longProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
@@ -136,14 +136,9 @@
         <hashTree>
           <ResponseAssertion guiclass="AssertionGui" testclass="ResponseAssertion" testname="Check for required parts of response" enabled="true">
             <collectionProp name="Asserion.test_strings">
-              <stringProp name="-508507438">0123456789012345678901234567890123456789012345678901234567890123456789012345678901&lt;/Filler&gt;</stringProp>
               <stringProp name="-1159638039">&lt;/Root&gt;</stringProp>
               <stringProp name="1796894912">&lt;Root&gt;</stringProp>
-              <stringProp name="1149379597">&lt;Account&gt;</stringProp>
-              <stringProp name="57451742">&lt;Aid&gt;</stringProp>
-              <stringProp name="57481533">&lt;Bid&gt;</stringProp>
-              <stringProp name="2000895176">&lt;Tid&gt;1&lt;/Tid&gt;</stringProp>
-              <stringProp name="1631076766">&lt;Filler&gt;0123456789012345678912&lt;/Filler&gt;</stringProp>
+              <stringProp name="747250097">&lt;Accounts/&gt;</stringProp>
             </collectionProp>
             <stringProp name="Assertion.test_field">Assertion.response_data</stringProp>
             <boolProp name="Assertion.assume_success">false</boolProp>
