@@ -13,7 +13,7 @@ You can vary the number of threads (in the &apos;Thread Group&apos; depending on
         <collectionProp name="Arguments.arguments">
           <elementProp name="BRANCH_COUNT_PER_THREAD" elementType="Argument">
             <stringProp name="Argument.name">BRANCH_COUNT_PER_THREAD</stringProp>
-            <stringProp name="Argument.value">5</stringProp>
+            <stringProp name="Argument.value">25</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="HISTORY_RECS_PER_ACCOUNT" elementType="Argument">
@@ -23,7 +23,7 @@ You can vary the number of threads (in the &apos;Thread Group&apos; depending on
           </elementProp>
           <elementProp name="ACCOUNT_RECS_PER_BRANCH" elementType="Argument">
             <stringProp name="Argument.name">ACCOUNT_RECS_PER_BRANCH</stringProp>
-            <stringProp name="Argument.value">50</stringProp>
+            <stringProp name="Argument.value">1250</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="FILLER" elementType="Argument">
@@ -63,7 +63,7 @@ You can vary the number of threads (in the &apos;Thread Group&apos; depending on
           </elementProp>
           <elementProp name="THREAD_COUNT" elementType="Argument">
             <stringProp name="Argument.name">THREAD_COUNT</stringProp>
-            <stringProp name="Argument.value">20</stringProp>
+            <stringProp name="Argument.value">4</stringProp>
             <stringProp name="Argument.metadata">=</stringProp>
           </elementProp>
           <elementProp name="SCHEMA" elementType="Argument">
@@ -156,9 +156,9 @@ CREATE TABLE ${TABLE_TELLERS} (
 ALTER TABLE ${TABLE_TELLERS} add primary key (tid);
 
 CREATE TABLE ${TABLE_ACCOUNTS} (
-        aid int not null,
-        bid int,
-        abalance int,
+        AID int not null,
+        BID int,
+        ABALANCE int,
         FILLER char(84),
         FILLER01 char(84),
         FILLER02 char(84),
@@ -281,16 +281,56 @@ ALTER TABLE ${TABLE_HISTORY} add primary key (hid);
 	AID,
 	BID,
 	ABALANCE,
-	FILLER
+	FILLER,
+        filler01 ,
+        filler02 ,
+        filler03 ,
+        filler04 ,
+        filler05 ,
+        filler06 ,
+        filler07 ,
+        filler08 ,
+        filler09 ,
+        filler10 ,
+        filler11 ,
+        filler12 ,
+        filler13 ,
+        filler14 ,
+        filler15 ,
+        filler16 ,
+        filler17 ,
+        filler18 ,
+        filler19 ,
+        filler20 	
 ) VALUES (
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
+	?,
 	?,
 	?,
 	?,
 	?
 )
 	</stringProp>
-              <stringProp name="queryArguments">${CURRENT_ACCOUNT_COUNT},${CURRENT_BRANCH_COUNT},${MY_ACCOUNT_BALANCE},${FILLER}</stringProp>
-              <stringProp name="queryArgumentsTypes">INTEGER,INTEGER,DOUBLE,VARCHAR</stringProp>
+              <stringProp name="queryArguments">${CURRENT_ACCOUNT_COUNT},${CURRENT_BRANCH_COUNT},${MY_ACCOUNT_BALANCE},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER},${FILLER}</stringProp>
+              <stringProp name="queryArgumentsTypes">INTEGER,INTEGER,DOUBLE,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR,VARCHAR</stringProp>
               <stringProp name="variableNames"></stringProp>
               <stringProp name="resultVariable"></stringProp>
               <stringProp name="queryTimeout"></stringProp>
