@@ -33,6 +33,23 @@ import com.zaxxer.hikari.HikariConfig;
 @Scope("prototype")
 public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshedEvent>, Logger {
 	private int db = 1;
+	private int readDataCount = 0;
+	private BusyCpuProcessor busyCpuProcessor01 = new BusyCpuProcessor();
+	private BusyCpuProcessor busyCpuProcessor02 = new BusyCpuProcessor();
+	public BusyCpuProcessor getBusyCpuProcessor(int busyNumber) {
+		if (busyNumber ==1)
+			return this.busyCpuProcessor01;
+		else if (busyNumber==2)
+			return this.busyCpuProcessor02;
+		else
+			throw new UnsupportedOperationException("Only values of 1 or 2 are allowed for the busyCpu id.");
+	}
+	public void setReadDataCount(int val) {
+		this.readDataCount = val;
+	}
+	public int getReadDataCount() {
+		return this.readDataCount;
+	}
 	private HttpServer httpServer = new HttpServer();
 	public HttpServer getHttpServer() {
 		return this.httpServer;

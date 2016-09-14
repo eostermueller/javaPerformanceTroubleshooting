@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import javax.annotation.Resource;
 import javax.servlet.ServletContext;
@@ -28,9 +29,9 @@ import com.github.eostermueller.perfSandbox.dataaccess_2.AccountMgr2;
 import com.github.eostermueller.perfSandbox.dataaccess_3.AccountMgr3;
 import com.github.eostermueller.perfSandbox.dataaccess_4.AccountMgr4;
 import com.github.eostermueller.perfSandbox.dataaccess_5.AccountMgr5;
+import com.github.eostermueller.perfSandbox.filesystem.FileSystemReader;
 import com.github.eostermueller.perfSandbox.model.Accounts;
 import com.github.eostermueller.perfSandbox.model.SerializationUtil;
-
 
 @RestController
 public class Controller  {
@@ -146,15 +147,56 @@ public class Controller  {
 		return sb.toString();
 		
     }
-    
+    @RequestMapping(value="/startCpuBusy", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
+    String startCpuBusy(
+			@RequestParam(value="id", required=true) Integer id
+    		)  {
+    			this.perfSandbox.getBusyCpuProcessor(id).start();
+    		try {
+				TimeUnit.MILLISECONDS.sleep(BusyCpuProcessor.SLEEP_TIME_MS);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+    		StringBuilder sb = new StringBuilder();
+    		sb.append("<Config>")
+    			.append("<msg>Busy CPU thread started.</msg>")
+    			.append("<id>").append(id).append("</id>")
+    			.append("<started>").append( this.perfSandbox.getBusyCpuProcessor(id).isStarted() ).append("</started>")
+    			.append("</Config>");
+    		return sb.toString();
+    }
+    @RequestMapping(value="/stopCpuBusy", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
+    String stopCpuBusy(
+			@RequestParam(value="id", required=true) Integer id
+    		)  {
+    		this.perfSandbox.getBusyCpuProcessor(id).stop();
+    		try {
+				TimeUnit.MILLISECONDS.sleep(BusyCpuProcessor.SLEEP_TIME_MS);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}    		
+    		StringBuilder sb = new StringBuilder();
+    		sb.append("<Config>")
+    			.append("<msg>Busy CPU thread stopped.</msg>")
+    			.append("<id>").append(id).append("</id>")
+    			.append("<stopped>").append( !this.perfSandbox.getBusyCpuProcessor(id).isStarted() ).append("</stopped>")
+    			.append("</Config>");
+    		return sb.toString();
+    }
     @RequestMapping(value="/config", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
     String config(
     			@RequestParam(value="db", required=false) Integer intDb,
     			@RequestParam(value="branchScenarioNum", required=false) Integer intBranchScenarioNum,
     			@RequestParam(value="branchInqPerRoundTrip", required=false) Integer intBranchInqPerRoundTrip,
     			@RequestParam(value="scenarioNum", required=false) Integer intScenarioNum,
+    			@RequestParam(value="readDataCount", required=false) Integer intReadDataCount,
     			@RequestParam(value="logSql", required=false) Boolean ynLogSql
     			) throws IOException, PerfSandboxException {
+    	
+    	if (intReadDataCount!=null)
+    		perfSandbox.setReadDataCount(intReadDataCount.intValue() );
     	
     	if (intScenarioNum!=null)
     		perfSandbox.setNumScenario(intScenarioNum.intValue());
@@ -234,6 +276,11 @@ public class Controller  {
     public Accounts internalInquiry2(List<Long> accountIds_criteria, int scenario) throws PerfSandboxException {
 		Accounts accounts = null;
 
+		for(int i = 0; i < this.perfSandbox.getReadDataCount(); i++ ) {
+			FileSystemReader fsr = new FileSystemReader();
+			fsr.readConfig();
+		}
+
 		if (this.perfSandbox.getBranchInquiry() != null)
 			try {
 				this.perfSandbox.getBranchInquiry().randomBranchInquiries();
@@ -287,6 +334,8 @@ public class Controller  {
 		int scenario = perfSandbox.getNumScenario();
 		boolean ynLogSql = perfSandbox.getLogSql();
 		accounts = this.internalInquiry2(accountIds_criteria,scenario);
+		
+		
 		stats = this.getStats(scenario);
 		
 		long end = System.currentTimeMillis();
