@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
-import javax.annotation.Resource;
 import javax.servlet.ServletContext;
 import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
@@ -16,13 +15,21 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
 import org.springframework.boot.context.embedded.EmbeddedServletContainer;
 import org.springframework.context.ApplicationContext;
-import org.springframework.core.env.ConfigurableEnvironment;
-import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
+
+
+
+
+
+
+
+
+
+
 
 import com.github.eostermueller.perfSandbox.dataaccess_1.AccountMgr1;
 import com.github.eostermueller.perfSandbox.dataaccess_2.AccountMgr2;
@@ -32,12 +39,13 @@ import com.github.eostermueller.perfSandbox.dataaccess_5.AccountMgr5;
 import com.github.eostermueller.perfSandbox.filesystem.FileSystemReader;
 import com.github.eostermueller.perfSandbox.model.Accounts;
 import com.github.eostermueller.perfSandbox.model.SerializationUtil;
+import com.github.eostermueller.perfSandbox.parse.ApacheCommonsPooledSaxParserWorker;
+import com.github.eostermueller.perfSandbox.parse.EclipseEmfPooledSaxParserWorker;
+import com.github.eostermueller.perfSandbox.parse.UnpooledSaxParserWorker;
+
 
 @RestController
 public class Controller  {
-	private static final int BRANCH_SCENARIO_00 = 0;
-	private static final int BRANCH_SCENARIO_01 = 1;
-	private static final int BRANCH_SCENARIO_02 = 2;
 	private static final int DEFAULT_BRANCH_INQ_PER_ROUND_TRIP = 5;
 	@Autowired
 	public Controller(PerfSandboxSingleton val) throws PerfSandboxException {
@@ -105,6 +113,7 @@ public class Controller  {
     		.append("<delayInMs>")
     		.append(this.perfSandbox.getHttpServer().getDelayInMs())
     		.append("</delayInMs>");
+    		
     		
     		if (this.perfSandbox.getHttpServer().isRunning()) {
         		sb.append("<url>")
@@ -191,12 +200,24 @@ public class Controller  {
     			@RequestParam(value="branchScenarioNum", required=false) Integer intBranchScenarioNum,
     			@RequestParam(value="branchInqPerRoundTrip", required=false) Integer intBranchInqPerRoundTrip,
     			@RequestParam(value="scenarioNum", required=false) Integer intScenarioNum,
-    			@RequestParam(value="readDataCount", required=false) Integer intReadDataCount,
+    			@RequestParam(value="fileSystemReadCount", required=false) Integer intFileSystemReadCount,
+    			@RequestParam(value="eclipseEmfPooledSaxParseCount", required=false) Integer intEclipseEmfPooledSaxParseCount,
+    			@RequestParam(value="apacheCommonsPooledSaxParseCount", required=false) Integer intApacheCommonsPooledSaxParseCount,
+    			@RequestParam(value="unpooledSaxParseCount", required=false) Integer intUnpooledSaxParseCount,
     			@RequestParam(value="logSql", required=false) Boolean ynLogSql
     			) throws IOException, PerfSandboxException {
-    	
-    	if (intReadDataCount!=null)
-    		perfSandbox.setReadDataCount(intReadDataCount.intValue() );
+		
+		if (intEclipseEmfPooledSaxParseCount!=null)
+			perfSandbox.setEclipseEmfPooledSaxParseCount(intEclipseEmfPooledSaxParseCount.intValue());
+   
+		if (intUnpooledSaxParseCount!=null)
+			perfSandbox.setUnpooledSaxParseCount(intUnpooledSaxParseCount.intValue());
+		
+		if (intApacheCommonsPooledSaxParseCount!=null)
+			perfSandbox.setApacheCommonsPooledSaxParseCount(intApacheCommonsPooledSaxParseCount.intValue());
+		
+    	if (intFileSystemReadCount!=null)
+    		perfSandbox.setFileSystemReadCount(intFileSystemReadCount.intValue() );
     	
     	if (intScenarioNum!=null)
     		perfSandbox.setNumScenario(intScenarioNum.intValue());
@@ -276,11 +297,13 @@ public class Controller  {
     public Accounts internalInquiry2(List<Long> accountIds_criteria, int scenario) throws PerfSandboxException {
 		Accounts accounts = null;
 
-		for(int i = 0; i < this.perfSandbox.getReadDataCount(); i++ ) {
+		for(int i = 0; i < this.perfSandbox.getFileSystemReadCount(); i++ ) {
 			FileSystemReader fsr = new FileSystemReader();
 			fsr.readConfig();
 		}
 
+		parse();
+		
 		if (this.perfSandbox.getBranchInquiry() != null)
 			try {
 				this.perfSandbox.getBranchInquiry().randomBranchInquiries();
@@ -326,7 +349,35 @@ public class Controller  {
 		}
 		return accounts;
     }
-    public String internalInquiry(List<Long> accountIds_criteria) throws PerfSandboxException, IOException {
+    /**
+     * Parse an XML file.
+     * Yes, parsing the same file repeatedly is not terribly realistic, but it does provide a nice test bed for comparison of pooled versus unpooled parsing.
+     */
+    private void parse() {
+		UnpooledSaxParserWorker unpooledWorker = new UnpooledSaxParserWorker();
+		for(int i = 0; i < this.perfSandbox.getUnpooledSaxParseCount(); i++ ) {
+			if (i==0) 		
+				unpooledWorker.setup();
+
+			unpooledWorker.parse();
+		}
+		ApacheCommonsPooledSaxParserWorker acPooledWorker = new ApacheCommonsPooledSaxParserWorker();
+		for(int i = 0; i < this.perfSandbox.getApacheCommonsPooledSaxParseCount(); i++ ) {
+			if (i==0) 		
+				acPooledWorker.setup();
+
+			acPooledWorker.parse();
+		}
+		EclipseEmfPooledSaxParserWorker pooledWorker = new EclipseEmfPooledSaxParserWorker();
+		for(int i = 0; i < this.perfSandbox.getEclipseEmfPooledSaxParseCount(); i++ ) {
+			if (i==0) 		
+				pooledWorker.setup();
+
+			pooledWorker.parse();
+		}
+		
+	}
+	public String internalInquiry(List<Long> accountIds_criteria) throws PerfSandboxException, IOException {
 		long start = System.currentTimeMillis();
 		Accounts accounts = null;
 		String stats = null;

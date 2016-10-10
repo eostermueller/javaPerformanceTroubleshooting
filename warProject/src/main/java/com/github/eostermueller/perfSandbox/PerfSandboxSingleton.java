@@ -1,6 +1,7 @@
 package com.github.eostermueller.perfSandbox;
 
 import java.sql.Connection;
+
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -44,10 +45,10 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		else
 			throw new UnsupportedOperationException("Only values of 1 or 2 are allowed for the busyCpu id.");
 	}
-	public void setReadDataCount(int val) {
+	public void setFileSystemReadCount(int val) {
 		this.readDataCount = val;
 	}
-	public int getReadDataCount() {
+	public int getFileSystemReadCount() {
 		return this.readDataCount;
 	}
 	private HttpServer httpServer = new HttpServer();
@@ -177,6 +178,9 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
  	DataSource dataSource01 = null;
  	DataSource dataSource02 = null;
 	private Integer backendPort = 8674;
+	private int eclipseEmfPooledSaxParseCount;
+	private int apacheCommonsPooledSaxParseCount;
+	private int unpooledSaxParseCount;
 
 
 	public Connection getConnection() throws SQLException, PerfSandboxException {
@@ -365,6 +369,12 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		sb.append("<Scenario>").append(Integer.toString(getNumScenario())).append("</Scenario>");
 		sb.append("<LogSql>").append(getLogSql()).append("</LogSql>");
 		sb.append("<Db>").append(getDb()).append("</Db>");
+		sb.append("<CpuBusyThread id=\"1\">" ).append( this.getBusyCpuProcessor(1).isStarted() ).append("</CpuBusyThread>");
+		sb.append("<CpuBusyThread id=\"2\">" ).append( this.getBusyCpuProcessor(2).isStarted() ).append("</CpuBusyThread>");
+		sb.append("<FileSystemReadCount>").append(this.getFileSystemReadCount()).append("</FileSystemReadCount>");
+		sb.append("<EclipseEmfPooledSaxParseCount>").append(this.getEclipseEmfPooledSaxParseCount()).append("</EclipseEmfPooledSaxParseCount>");
+		sb.append("<ApacheCommonsPooledSaxParseCount>").append(this.getApacheCommonsPooledSaxParseCount()).append("</ApacheCommonsPooledSaxParseCount>");
+		sb.append("<UnpooledSaxParseCount>").append(this.getUnpooledSaxParseCount()).append("</UnpooledSaxParseCount>");
 		int branchScenario = this.getBranchScenarioNum();
 		sb.append("<BranchScenario>").append( branchScenario ).append("</BranchScenario>");
 		int branchInquiryPerRoundTrip = -1;
@@ -380,5 +390,29 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 		
 		return sb.toString();
 	}
+	/** Number of times FOR EACH request that the code will reparse some test XML using the Eclipse EMF parser pool of SAXParser objects. */
+	public void setEclipseEmfPooledSaxParseCount(int intValue) {
+		this.eclipseEmfPooledSaxParseCount = intValue;
+	}
+	public int getEclipseEmfPooledSaxParseCount() {
+		return this.eclipseEmfPooledSaxParseCount;
+	}
+
+	/** Number of times FOR EACH request that the code will reparse some test XML using the the Apache Commons Pool2 pool of SAXParser objects. */
+	public void setApacheCommonsPooledSaxParseCount(int intValue) {
+		this.apacheCommonsPooledSaxParseCount = intValue;
+	}
+	public int getApacheCommonsPooledSaxParseCount() {
+		return this.apacheCommonsPooledSaxParseCount;
+	}
+
+	/** Number of times FOR EACH request that the code will reparse some test XML using a new SAXParser object for every parse. */
+	public void setUnpooledSaxParseCount(int intValue) {
+		this.unpooledSaxParseCount = intValue;
+	}
+	public int getUnpooledSaxParseCount() {
+		return this.unpooledSaxParseCount;
+	}
+	
 	
 }
