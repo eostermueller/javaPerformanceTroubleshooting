@@ -13,6 +13,8 @@ import java.net.HttpURLConnection;
 import java.net.Socket;
 import java.net.URL;
 
+import wiremock.com.google.common.base.Optional;
+
 import com.github.tomakehurst.wiremock.WireMockServer;
 import com.github.tomakehurst.wiremock.client.WireMock;
 
@@ -48,7 +50,7 @@ public class HttpServer {
 		if (!available(WIREMOCK_HOST,DEFAULT_HTTP_LISTEN_PORT)) 
 			log("Can't run test unless [" + DEFAULT_HTTP_LISTEN_PORT + " is available");
 		
-		myServer.start(DEFAULT_HTTP_LISTEN_PORT, 1000);
+		myServer.start(DEFAULT_HTTP_LISTEN_PORT, 1000, true);
 		if (available(WIREMOCK_HOST,DEFAULT_HTTP_LISTEN_PORT)) 
 			log("Server did not start on TCP port [" + DEFAULT_HTTP_LISTEN_PORT + " as expected.");
 
@@ -84,6 +86,13 @@ public class HttpServer {
 	public String getUrl() {
 		return "http://localhost:" + this.intPort + PERF_SANDBOX_BACKEND_URL;
 	}
+	
+	/** A convenience method that executes an HTTP GET to the given URL.
+	 * 
+	 * @param url
+	 * @return
+	 * @throws IOException
+	 */
 	public String getHttpResponse(String url) throws IOException {
 		
 		URL obj = new URL(url);
@@ -116,7 +125,7 @@ public class HttpServer {
 	 * @return
 	 * @throws PerfSandboxException
 	 */
-	public boolean start(int intPort, int intDelayMs) throws PerfSandboxException {
+	public boolean start(int intPort, int intDelayMs, boolean disableRequestJournal) throws PerfSandboxException {
 		if (intPort <1 || intPort > 65535) {
 			throw new PerfSandboxException("The /startBackend 'port' query parameter is out of bounds.  Must be a valid TCP port number, aka b/t 1 and 65535");
 		} else {
@@ -127,7 +136,11 @@ public class HttpServer {
 			this.wireMockServer.stop();
 
 		if (available(host,intPort)) {
-    		this.wireMockServer = new WireMockServer(wireMockConfig().port(intPort) );
+			
+			if (disableRequestJournal)
+				this.wireMockServer = new WireMockServer(wireMockConfig().port(intPort).disableRequestJournal() );
+			else
+				this.wireMockServer = new WireMockServer(wireMockConfig().port(intPort).maxRequestJournalEntries(Optional.of(Integer.MAX_VALUE)) );
 
     		wireMockServer.start();
     		

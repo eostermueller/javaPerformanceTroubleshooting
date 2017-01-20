@@ -181,6 +181,7 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	private int eclipseEmfPooledSaxParseCount;
 	private int apacheCommonsPooledSaxParseCount;
 	private int unpooledSaxParseCount;
+	private int accountCloneCount;
 
 
 	public Connection getConnection() throws SQLException, PerfSandboxException {
@@ -412,6 +413,12 @@ public class PerfSandboxSingleton implements ApplicationListener<ContextRefreshe
 	}
 	public int getUnpooledSaxParseCount() {
 		return this.unpooledSaxParseCount;
+	}
+	public void setAccountCloneCount(int intValue) {
+		this.accountCloneCount = intValue;
+	}
+	public int getAccountCloneCount() {
+		return this.accountCloneCount;
 	}
 	
 	

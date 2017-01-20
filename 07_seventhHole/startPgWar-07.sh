@@ -5,4 +5,4 @@ export PG_WAR=$dir/../warProject/target/performanceGolf.war
 . $dir/../bin/setenv.sh
 
 
-$JAVA_HOME/bin/java -jar $PG_WAR
+$JAVA_HOME/bin/java $MY_JPL_AGENT -jar $PG_WAR

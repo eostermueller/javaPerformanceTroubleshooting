@@ -21,21 +21,12 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
 
-
-
-
-
-
-
-
-
-
-
 import com.github.eostermueller.perfSandbox.dataaccess_1.AccountMgr1;
 import com.github.eostermueller.perfSandbox.dataaccess_2.AccountMgr2;
 import com.github.eostermueller.perfSandbox.dataaccess_3.AccountMgr3;
 import com.github.eostermueller.perfSandbox.dataaccess_4.AccountMgr4;
 import com.github.eostermueller.perfSandbox.dataaccess_5.AccountMgr5;
+import com.github.eostermueller.perfSandbox.dataaccess_6.AccountMgr6;
 import com.github.eostermueller.perfSandbox.filesystem.FileSystemReader;
 import com.github.eostermueller.perfSandbox.model.Accounts;
 import com.github.eostermueller.perfSandbox.model.SerializationUtil;
@@ -47,6 +38,7 @@ import com.github.eostermueller.perfSandbox.parse.UnpooledSaxParserWorker;
 @RestController
 public class Controller  {
 	private static final int DEFAULT_BRANCH_INQ_PER_ROUND_TRIP = 5;
+
 	@Autowired
 	public Controller(PerfSandboxSingleton val) throws PerfSandboxException {
 		if (val==null) {
@@ -142,10 +134,11 @@ public class Controller  {
     @RequestMapping(value="/backendStart", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
     String backendStart(
     			@RequestParam(value="port", required=true) Integer intPort,
-    			@RequestParam(value="delayMs", required=false, defaultValue = "0") Integer intDelayMs
+    			@RequestParam(value="delayMs", required=false, defaultValue = "0") Integer intDelayMs,
+    			@RequestParam(value="memoryLeak", defaultValue = "false", required=false) Boolean ynMemoryLeak
     			) throws IOException, PerfSandboxException {
 
-    	boolean ynStarted = this.perfSandbox.getHttpServer().start(intPort, intDelayMs);
+    	boolean ynStarted = this.perfSandbox.getHttpServer().start(intPort, intDelayMs, !ynMemoryLeak.booleanValue() );
     	perfSandbox.backendStarted.set(ynStarted);
     	
 		StringBuilder sb = new StringBuilder();
@@ -204,6 +197,7 @@ public class Controller  {
     			@RequestParam(value="eclipseEmfPooledSaxParseCount", required=false) Integer intEclipseEmfPooledSaxParseCount,
     			@RequestParam(value="apacheCommonsPooledSaxParseCount", required=false) Integer intApacheCommonsPooledSaxParseCount,
     			@RequestParam(value="unpooledSaxParseCount", required=false) Integer intUnpooledSaxParseCount,
+    			@RequestParam(value="accountCloneCount", required=false) Integer intAccountCloneCount,
     			@RequestParam(value="logSql", required=false) Boolean ynLogSql
     			) throws IOException, PerfSandboxException {
 		
@@ -219,6 +213,9 @@ public class Controller  {
     	if (intFileSystemReadCount!=null)
     		perfSandbox.setFileSystemReadCount(intFileSystemReadCount.intValue() );
     	
+    	if (intAccountCloneCount!=null)
+    		perfSandbox.setAccountCloneCount(intAccountCloneCount.intValue() );
+
     	if (intScenarioNum!=null)
     		perfSandbox.setNumScenario(intScenarioNum.intValue());
     	
@@ -289,6 +286,8 @@ public class Controller  {
 			AccountMgr5 acctMgr5 = new AccountMgr5(perfSandbox); 
 			stats = acctMgr5.m_sqlTextMgr5.m_stats.getXmlStats();
 			break;
+		case SCENARIO_6_FROM_MEMORY:
+			return "";
 		default:
 				throw new RuntimeException("Found URL Parameter [" + PARAM_SCENARIO_NUM + "=" + scenario + "].  Was expecting a value of 0-5." );
 		}
@@ -335,9 +334,20 @@ public class Controller  {
 			AccountMgr5 acctMgr5 = new AccountMgr5(perfSandbox); 
 			accounts = acctMgr5.getAccounts(accountIds_criteria);
 			break;
+		case SCENARIO_6_FROM_MEMORY:
+			AccountMgr6 acctMgr6 = new AccountMgr6(perfSandbox); 
+			accounts = acctMgr6.getAccounts(accountIds_criteria);
+			break;
 		default:
 			throw new RuntimeException("Found URL Parameter [" + PARAM_SCENARIO_NUM + "=" + perfSandbox.getNumScenario() + "].  Was expecting a value of 1-5." );
 		}
+		
+		List<Accounts> setsOfAccounts = new ArrayList<Accounts>(); //keep in scope until end of method.
+		//Create extra memory for Young Gen to expire.
+		for(int i = 0; i < this.perfSandbox.getAccountCloneCount(); i++) {
+			setsOfAccounts.add( new Accounts(accounts) );
+		}
+		
 		try {
 			if (this.perfSandbox.backendStarted.get()) {
 				this.perfSandbox.getHttpServer().getHttpResponse();
@@ -423,6 +433,8 @@ public class Controller  {
 	private static final int SCENARIO_3_BULK_ACCOUNT_PIECEMEAL_HISTORY = 3;
 	private static final int SCENARIO_4_SEPARATE_ACCOUNT_QUERIES = 4;
 	private static final int SCENARIO_5_PK_LOOKUP_ONLY = 5;
+	private static final int SCENARIO_6_FROM_MEMORY = 6;
+
 	
 	private String formatStats(String xmlStats, long duration, int scenario, boolean ynLogSql, int db) throws IOException {
 		

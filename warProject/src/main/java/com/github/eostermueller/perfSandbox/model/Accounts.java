@@ -18,4 +18,12 @@ public class Accounts {
 		}
 		return null;
 	}
+	public Accounts() {
+		
+	}
+	public Accounts(Accounts template) {
+		for(Account a : template.m_list) {
+			this.m_list.add( new Account(a) );
+		}
+	}
 }

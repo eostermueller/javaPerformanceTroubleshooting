@@ -1,0 +1,6 @@
+config file.
+special class names.
+remove 'noise' columns.
+add leak indicator problem.
+move interval count to the header, 
+use tag instead of paren

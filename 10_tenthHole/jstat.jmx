@@ -1,0 +1,2011 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jmeterTestPlan version="1.2" properties="2.9" jmeter="3.0 r1743807">
+  <hashTree>
+    <TestPlan guiclass="TestPlanGui" testclass="TestPlan" testname="jstatlive_PID=${PID}" enabled="true">
+      <stringProp name="TestPlan.comments">Doc for metrics taken from https://docs.oracle.com/javase/8/docs/technotes/tools/unix/jstat.html</stringProp>
+      <boolProp name="TestPlan.functional_mode">false</boolProp>
+      <boolProp name="TestPlan.serialize_threadgroups">false</boolProp>
+      <elementProp name="TestPlan.user_defined_variables" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" testname="User Defined Variables" enabled="true">
+        <collectionProp name="Arguments.arguments">
+          <elementProp name="PID" elementType="Argument">
+            <stringProp name="Argument.name">PID</stringProp>
+            <stringProp name="Argument.value">15350</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="INTERVAL" elementType="Argument">
+            <stringProp name="Argument.name">INTERVAL</stringProp>
+            <stringProp name="Argument.value">10s</stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#JTL_FOLDER" elementType="Argument">
+            <stringProp name="Argument.name">#JTL_FOLDER</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gc" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gc</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gccapacity" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gccapacity</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcnew" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcnew</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcnewcapacity" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcnewcapacity</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcold" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcold</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcoldcapacity" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcoldcapacity</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcpermcapacity" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcpermcapacity</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+          <elementProp name="#FILE_gcutil" elementType="Argument">
+            <stringProp name="Argument.name">#FILE_gcutil</stringProp>
+            <stringProp name="Argument.value"></stringProp>
+            <stringProp name="Argument.metadata">=</stringProp>
+          </elementProp>
+        </collectionProp>
+      </elementProp>
+      <stringProp name="TestPlan.user_define_classpath"></stringProp>
+    </TestPlan>
+    <hashTree>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="GC Overhead %" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="795422963">GRAPH_gcnew</stringProp>
+            <stringProp name="795424122">GRAPH_gcold</stringProp>
+            <stringProp name="795424122">GRAPH_gcold</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-1803327671">jstat_POY_Young-generation-garbage-collection-overhead-%</stringProp>
+            <stringProp name="-959792034">jstat_POF_Full-garbage-collection-overhead-%</stringProp>
+            <stringProp name="-440000305">jstat_POT_Total-garbage-collection-overhead-%</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization - %" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="-1111469297">GRAPH_gcutil</stringProp>
+            <stringProp name="-1111469297">GRAPH_gcutil</stringProp>
+            <stringProp name="-1111469297">GRAPH_gcutil</stringProp>
+            <stringProp name="-1111469297">GRAPH_gcutil</stringProp>
+            <stringProp name="-1111469297">GRAPH_gcutil</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-1584123766">jstat_S0_Survivor-space-0-utilization-as-a-percentage-of-the-space&apos;s-current-capacity</stringProp>
+            <stringProp name="1963664042">jstat_S1_Survivor-space-1-utilization-as-a-percentage-of-the-space&apos;s-current-capacity</stringProp>
+            <stringProp name="-2105620077">jstat_E_Eden-space-utilization-as-a-percentage-of-the-space&apos;s-current-capacity</stringProp>
+            <stringProp name="-947567066">jstat_O_Old-space-utilization-as-a-percentage-of-the-space&apos;s-current-capacity</stringProp>
+            <stringProp name="625491045">jstat_M_Metaspace-utilization-as-a-percentage-of-the-space&apos;s-current-capacity</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization vs. Capacity - Eden" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-331970299">jstat_EC_Current-eden-space-capacity-(kB)</stringProp>
+            <stringProp name="1238771891">jstat_EU_Eden-space-utilization-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization vs. Capacity - Survivor 0" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-2049650832">jstat_S0C_Current-survivor-space-0-capacity-(kB)</stringProp>
+            <stringProp name="-15472664">jstat_S0U_Survivor-space-0-utilization-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization vs. Capacity - Survivor 1" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="1817207986">jstat_S1C_Current-survivor-space-1-capacity-(kB)</stringProp>
+            <stringProp name="937755238">jstat_S1U_Survivor-space-1-utilization-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization vs. Capacity - Old" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-1745166350">jstat_OC_Current-old-space-capacity-(kB)</stringProp>
+            <stringProp name="1637557530">jstat_OU_Old-space-utilization-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Utilization vs. Capacity - MetaSpace" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-1753446775">jstat_MC_Metaspace-capacity-(kB)</stringProp>
+            <stringProp name="-1261177788">jstat_MU_Metacspace-utilization-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="GC Time" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="795422963">GRAPH_gcnew</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="481831890">jstat_FGCT_Full-garbage-collection-time</stringProp>
+            <stringProp name="1645432339">jstat_GCT_Total-garbage-collection-time</stringProp>
+            <stringProp name="1040813251">jstat_YGCT_Young-generation-garbage-collection-time</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Generation Max Sizes" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="-2047463372">GRAPH_gcoldcapacity</stringProp>
+            <stringProp name="49830860">GRAPH_gcmetacapacity</stringProp>
+            <stringProp name="1143186093">GRAPH_gcnewcapacity</stringProp>
+            <stringProp name="1087121735">GRAPH_gccapacity</stringProp>
+            <stringProp name="1087121735">GRAPH_gccapacity</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="1055516389">jstat_OGCMX_Maximum-old-generation-capacity-(kB)</stringProp>
+            <stringProp name="-412570169">jstat_MCMX_Maximum-metaspace-capacity-(kB)</stringProp>
+            <stringProp name="1055516389">jstat_OGCMX_Maximum-old-generation-capacity-(kB)</stringProp>
+            <stringProp name="-412570169">jstat_MCMX_Maximum-metaspace-capacity-(kB)</stringProp>
+            <stringProp name="-660774803">jstat_NGCMX_Maximum-new-generation-capacity-(kB)</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <kg.apc.jmeter.vizualizers.CompositeResultCollector guiclass="kg.apc.jmeter.vizualizers.CompositeGraphGui" testclass="kg.apc.jmeter.vizualizers.CompositeResultCollector" testname="Events" enabled="true">
+        <boolProp name="ResultCollector.error_logging">false</boolProp>
+        <objProp>
+          <name>saveConfig</name>
+          <value class="SampleSaveConfiguration">
+            <time>true</time>
+            <latency>true</latency>
+            <timestamp>true</timestamp>
+            <success>true</success>
+            <label>true</label>
+            <code>true</code>
+            <message>true</message>
+            <threadName>true</threadName>
+            <dataType>true</dataType>
+            <encoding>false</encoding>
+            <assertions>true</assertions>
+            <subresults>true</subresults>
+            <responseData>false</responseData>
+            <samplerData>false</samplerData>
+            <xml>false</xml>
+            <fieldNames>true</fieldNames>
+            <responseHeaders>false</responseHeaders>
+            <requestHeaders>false</requestHeaders>
+            <responseDataOnError>false</responseDataOnError>
+            <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+            <assertionsResultsToSave>0</assertionsResultsToSave>
+            <bytes>true</bytes>
+            <threadCounts>true</threadCounts>
+            <idleTime>true</idleTime>
+          </value>
+        </objProp>
+        <stringProp name="filename"></stringProp>
+        <longProp name="interval_grouping">500</longProp>
+        <boolProp name="graph_aggregated">false</boolProp>
+        <stringProp name="include_sample_labels"></stringProp>
+        <stringProp name="exclude_sample_labels"></stringProp>
+        <stringProp name="start_offset"></stringProp>
+        <stringProp name="end_offset"></stringProp>
+        <boolProp name="include_checkbox_state">false</boolProp>
+        <boolProp name="exclude_checkbox_state">false</boolProp>
+        <collectionProp name="COMPOSITE_CFG">
+          <collectionProp name="">
+            <stringProp name="883356045">GRAPH_gc</stringProp>
+            <stringProp name="1087121735">GRAPH_gccapacity</stringProp>
+            <stringProp name="1087121735">GRAPH_gccapacity</stringProp>
+          </collectionProp>
+          <collectionProp name="">
+            <stringProp name="-1446088804">jstat_FGC_Number-of-full-GC-events</stringProp>
+            <stringProp name="-242661369">jstat_YGC_Number-of-young-generation-GC-events</stringProp>
+            <stringProp name="-1446088804">jstat_FGC_Number-of-full-GC-events</stringProp>
+          </collectionProp>
+        </collectionProp>
+      </kg.apc.jmeter.vizualizers.CompositeResultCollector>
+      <hashTree/>
+      <ThreadGroup guiclass="ThreadGroupGui" testclass="ThreadGroup" testname="jstat" enabled="true">
+        <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
+        <elementProp name="ThreadGroup.main_controller" elementType="LoopController" guiclass="LoopControlPanel" testclass="LoopController" testname="Loop Controller" enabled="true">
+          <boolProp name="LoopController.continue_forever">false</boolProp>
+          <intProp name="LoopController.loops">-1</intProp>
+        </elementProp>
+        <stringProp name="ThreadGroup.num_threads">1</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <longProp name="ThreadGroup.start_time">1476598964000</longProp>
+        <longProp name="ThreadGroup.end_time">1476598964000</longProp>
+        <boolProp name="ThreadGroup.scheduler">false</boolProp>
+        <stringProp name="ThreadGroup.duration"></stringProp>
+        <stringProp name="ThreadGroup.delay"></stringProp>
+      </ThreadGroup>
+      <hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gc" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gc" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gc ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gc" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[17];
+metrics[ 0] = &quot;S0C_Current-survivor-space-0-capacity-(kB)&quot;;
+metrics[ 1] = &quot;S1C_Current-survivor-space-1-capacity-(kB)&quot;;
+metrics[ 2] = &quot;S0U_Survivor-space-0-utilization-(kB)&quot;;
+metrics[ 3] = &quot;S1U_Survivor-space-1-utilization-(kB)&quot;;
+metrics[ 4] = &quot;EC_Current-eden-space-capacity-(kB)&quot;;
+metrics[ 5] = &quot;EU_Eden-space-utilization-(kB)&quot;;
+metrics[ 6] = &quot;OC_Current-old-space-capacity-(kB)&quot;;
+metrics[ 7] = &quot;OU_Old-space-utilization-(kB)&quot;;
+metrics[ 8] = &quot;MC_Metaspace-capacity-(kB)&quot;;
+metrics[ 9] = &quot;MU_Metacspace-utilization-(kB)&quot;;
+metrics[10] = &quot;CCSC_Compressed-class-space-capacity-(kB)&quot;;
+metrics[11] = &quot;CCSU_Compressed-class-space-used-(kB)&quot;;
+metrics[12] = &quot;YGC_Number-of-young-generation-garbage-collection-events&quot;;
+metrics[13] = &quot;YGCT_Young-generation-garbage-collection-time&quot;;
+metrics[14] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[15] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[16] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	log.info(&quot;i [&quot; + i + &quot;] Variable [&quot; + metrics[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gc" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gc} to capture output running JMeter headlessly.</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gccapacity" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gccapacity" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gccapacity ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gccapacity" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[18];
+
+metrics[ 0] = &quot;NGCMN_Minimum-new-generation-capacity-(kB)&quot;;
+metrics[ 1] = &quot;NGCMX_Maximum-new-generation-capacity-(kB)&quot;;
+metrics[ 2] = &quot;NGC_Current-new-generation-capacity-(kB)&quot;;
+metrics[ 3] = &quot;S0C_Current-survivor-space-0-capacity-(kB)&quot;;
+metrics[ 4] = &quot;S1C_Current-survivor-space-1-capacity-(kB)&quot;;
+metrics[ 5] = &quot;EC_Current-eden-space-capacity-(kB)&quot;;
+metrics[ 6] = &quot;OGCMN_Minimum-old-generation-capacity-(kB)&quot;;
+metrics[ 7] = &quot;OGCMX_Maximum-old-generation-capacity-(kB)&quot;;
+metrics[ 8] = &quot;OGC_Current-old-generation-capacity-(kB)&quot;;
+metrics[ 9] = &quot;OC_Current-old-space-capacity-(kB)&quot;;
+metrics[10] = &quot;MCMN_Minimum-metaspace-capacity-(kB)&quot;;
+metrics[11] = &quot;MCMX_Maximum-metaspace-capacity-(kB)&quot;;
+metrics[12] = &quot;MC_Metaspace-capacity-(kB)&quot;;
+metrics[13] = &quot;CCSMN_Compressed-class-space-minimum-capacity-(kB)&quot;;
+metrics[14] = &quot;CCSMX_Compressed-class-space-maximum-capacity-(kB)&quot;;
+metrics[15] = &quot;CCSC_Compressed-class-space-capacity-(kB)&quot;;
+metrics[16] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[17] = &quot;FGC_Number-of-full-GC-events&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gccapacity" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gccapacity} to capture output when running JMeter headlessly</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcnew" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcnew" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcnew ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcnew" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[12];
+
+metrics[ 0] = &quot;S0C_Current-survivor-space-0-capacity-(kB)&quot;;
+metrics[ 1] = &quot;S1C_Current-survivor-space-1-capacity-(kB)&quot;;
+metrics[ 2] = &quot;S0U_Survivor-space-0-utilization-(kB)&quot;;
+metrics[ 3] = &quot;S1U_Survivor-space-1-utilization-(kB)&quot;;
+metrics[ 4] = &quot;TT_Tenuring-threshold&quot;;
+metrics[ 5] = &quot;MTT_Maximum-tenuring-threshold&quot;;
+metrics[ 6] = &quot;DSS_Desired-survivor-size-(kB)&quot;;
+metrics[ 7] = &quot;EC_Current-eden-space-capacity-(kB)&quot;;
+metrics[ 8] = &quot;EU_Eden-space-utilization-(kB)&quot;;
+metrics[ 9] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[10] = &quot;YGCT_Young-generation-garbage-collection-time&quot;;
+metrics[11] = &quot;POY_Young-generation-garbage-collection-overhead-%&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+long testStartMs = Long.parseLong(props.get(&quot;TESTSTART.MS&quot;) );
+long durationMs = System.currentTimeMillis() - testStartMs;
+for(int i = 0; i &lt; metrics.length; i++) {
+	//Calculate overhead of &apos;new&apos; GC
+	if (i==11) {
+			Double newGcTimeSeconds = Double.parseDouble(results[10]);  //&quot;YGCT_Young-generation-garbage-collection-time&quot;
+			long newGcTimeMs = (long) (newGcTimeSeconds.doubleValue() * 1000);
+			String strNewGcTimeMs_prev = props.get(&quot;YGCT_Young-generation-garbage-collection-time-ms-prev&quot;);
+			int percentage = 0;
+			if (strNewGcTimeMs_prev != null &amp;&amp; strNewGcTimeMs_prev.length() &gt; 0) {
+				long newGcTimeMs_prev = Long.parseLong(strNewGcTimeMs_prev);
+				long numerator = newGcTimeMs-newGcTimeMs_prev;
+				if (numerator &gt; 0) 
+					percentage = (int) ( (numerator) / 100); //Why 100?  think 10*1000ms/100%
+				else
+					percentage = 0;
+            }
+			props.put(&quot;YGCT_Young-generation-garbage-collection-time-ms-prev&quot;, String.valueOf(newGcTimeMs) );            
+			log.info(&quot;durationMs,% [&quot; + durationMs + &quot;] [&quot; + percentage + &quot;]&quot;);
+			sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + percentage + &quot;&lt;BR&gt;\n&quot;);		
+
+	} else {
+		sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);		
+	}
+
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcnew" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcnew} for Filename to capture output when running JMeter headlessly</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcnewcapacity" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcnewcapacity" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcnewcapacity ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcnewcapacity" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[8];
+
+metrics[ 0] = &quot;OGCMN_Minimum-old-generation-capacity-(kB)&quot;;
+metrics[ 1] = &quot;OGCMX_Maximum-old-generation-capacity-(kB)&quot;;
+metrics[ 2] = &quot;OGC_Current-old-generation-capacity-(kB)&quot;;
+metrics[ 3] = &quot;OC_Current-old-space-capacity-(kB)&quot;;
+metrics[ 4] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[ 5] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[ 6] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[ 7] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcnewcapacity" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcnewcapacity} for the Filename to capture output when running JMeter headlessly.</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcmetacapacity" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcnewcapacity" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcmetacapacity ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcmetacapacity" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[9];
+
+metrics[ 0] = &quot;MCMN_Minimum-metaspace-capacity-(kB)&quot;;
+metrics[ 1] = &quot;MCMX_Maximum-metaspace-capacity-(kB)&quot;;
+metrics[ 2] = &quot;MC_Metaspace-capacity-(kB)&quot;;
+metrics[ 3] = &quot;CCSMN_Compressed-class-space-minimum-capacity-(kB)&quot;;
+metrics[ 4] = &quot;CCSMX_Compressed-class-space-maximum-capacity-(kB)&quot;;
+metrics[ 5] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[ 6] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[ 7] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[ 8] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcmetacapacity" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcnewcapacity} for the Filename to capture output when running JMeter headlessly.</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcold" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcold" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcold ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcold} for Filename, below, when running JMeter headlessly</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcold" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[12];
+
+metrics[0] = &quot;MC_Metaspace-capacity-(kB)&quot;;
+metrics[1] = &quot;MU_Metaspace-utilization-(kB)&quot;;
+metrics[2] = &quot;CCSC_Compressed-class-space-capacity-(kB)&quot;;
+metrics[3] = &quot;CCSU_Compressed-class-space-used-(kB)&quot;;
+metrics[4] = &quot;OC_Current-old-space-capacity-(kB)&quot;;
+metrics[5] = &quot;OU_Old-space-utilization-(kB)&quot;;
+metrics[6] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[7] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[8] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[9] = &quot;GCT_Total-garbage-collection-time&quot;;
+metrics[10] =   &quot;POF_Full-garbage-collection-overhead-%&quot;;
+metrics[11] =   &quot;POT_Total-garbage-collection-overhead-%&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+
+	if (i==10) {
+			long fullGcTimeMs_prev = -1;
+			long fullNumerator = -2;
+			Double fullGcTimeSeconds = Double.parseDouble(results[8]);  //FGCT_Full-garbage-collection-time
+			long fullGcTimeMs = (long) (fullGcTimeSeconds.doubleValue() * 1000);
+			String strFullGcTimeMs_prev = props.get(&quot;FGCT_Full-garbage-collection-time-ms-prev&quot;);
+			int percentage = 151; //sentinel value for &apos;error&apos;
+			if (strFullGcTimeMs_prev != null &amp;&amp; strFullGcTimeMs_prev.length() &gt; 0) {
+				fullGcTimeMs_prev = Long.parseLong(strFullGcTimeMs_prev);
+				fullNumerator = fullGcTimeMs-fullGcTimeMs_prev;
+				log.info(&quot;full num = current-prev, str[&quot; + fullNumerator + &quot;,&quot; + fullGcTimeMs + &quot;,&quot; + Long.toString(fullGcTimeMs_prev) + &quot;,&quot; + strFullGcTimeMs_prev + &quot;]&quot; );
+				if (fullNumerator &gt; 0) {
+					percentage = (int) ( (fullNumerator) / 100); //Why 100?  think 10*1000ms/100%
+				} else {
+					percentage = 0;
+				}
+                
+               }
+			props.put(&quot;FGCT_Full-garbage-collection-time-ms-prev&quot;, Long.toString(fullGcTimeMs) );            
+			log.info(&quot;full % [&quot; + percentage + &quot;] full_Seconds/ms [&quot; + fullGcTimeSeconds + &quot;] [&quot; + fullGcTimeMs + &quot;] fullGcTimeMs_prev, numerator[&quot; + fullGcTimeMs_prev + &quot;][&quot; + fullNumerator + &quot;]&quot;);
+			sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + percentage + &quot;&lt;BR&gt;\n&quot;);		
+	} else if (i==11) {
+			Double totalGcTimeSeconds = Double.parseDouble(results[9]);  //GCT_Total-garbage-collection-time
+			long totalGcTimeMs = (long) (totalGcTimeSeconds.doubleValue() * 1000);
+			String strTotalGcTimeMs_prev = props.get(&quot;GCT_Total-garbage-collection-time-ms-prev&quot;);
+			int percentage = 151;
+			if (strTotalGcTimeMs_prev != null &amp;&amp; strTotalGcTimeMs_prev.length() &gt; 0) {
+				long totalGcTimeMs_prev = Long.parseLong(strTotalGcTimeMs_prev);
+				long numerator = totalGcTimeMs-totalGcTimeMs_prev;
+				if (numerator &gt; 0) 
+					percentage = (int) ( (numerator) / 100); //Why 100?  think 10*1000ms/100%
+				else
+					percentage = 0;
+                
+            }
+			props.put(&quot;GCT_Total-garbage-collection-time-ms-prev&quot;, String.valueOf(totalGcTimeMs) );            
+			log.info(&quot;durationMs,% [&quot; + durationMs + &quot;] [&quot; + percentage + &quot;]&quot;);
+			sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + percentage + &quot;&lt;BR&gt;\n&quot;);		
+	} else {
+		sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);		
+	}
+
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcold" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename">${JTL_FOLDER}/${FILE_gcold}</stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcoldcapacity" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcoldcapacity" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcoldcapacity ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcoldcapacity" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[8];
+
+metrics[ 0] = &quot;OGCMN_Minimum-old-generation-capacity-(kB)&quot;;
+metrics[ 1] = &quot;OGCMX_Maximum-old-generation-capacity-(kB)&quot;;
+metrics[ 2] = &quot;OGC_Current-old-generation-capacity-(kB)&quot;;
+metrics[ 3] = &quot;OC_Current-old-space-capacity-(kB)&quot;;
+metrics[ 4] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[ 5] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[ 6] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[ 7] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcoldcapacity" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcoldcapacity}, below, for Filename when running JMeter headlessly</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcpermcapacity_PRE_1.8" enabled="false"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcpermcapacity" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcpermcapacity ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcpermcapacity" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[8];
+
+metrics[0] = &quot;PGCMN_Minimum-permanent-generation-capacity-(kB)&quot;;
+metrics[1] = &quot;PGCMX_Maximum-permanent-generation-capacity-(kB)&quot;;
+metrics[2] = &quot;PGC_Current-permanent-generation-capacity-(kB)&quot;;
+metrics[3] = &quot;PC_Current-permanent-space-capacity-(kB)&quot;;
+metrics[4] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[5] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[6] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[7] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcpermcapacity" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcpermcapacity}, below, for Filename when running JMeter headlessly.</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+        </hashTree>
+        <GenericController guiclass="LogicControllerGui" testclass="GenericController" testname="gcutil" enabled="true"/>
+        <hashTree>
+          <JSR223Sampler guiclass="TestBeanGUI" testclass="JSR223Sampler" testname="jstatRunner_gcutil" enabled="true">
+            <stringProp name="cacheKey">1be3a331-fd44-4de7-8d08-8525573e7f03</stringProp>
+            <stringProp name="filename"></stringProp>
+            <stringProp name="parameters">-gcutil ${PID} ${INTERVAL}</stringProp>
+            <stringProp name="script">import java.io.*;
+import java.lang.ProcessBuilder;
+import java.util.List;
+String javaHome = System.getenv(&quot;JAVA_HOME&quot;);
+
+List processArgs = new ArrayList();
+
+
+//String fullCmdPath = javaHome + File.separator + &quot;bin&quot; + File.separator + &quot;jstat&quot;;
+String fullCmdPath = &quot;jstat&quot;;
+log.info(&quot;JAVA_HOME: [&quot; + javaHome + &quot;]&quot;);
+log.info(&quot;full [&quot; + fullCmdPath + &quot;]&quot;);
+processArgs.add(fullCmdPath);
+String jstatOption = args[0];
+String pidToMonitor = args[1];
+String timeBetweenSamples = args[2];
+processArgs.add(jstatOption);
+processArgs.add(pidToMonitor); //process id
+processArgs.add(timeBetweenSamples); //time between samples
+processArgs.add(&quot;1&quot;);  //count of repetitions
+
+log.info( &quot;Args: [&quot; + processArgs.toString() + &quot;]&quot;);
+ProcessBuilder processBuilder = new ProcessBuilder(processArgs);
+
+  processBuilder.redirectErrorStream(true);
+
+  Process process = processBuilder.start();
+  StringBuilder processOutput = new StringBuilder();
+
+BufferedReader processOutputReader = new BufferedReader(
+          new InputStreamReader(process.getInputStream()));
+
+String readLine;
+
+int lineCount = 0;
+      while ((readLine = processOutputReader.readLine()) != null)
+      {
+      	if (lineCount &gt;0)
+	          processOutput.append(readLine + System.lineSeparator());
+      	lineCount++;
+      }
+
+      process.waitFor();
+
+SampleResult.setResponseData(processOutput.toString(), &quot;UTF-8&quot;);
+log.info(&quot;output:&quot;  + processOutput.toString() );
+</stringProp>
+            <stringProp name="scriptLanguage">java</stringProp>
+          </JSR223Sampler>
+          <hashTree>
+            <JSR223PostProcessor guiclass="TestBeanGUI" testclass="JSR223PostProcessor" testname="jstat_gcutil" enabled="true">
+              <stringProp name="cacheKey">08ad9b51-4c4c-4b64-9f8a-7534e2bd1dec</stringProp>
+              <stringProp name="filename"></stringProp>
+              <stringProp name="parameters"></stringProp>
+              <stringProp name="script">String[] metrics = new String[11];
+
+metrics[ 0] = &quot;S0_Survivor-space-0-utilization-as-a-percentage-of-the-space&apos;s-current-capacity&quot;;
+metrics[ 1] = &quot;S1_Survivor-space-1-utilization-as-a-percentage-of-the-space&apos;s-current-capacity&quot;;
+metrics[ 2] = &quot;E_Eden-space-utilization-as-a-percentage-of-the-space&apos;s-current-capacity&quot;;
+metrics[ 3] = &quot;O_Old-space-utilization-as-a-percentage-of-the-space&apos;s-current-capacity&quot;;
+metrics[ 4] = &quot;M_Metaspace-utilization-as-a-percentage-of-the-space&apos;s-current-capacity&quot;;
+metrics[ 5] = &quot;CCS_Compressed-class-space-utilization-as-a-percentage&quot;;
+metrics[ 6] = &quot;YGC_Number-of-young-generation-GC-events&quot;;
+metrics[ 7] = &quot;YGCT_Young-generation-garbage-collection-time&quot;;
+metrics[ 8] = &quot;FGC_Number-of-full-GC-events&quot;;
+metrics[ 9] = &quot;FGCT_Full-garbage-collection-time&quot;;
+metrics[10] = &quot;GCT_Total-garbage-collection-time&quot;;
+
+String response  = prev.getResponseDataAsString();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+response = response.replace(&quot;  &quot;,&quot; &quot;).trim();
+String[] results = response.split(&quot; &quot;);
+StringBuffer sb = new StringBuffer();
+for(int i = 0; i &lt; metrics.length; i++) {
+	sb.append(&quot;jstat_&quot; + metrics[i] + &quot;=&quot; + results[i]+ &quot;&lt;BR&gt;\n&quot;);
+	//log.info(&quot;Variable [&quot; + args[i] + &quot;=&quot; + results[i] + &quot;]&quot;);
+}
+prev.setResponseData(sb.toString(),&quot;UTF-8&quot;);
+//log.info(&quot;goXodbye:&quot; + response);</stringProp>
+              <stringProp name="scriptLanguage">java</stringProp>
+            </JSR223PostProcessor>
+            <hashTree/>
+          </hashTree>
+          <kg.apc.jmeter.vizualizers.CorrectedResultCollector guiclass="kg.apc.jmeter.vizualizers.PageDataExtractorOverTimeGui" testclass="kg.apc.jmeter.vizualizers.CorrectedResultCollector" testname="GRAPH_gcutil" enabled="true">
+            <boolProp name="ResultCollector.error_logging">false</boolProp>
+            <objProp>
+              <name>saveConfig</name>
+              <value class="SampleSaveConfiguration">
+                <time>true</time>
+                <latency>true</latency>
+                <timestamp>true</timestamp>
+                <success>true</success>
+                <label>true</label>
+                <code>true</code>
+                <message>true</message>
+                <threadName>true</threadName>
+                <dataType>true</dataType>
+                <encoding>false</encoding>
+                <assertions>true</assertions>
+                <subresults>true</subresults>
+                <responseData>true</responseData>
+                <samplerData>false</samplerData>
+                <xml>true</xml>
+                <fieldNames>false</fieldNames>
+                <responseHeaders>false</responseHeaders>
+                <requestHeaders>false</requestHeaders>
+                <responseDataOnError>false</responseDataOnError>
+                <saveAssertionResultsFailureMessage>false</saveAssertionResultsFailureMessage>
+                <assertionsResultsToSave>0</assertionsResultsToSave>
+                <bytes>true</bytes>
+              </value>
+            </objProp>
+            <stringProp name="filename"></stringProp>
+            <longProp name="interval_grouping">1000</longProp>
+            <boolProp name="graph_aggregated">false</boolProp>
+            <stringProp name="include_sample_labels"></stringProp>
+            <stringProp name="exclude_sample_labels">server_SRV3_TOTAL_version</stringProp>
+            <collectionProp name="regexps">
+              <collectionProp name="-2025668824">
+                <stringProp name="-311830535">(jstat_.*)=</stringProp>
+                <stringProp name="631755383">jstat_.*=(.*)&lt;BR&gt;</stringProp>
+                <stringProp name="1237">false</stringProp>
+                <stringProp name="1231">true</stringProp>
+              </collectionProp>
+            </collectionProp>
+            <stringProp name="start_offset"></stringProp>
+            <stringProp name="end_offset"></stringProp>
+            <boolProp name="include_checkbox_state">false</boolProp>
+            <boolProp name="exclude_checkbox_state">false</boolProp>
+            <stringProp name="TestPlan.comments">Use ${JTL_FOLDER}/${FILE_gcutil}, below, for Filename when running JMeter headlessly.</stringProp>
+          </kg.apc.jmeter.vizualizers.CorrectedResultCollector>
+          <hashTree/>
+          <ConstantTimer guiclass="ConstantTimerGui" testclass="ConstantTimer" testname="Constant Timer" enabled="true">
+            <stringProp name="ConstantTimer.delay">10000</stringProp>
+          </ConstantTimer>
+          <hashTree/>
+        </hashTree>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="View Results Tree" enabled="true">
+          <boolProp name="ResultCollector.error_logging">true</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>false</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>0</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
+        <hashTree/>
+      </hashTree>
+    </hashTree>
+  </hashTree>
+</jmeterTestPlan>

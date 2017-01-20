@@ -22,7 +22,10 @@ public class HttpServerTest {
 			assertTrue("TCP port [" + HttpServer.DEFAULT_HTTP_LISTEN_PORT + "t must be avilable for this test to run...and it is NOT available",
 					HttpServer.available(HttpServer.WIREMOCK_HOST,HttpServer.DEFAULT_HTTP_LISTEN_PORT));
 			
-			myServer.start(HttpServer.DEFAULT_HTTP_LISTEN_PORT, 1000);
+			myServer.start(HttpServer.DEFAULT_HTTP_LISTEN_PORT, 
+					1000, 
+					true /* disable journal, which is a memory leak, per http://wiremock.org/docs/configuration/ */
+					);
 
 			assertTrue("Server did not start on TCP port [" + HttpServer.DEFAULT_HTTP_LISTEN_PORT + " as expected.",
 					!HttpServer.available(HttpServer.WIREMOCK_HOST,HttpServer.DEFAULT_HTTP_LISTEN_PORT));
