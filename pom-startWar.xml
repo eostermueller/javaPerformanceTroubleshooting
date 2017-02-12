@@ -1,0 +1,95 @@
+<project>
+ <modelVersion>4.0.0</modelVersion>
+  <groupId>com.github.eostermueller</groupId>
+  <artifactId>warStarter</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>War Starter</name>
+  <packaging>war</packaging>
+
+  <properties>
+	<common.startup>-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl -jar ${basedir}/warProject/target/performanceGolf.war</common.startup>
+		<profile.specific.args>-Xmx1g -XX:NewSize=768m</profile.specific.args> 
+  </properties>
+ 
+  <profiles>
+        <profile> <id>01a</id> <properties> </properties> </profile>
+        <profile> <id>01b</id> <properties> </properties> </profile>
+
+        <profile> <id>02a</id> <properties> </properties> </profile>
+        <profile> <id>02b</id> <properties> </properties> </profile>
+
+        <profile> <id>03a</id> <properties> </properties> </profile>
+        <profile> <id>03b</id> <properties> </properties> </profile>
+
+        <profile> <id>04a</id> <properties> </properties> </profile>
+        <profile> <id>04b</id> <properties> </properties> </profile>
+
+        <profile> <id>05a</id> <properties> </properties> </profile>
+        <profile> <id>05b</id> <properties> </properties> </profile>
+
+        <profile> <id>06a</id> <properties> </properties> </profile>
+        <profile> <id>06b</id> <properties> </properties> </profile>
+
+        <profile> <id>07a</id> <properties> </properties> </profile>
+        <profile> <id>07b</id> <properties> </properties> </profile>
+
+        <profile> <id>08a</id> <properties> </properties> </profile>
+        <profile> <id>08b</id> <properties> </properties> </profile>
+
+        <profile> <id>09a</id> <properties> </properties> </profile>
+        <profile> <id>09b</id> <properties> </properties> </profile>
+
+        <profile> <id>10a</id> <properties> </properties> </profile>
+        <profile> <id>10b</id> <properties> </properties> </profile>
+
+        <profile> <id>11a</id> <properties> </properties> </profile>
+        <profile> <id>11b</id> <properties> </properties> </profile>
+
+        <profile> <id>12a</id> <properties> 
+		<profile.specific.args>
+			-Xmx512m -XX:NewSize=100m -XX:MaxNewSize=100m -XX:+UseParallelOldGC
+		</profile.specific.args>
+        </properties> </profile>
+
+        <profile> <id>12b</id> <properties>
+		<profile.specific.args>
+			-Xmx2304m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
+		</profile.specific.args>
+        </properties> </profile>
+
+        <profile> <id>13a</id> <properties>
+                <profile.specific.args>
+                        -Xmx2304m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
+                </profile.specific.args>
+        </properties> </profile>
+
+        <profile> <id>13b</id> <properties>
+                <profile.specific.args>
+                        -Xmx3328m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
+                </profile.specific.args>
+        </properties> </profile>
+
+    </profiles>
+
+  <build>
+  <plugins>
+  <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>exec-maven-plugin</artifactId>
+        <version>1.2.1</version>
+        <executions>
+            <execution>
+                <id>default-cli</id>
+                <goals>
+                    <goal>exec</goal>
+                </goals>
+                <configuration>
+ 			<executable>${env.JAVA_HOME}/bin/java</executable>
+  			<commandlineArgs>${profile.specific.args} ${common.startup}</commandlineArgs>
+               </configuration>                        
+            </execution>
+        </executions>
+    </plugin>         
+    </plugins>
+  </build>
+</project>
