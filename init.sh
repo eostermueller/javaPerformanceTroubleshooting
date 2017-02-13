@@ -36,6 +36,15 @@ mkdir $dir/db/data
 $dir/db/startDb.sh 1> $LOG 2>&1 &
 $dir/load.sh loadDb-01.jmx
 $dir/load.sh loadDb-02.jmx
+echo "@@"
+echo "@@ Here are row counts of tables:"
+echo "@@"
+$dir/load.sh countRows-01.jmx | grep S0
+$dir/load.sh countRows-02.jmx | grep S0
 $dir/db/stopDb.sh
 
+echo "@@"
+echo "@@ init.sh is finished.
+echo "@@"
 
+echo "@@ The db has been stopped."
