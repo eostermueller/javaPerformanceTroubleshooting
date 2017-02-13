@@ -8,15 +8,30 @@
 	<name>jmeter-demo</name>
 	<url>http://maven.apache.org</url>
 
+
+
 	<properties>
 		<jmeter.test>test-02.jmx</jmeter.test>	
 	</properties>
 	<build>
+		<defaultGoal>install</defaultGoal>
 		<plugins>
 			<plugin>
 				<groupId>com.lazerycode.jmeter</groupId>
 				<artifactId>jmeter-maven-plugin</artifactId>
-				<version>1.4.1</version>
+				<version>2.1.0</version>
+                        	<configuration>
+					<jmeterVersion>3.1</jmeterVersion>
+                                        <testFilesIncluded>
+                                                <jMeterTestFile>${jmeter.test}</jMeterTestFile>
+                                        </testFilesIncluded>
+                                        <jmeterExtensions>
+                                                <artifact>com.h2database:h2:1.4.191</artifact>
+                                        </jmeterExtensions>
+					<propertiesJMeter>
+						<summariser.interval>10</summariser.interval>
+					</propertiesJMeter>
+                                </configuration>
 				<executions>
 					<execution>
 						<id>jmeter-tests</id>
@@ -26,11 +41,6 @@
 						</goals>
 					</execution>
 				</executions>
-				<configuration>
-                        		<testFilesIncluded>
-                            			<jMeterTestFile>${jmeter.test}</jMeterTestFile>
-                        		</testFilesIncluded>
-				</configuration>
 			</plugin>
 		</plugins>
 	</build>

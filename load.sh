@@ -1,1 +1,2 @@
-mvn install -Djmeter.test=test-02.jmx
+mvn -f pom-load.xml -Djmeter.test=$1
+

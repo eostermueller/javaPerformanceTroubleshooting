@@ -1,1 +1,3 @@
 /target/
+/db/data/
+db/h2.log
