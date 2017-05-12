@@ -1,16 +1,75 @@
-<project>
- <modelVersion>4.0.0</modelVersion>
-  <groupId>com.github.eostermueller</groupId>
-  <artifactId>warStarter</artifactId>
-  <version>0.0.1-SNAPSHOT</version>
-  <name>War Starter</name>
-  <packaging>war</packaging>
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    	<modelVersion>4.0.0</modelVersion>
 
-  <properties>
-	<common.startup>-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl -jar ${basedir}/warProject/target/performanceGolf.war</common.startup>
-		<profile.specific.args>-Xmx1g -XX:NewSize=768m</profile.specific.args> 
-  </properties>
+    	<groupId>com.github.eostermueller.littlemock</groupId>
+    	<artifactId>javaPerformanceTroubleshooting</artifactId>
+    	<version>0.0.1-SNAPSHOT</version>
+
+	<parent>
+        	<groupId>org.springframework.boot</groupId>
+        	<artifactId>spring-boot-starter-parent</artifactId>
+        	<version>1.5.1.RELEASE</version>
+	</parent>
+
+	<properties>
+		<java.version>1.8</java.version>
+        	<my.lib>${org.glowroot:glowroot-agent:jar}</my.lib>
+
+		<!-- this script is forced into a corner to include an arg multiple times...and this is the lucky winner -->
+        	<benign.arg>-server</benign.arg>
+      		<common.startup>-Djavax.xml.parsers.SAXParserFactory=com.sun.org.apache.xerces.internal.jaxp.SAXParserFactoryImpl</common.startup>
  
+                 <!-- Some of the profiles below override this next bit -->
+                <!-- <profile.specific.args>-Xmx1g -XX:NewSize=768m</profile.specific.args> -->
+                <profile.specific.arg.01>-Xmx1g</profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=256m</profile.specific.arg.02>
+                <profile.specific.arg.03>${benign.arg}</profile.specific.arg.03>
+                <profile.specific.arg.04>${benign.arg}</profile.specific.arg.04>
+	</properties>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+	
+		<dependency>
+	    		<groupId>junit</groupId>
+	    		<artifactId>junit</artifactId>
+	    		<version>4.12</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-thymeleaf</artifactId>
+		</dependency>
+
+		<!-- hot swapping, disable cache for template, enable live reload -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-devtools</artifactId>
+			<optional>true</optional>
+		</dependency>
+
+		<!-- Optional, for bootstrap -->
+		<dependency>
+			<groupId>org.webjars</groupId>
+			<artifactId>bootstrap</artifactId>
+			<version>3.3.7</version>
+		</dependency>
+	
+		<!-- https://mvnrepository.com/artifact/org.glowroot/glowroot-agent -->
+		<dependency>
+		    <groupId>org.glowroot</groupId>
+		    <artifactId>glowroot-agent</artifactId>
+		    <version>0.9.14</version>
+		</dependency>
+		
+		
+	</dependencies>
   <profiles>
         <profile> <id>01a</id> <properties> </properties> </profile>
         <profile> <id>01b</id> <properties> </properties> </profile>
@@ -44,52 +103,109 @@
 
         <profile> <id>11a</id> <properties> </properties> </profile>
         <profile> <id>11b</id> <properties> </properties> </profile>
-
-        <profile> <id>12a</id> <properties> 
-		<profile.specific.args>
-			-Xmx512m -XX:NewSize=100m -XX:MaxNewSize=100m -XX:+UseParallelOldGC
-		</profile.specific.args>
+      <profile> <id>12a</id> <properties>
+                <profile.specific.arg.01>-Xmx512m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=100m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=100m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC</profile.specific.arg.04>
         </properties> </profile>
 
         <profile> <id>12b</id> <properties>
-		<profile.specific.args>
-			-Xmx2304m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
-		</profile.specific.args>
+                <profile.specific.arg.01>-Xmx2304m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
         </properties> </profile>
 
         <profile> <id>13a</id> <properties>
-                <profile.specific.args>
-                        -Xmx2304m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
-                </profile.specific.args>
+                <profile.specific.arg.01>-Xmx2304m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
         </properties> </profile>
 
         <profile> <id>13b</id> <properties>
-                <profile.specific.args>
-                        -Xmx3328m -XX:NewSize=2048m -XX:MaxNewSize=2048m -XX:+UseParallelOldGC
-                </profile.specific.args>
+                <profile.specific.arg.01>-Xmx3328m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
         </properties> </profile>
 
     </profiles>
 
-  <build>
-  <plugins>
-  <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>exec-maven-plugin</artifactId>
-        <version>1.2.1</version>
-        <executions>
-            <execution>
-                <id>default-cli</id>
-                <goals>
-                    <goal>exec</goal>
-                </goals>
-                <configuration>
- 			<executable>${env.JAVA_HOME}/bin/java</executable>
-  			<commandlineArgs>${profile.specific.args} ${common.startup}</commandlineArgs>
-               </configuration>                        
-            </execution>
-        </executions>
-    </plugin>         
-    </plugins>
-  </build>
+
+	<build>
+		<!-- <defaultGoal>generate-sources</defaultGoal> -->
+		<plugins>
+
+<plugin>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-maven-plugin</artifactId>
+    <executions>
+        <execution>
+            <goals>
+                <goal>repackage</goal>
+            </goals>
+ 	    <phase>package</phase>
+            <configuration>
+                <classifier>spring-boot</classifier>
+                <mainClass>
+                  com.github.eostermueller.littlemock.Controller
+                </mainClass>
+            </configuration>
+        </execution>
+    </executions>
+</plugin>
+<plugin>
+    <groupId>org.bitstrings.maven.plugins</groupId>
+    <artifactId>dependencypath-maven-plugin</artifactId>
+    <version>1.1.1</version>
+    <executions>
+        <execution>
+		<!-- <phase>prepare-package</phase> -->
+            <id>set-all</id>
+            <goals>
+                <goal>set</goal>
+            </goals>
+        </execution>
+    </executions>
+</plugin>
+
+
+         <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>exec-maven-plugin</artifactId>
+                <version>1.2</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>exec</goal>
+                        </goals>
+			<phase>integration-test</phase>
+                    </execution>
+                </executions>
+		<configuration>
+		    <executable>java</executable>
+		    <arguments>
+			<argument>-classpath</argument>
+		        <classpath />
+		        <argument>-javaagent:${org.glowroot:glowroot-agent:jar}</argument>
+			<argument>${profile.specific.arg.01}</argument>
+			<argument>${profile.specific.arg.02}</argument>
+			<argument>${profile.specific.arg.03}</argument>
+			<argument>${profile.specific.arg.04}</argument>
+			<argument>${common.startup}</argument>
+		        <argument>-jar</argument>
+		       <argument>warProject/target/performanceGolf.war</argument>
+		   </arguments>
+		</configuration>
+
+            </plugin>
+
+
+
+
+		</plugins>
+	</build>
+
 </project>
