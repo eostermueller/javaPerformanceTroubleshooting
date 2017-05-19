@@ -1,2 +1,2 @@
-mvn -f pom-load.xml -Djmeter.test=$1
+mvn -f pom-load.xml -Djmeter.test=$1.jmx
 
