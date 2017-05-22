@@ -36,8 +36,8 @@ mkdir %dir%\db\data
 :###    the DOS window once stopDb.cmd is called
 :###
 start /MIN  %dir%\db\startDb.cmd ^& exit
-call %dir%\load.cmd loadDb-01.jmx
-call %dir%\load.cmd loadDb-02.jmx
+call %dir%\load.cmd loadDb-01
+call %dir%\load.cmd loadDb-02
 echo "@@"
 echo "@@ Here are row counts of tables:"
 echo "@@"

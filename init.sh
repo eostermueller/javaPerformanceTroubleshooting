@@ -38,8 +38,8 @@ mkdir $dir/db/data
 ###    This is the part that takes 5-10 minutes.
 ###
 $dir/db/startDb.sh 1> $LOG 2>&1 &
-$dir/load.sh loadDb-01.jmx
-$dir/load.sh loadDb-02.jmx
+$dir/load.sh loadDb-01
+$dir/load.sh loadDb-02
 echo "@@"
 echo "@@ Here are row counts of tables:"
 echo "@@"
