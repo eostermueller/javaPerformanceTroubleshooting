@@ -38,7 +38,7 @@ mkdir %dir%\db\data
 :###
 start /MIN  %dir%\db\startDb.cmd ^& exit
 
-timeout 5
+timeout 10
 call %dir%\load.cmd loadDb-01.jmx
 call %dir%\load.cmd loadDb-02.jmx
 echo "@@"
