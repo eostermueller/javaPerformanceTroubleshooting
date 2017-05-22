@@ -18,8 +18,8 @@ pause
 set LOG=%dir%\db\h2.log
 
 
-#Build the WAR file used for all performance testing
-mvn -f %dir%\warProject\pom.xml clean package
+:#Build the WAR file used for all performance testing
+call mvn -f %dir%\warProject\pom.xml clean package
 
 :###
 :###    Delete any existing database
@@ -27,6 +27,7 @@ mvn -f %dir%\warProject\pom.xml clean package
 call %dir%\db\stopDb.cmd > NUL
 rmdir /q /s %dir%\db\data
 mkdir %dir%\db\data
+
 
 :###
 :###    Create blank DB and generate data into it.
@@ -36,8 +37,11 @@ mkdir %dir%\db\data
 :###    the DOS window once stopDb.cmd is called
 :###
 start /MIN  %dir%\db\startDb.cmd ^& exit
+
+timeout 10
 call %dir%\load.cmd loadDb-01
 call %dir%\load.cmd loadDb-02
+
 echo "@@"
 echo "@@ Here are row counts of tables:"
 echo "@@"
