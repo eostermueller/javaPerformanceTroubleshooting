@@ -18,7 +18,7 @@ pause
 set LOG=%dir%\db\h2.log
 
 
-#Build the WAR file used for all performance testing
+:#Build the WAR file used for all performance testing
 mvn -f %dir%\warProject\pom.xml clean package
 
 :###
