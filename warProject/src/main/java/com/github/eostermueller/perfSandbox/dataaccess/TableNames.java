@@ -1,5 +1,13 @@
 package com.github.eostermueller.perfSandbox.dataaccess;
 
+/**
+ * Used to create "schema.table" text to be embedded in SQL statements.
+ * Sometimes a schema with performance issues (say, missing a particular index) will be used
+ * to simulate performance problems.
+ * 
+ * @author erikostermueller
+ *
+ */
 public class TableNames {
 	public String getAccountTable() {
 		return getTable("accounts");
