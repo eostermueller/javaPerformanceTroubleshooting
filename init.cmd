@@ -45,8 +45,8 @@ call %dir%\load.cmd loadDb-02
 echo "@@"
 echo "@@ Here are row counts of tables:"
 echo "@@"
-call %dir%\load.cmd countRows-01.jmx | findstr S0
-call %dir%\load.cmd countRows-02.jmx | findstr S0
+call %dir%\load.cmd countRows-01 | findstr S0
+call %dir%\load.cmd countRows-02 | findstr S0
 call %dir\db\stopDb.cmd
 
 echo "@@"
