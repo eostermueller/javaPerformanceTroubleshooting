@@ -32,9 +32,32 @@ public class AccountMgr1 extends BaseManager {
 		return pgBench;
 	}
 
+	public Accounts getAllAccountsAndCrashJvm() throws PerfSandboxException   {
+		int NUM_CRITERIA = 0; // means do not add WHERE clauses, select all rows in table, crash JVM.
+		Connection con = null;
+		PreparedStatement ps = null;
+		ResultSet rs = null;
+		Accounts accounts = new Accounts();
+		try {
+			con = getPgBench().getConnection();
+			ps = con.prepareStatement( m_sqlTextMgr1.getAccountAndHistorySql(NUM_CRITERIA) );
+			ps.setFetchSize(1000);//2.5million rows total, get 1k rows at a time.
+			rs = ps.executeQuery();
+			
+			while(rs.next()) {
+				getAccountAndTxData( rs, accounts );
+			}
+		} catch (SQLException e) {
+			throw new PerfSandboxException(e);
+		} finally {
+			PerfSandboxUtil.closeQuietly(rs);
+			PerfSandboxUtil.closeQuietly(ps);
+			PerfSandboxUtil.closeQuietly(con);
+		}
+		return accounts;
+	}
 
 	public Accounts getAccounts(List<Long> accountIdsCriteria) throws PerfSandboxException   {
-		
 		
 		Connection con = null;
 		PreparedStatement ps = null;
