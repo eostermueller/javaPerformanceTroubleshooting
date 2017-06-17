@@ -23,6 +23,7 @@ import org.springframework.web.context.WebApplicationContext;
 
 import com.github.eostermueller.perfSandbox.dataaccess_1.AccountMgr1;
 import com.github.eostermueller.perfSandbox.dataaccess_2.AccountMgr2;
+import com.github.eostermueller.perfSandbox.dataaccess_2.AllAccountMgr2;
 import com.github.eostermueller.perfSandbox.dataaccess_3.AccountMgr3;
 import com.github.eostermueller.perfSandbox.dataaccess_4.AccountMgr4;
 import com.github.eostermueller.perfSandbox.dataaccess_5.AccountMgr5;
@@ -187,6 +188,39 @@ public class Controller  {
     			.append("</Config>");
     		return sb.toString();
     }
+    @RequestMapping(value="/crashJvmWithMonsterResultSet", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
+    String crashJvmWithMonsterResultSet() throws PerfSandboxException {
+		
+		long start = System.currentTimeMillis();
+		Accounts accounts = null;
+		String stats = null;
+
+		AllAccountMgr2 acctMgr2 = new AllAccountMgr2(perfSandbox);
+		stats = acctMgr2.m_sqlTextMgr2.m_stats.getXmlStats();
+		
+		long end = System.currentTimeMillis();
+		StringBuilder sb = new StringBuilder();
+		sb.append("<Root>");
+		SerializationUtil as = null;
+		try {
+			accounts = acctMgr2.getAllAccountsAndCrashJvm();		
+			as = new SerializationUtil();
+			ByteArrayOutputStream baos = new ByteArrayOutputStream();
+			as.setOutputStream(baos);
+			as.serialize(accounts);
+			sb.append( perfSandbox.formatStats( stats, (end-start)) );
+			sb.append( as.getOutputStream().toString() );
+			sb.append("</Root>");
+		} catch (ParserConfigurationException e) {
+			throw new PerfSandboxException(e);
+		} catch (TransformerException e) {
+			throw new PerfSandboxException(e);
+		}
+		return sb.toString();
+		
+    	
+    }
+    		
     @RequestMapping(value="/config", method=RequestMethod.GET, produces = { "application/xml", "text/xml" })
     String config(
     			@RequestParam(value="db", required=false) Integer intDb,
