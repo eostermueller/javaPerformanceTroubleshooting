@@ -10,7 +10,8 @@ export BASE_DIR=$dir/data
 
 export H2=$dir/../warProject/target/performanceGolf/WEB-INF/lib/h2-1.4.191.jar
 
-$JAVA_HOME/bin/java -Xmx1g -XX:NewSize=768m -cp $H2 org.h2.tools.Server -tcp -web -baseDir $BASE_DIR
+
+java -Xmx1g -XX:NewSize=768m -cp $H2 org.h2.tools.Server -tcp -web -baseDir $BASE_DIR
 
 
 #[-baseDir <dir>]        The base directory for H2 databases (all servers)
