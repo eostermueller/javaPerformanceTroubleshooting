@@ -2,6 +2,7 @@ package com.github.eostermueller.perfSandbox.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ThreadLocalRandom;
 
 public class Account {
 	public long accountId = 0;
@@ -70,28 +71,28 @@ public class Account {
 		Account a = new Account();
 		a.accountId = acctId;
 		a.branchId = 1;
-		a.balance = 8675309;
-		a.filler = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.balance = ThreadLocalRandom.current().nextInt(8675309);
+		a.filler =   Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler01 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler02 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler02 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler03 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler04 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler04 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler05 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler06 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler06 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler07 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler08 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler08 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler09 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler10 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler10 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler11 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler12 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler12 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler13 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler14 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler14 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler15 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler16 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler16 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler17 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler18 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler18 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		a.filler19 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
-		a.filler20 = "0123456789012345678901234567890123456789012345678901234567890123456789012345678901";
+		a.filler20 = Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString()+Transaction.getRandomNineteenDigitString();
 		for(int i = 0; i < 50; i++)
 			a.transactions.add( Transaction.createFake( acctId ) );
 		

@@ -1,6 +1,7 @@
 package com.github.eostermueller.perfSandbox.model;
 
 import java.util.Date;
+import java.util.concurrent.ThreadLocalRandom;
 
 import com.github.eostermueller.perfSandbox.dataaccess.PerfSandboxUtil;
 
@@ -31,13 +32,19 @@ public class Transaction {
 	public static Transaction createFake(Long acctId) {
 		Transaction t = new Transaction();
 		
-		t.tellerId = 1;
-		t.historyId = 2;
-		t.branchId = 3;
+		t.tellerId = ThreadLocalRandom.current().nextInt(5000);
+		t.historyId = ThreadLocalRandom.current().nextInt(2500000);
+		t.branchId = ThreadLocalRandom.current().nextInt(1000);;
 		t.accountId = acctId;
-		t.delta = 8675309;
+		t.delta = ThreadLocalRandom.current().nextInt(200000);
 		t.mtime = new Date();
-		t.filler = new String("0123456789012345678912");
+		t.filler = getRandomNineteenDigitString();
 		return t;
 	}
+	public static String getRandomNineteenDigitString() {
+		///these #'s approach max long, but not quite there.
+		long myLong = ThreadLocalRandom.current().nextLong(1223372036854775807L,9223372036854775807L );
+		return Long.toString(myLong);
+	}
+	
 }
