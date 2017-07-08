@@ -1,0 +1,103 @@
+2017-07-07 01:03:15,648 INFO o.a.j.u.JMeterUtils: Setting Locale to en_US
+2017-07-07 01:03:15,661 INFO o.a.j.JMeter: Loading user properties from: /Users/erikostermueller/Documents/src/jdist/JMeter/apache-jmeter-3.2/bin/user.properties
+2017-07-07 01:03:15,662 INFO o.a.j.JMeter: Loading system properties from: /Users/erikostermueller/Documents/src/jdist/JMeter/apache-jmeter-3.2/bin/system.properties
+2017-07-07 01:03:15,662 INFO o.a.j.JMeter: Setting JMeter property: search_paths=/Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/test-classes;/Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/classes
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: Copyright (c) 1998-2017 The Apache Software Foundation
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: Version 3.2 r1790748
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: java.version=1.8.0_92
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: java.vm.name=Java HotSpot(TM) 64-Bit Server VM
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: os.name=Mac OS X
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: os.arch=x86_64
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: os.version=10.12.5
+2017-07-07 01:03:15,667 INFO o.a.j.JMeter: file.encoding=UTF-8
+2017-07-07 01:03:15,668 INFO o.a.j.JMeter: Max memory     =4474273792
+2017-07-07 01:03:15,668 INFO o.a.j.JMeter: Available Processors =8
+2017-07-07 01:03:15,671 INFO o.a.j.JMeter: Default Locale=English (United States)
+2017-07-07 01:03:15,672 INFO o.a.j.JMeter: JMeter  Locale=English (United States)
+2017-07-07 01:03:15,672 INFO o.a.j.JMeter: JMeterHome=/Users/erikostermueller/Documents/src/jdist/JMeter/apache-jmeter-3.2
+2017-07-07 01:03:15,672 INFO o.a.j.JMeter: user.dir  =/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter
+2017-07-07 01:03:15,672 INFO o.a.j.JMeter: PWD       =/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter
+2017-07-07 01:03:15,678 INFO o.a.j.JMeter: IP: 192.168.1.235 Name: Eriks-MBP.attlocal.net FullName: eriks-mbp.attlocal.net
+2017-07-07 01:03:15,678 INFO o.a.j.JMeter: search_paths=/Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/test-classes;/Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/classes
+2017-07-07 01:03:15,678 INFO o.a.j.JMeter: Adding to classpath and loader: /Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/test-classes
+2017-07-07 01:03:15,679 INFO o.a.j.JMeter: Adding to classpath and loader: /Users/erikostermueller/Documents/src/jsource/crazyFastXml/target/classes
+2017-07-07 01:03:17,510 INFO o.a.j.g.a.LookAndFeelCommand: Using look and feel: com.apple.laf.AquaLookAndFeel [Mac OS X, System]
+2017-07-07 01:03:17,516 INFO o.a.j.JMeter: Loaded icon properties from org/apache/jmeter/images/icon.properties
+2017-07-07 01:03:18,206 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2017-07-07 01:03:18,206 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2017-07-07 01:03:20,796 INFO o.j.r.PluginManager: Plugins Status: [jpgc-graphs-basic=0.0.0-STOCK, jpgc-graphs-additional=0.0.0-STOCK, jpgc-autostop=0.0.0-STOCK, jpgc-sense=0.0.0-STOCK, jpgc-cmd=0.0.0-STOCK, jpgc-graphs-composite=0.0.0-STOCK, jpgc-csl=0.0.0-STOCK, jpgc-functions=0.0.0-STOCK, jpgc-casutg=0.0.0-STOCK, jpgc-dbmon=0.0.0-STOCK, jpgc-graphs-dist=0.0.0-STOCK, jpgc-dummy=0.0.0-STOCK, jmeter-ftp=3.2, jpgc-filterresults=0.0.0-STOCK, jpgc-ffw=0.0.0-STOCK, jpgc-ggl=0.0.0-STOCK, jmeter-http=3.2, jpgc-httpraw=0.0.0-STOCK, jpgc-sts=0.0.0-STOCK, jpgc-fifo=0.0.0-STOCK, jmeter-jdbc=3.2, jmeter-jms=3.2, jpgc-jmxmon=0.0.0-STOCK, jmeter-core=3.2, jmeter-junit=3.2, jmeter-java=3.2, jpgc-graphs-vs=0.0.0-STOCK, jmeter-ldap=3.2, jpgc-lockfile=0.0.0-STOCK, jmeter-mail=3.2, jpgc-mergeresults=0.0.0-STOCK, jmeter-mongodb=3.2, jmeter-native=3.2, jpgc-pde=0.0.0-STOCK, jpgc-prmctl=0.0.0-STOCK, jpgc-perfmon=0.0.0-STOCK, jpgc-plugins-manager=0.11, jpgc-synthesis=0.0.0-STOCK, jmeter-tcp=3.2, jpgc-plancheck=0.0.0-STOCK, jpgc-tst=0.0.0-STOCK, jpgc-udp=0.0.0-STOCK, jpgc-csvars=0.0.0-STOCK, jmeter-components=3.2, jpgc-wsc=0.0.0-STOCK, jpgc-xml=0.0.0-STOCK, jpgc-standard=2.0]
+2017-07-07 01:03:21,308 WARN o.a.j.g.u.MenuFactory: Configuration error, probably corrupt or missing third party library(jar) ? Could not create class: kg.apc.jmeter.reporters.LoadosophiaUploaderGui. java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
+java.lang.NoClassDefFoundError: org/apache/commons/httpclient/methods/multipart/PartSource
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.init(LoadosophiaUploaderGui.java:114) ~[JMeterPlugins-Standard.jar:?]
+	at kg.apc.jmeter.reporters.LoadosophiaUploaderGui.<init>(LoadosophiaUploaderGui.java:28) ~[JMeterPlugins-Standard.jar:?]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:1.8.0_92]
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62) ~[?:1.8.0_92]
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:1.8.0_92]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423) ~[?:1.8.0_92]
+	at java.lang.Class.newInstance(Class.java:442) ~[?:1.8.0_92]
+	at org.apache.jmeter.gui.util.MenuFactory.initializeMenus(MenuFactory.java:505) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.gui.util.MenuFactory.<clinit>(MenuFactory.java:169) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.control.gui.WorkBenchGui.createPopupMenu(WorkBenchGui.java:119) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.gui.tree.JMeterTreeNode.createPopupMenu(JMeterTreeNode.java:156) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.gui.action.EditCommand.doAction(EditCommand.java:46) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.gui.action.ActionRouter.performAction(ActionRouter.java:74) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at org.apache.jmeter.gui.action.ActionRouter.lambda$actionPerformed$0(ActionRouter.java:59) ~[ApacheJMeter_core.jar:3.2 r1790748]
+	at java.awt.event.InvocationEvent.dispatch(InvocationEvent.java:311) [?:1.8.0_92]
+	at java.awt.EventQueue.dispatchEventImpl(EventQueue.java:756) [?:1.8.0_92]
+	at java.awt.EventQueue.access$500(EventQueue.java:97) [?:1.8.0_92]
+	at java.awt.EventQueue$3.run(EventQueue.java:709) [?:1.8.0_92]
+	at java.awt.EventQueue$3.run(EventQueue.java:703) [?:1.8.0_92]
+	at java.security.AccessController.doPrivileged(Native Method) ~[?:1.8.0_92]
+	at java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(ProtectionDomain.java:76) [?:1.8.0_92]
+	at java.awt.EventQueue.dispatchEvent(EventQueue.java:726) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(EventDispatchThread.java:201) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.pumpEventsForFilter(EventDispatchThread.java:116) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(EventDispatchThread.java:105) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:101) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.pumpEvents(EventDispatchThread.java:93) [?:1.8.0_92]
+	at java.awt.EventDispatchThread.run(EventDispatchThread.java:82) [?:1.8.0_92]
+Caused by: java.lang.ClassNotFoundException: org.apache.commons.httpclient.methods.multipart.PartSource
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381) ~[?:1.8.0_92]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[?:1.8.0_92]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[?:1.8.0_92]
+	... 28 more
+2017-07-07 01:03:21,871 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.assertions.BSFAssertion
+2017-07-07 01:03:22,166 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.extractor.BSFPostProcessor
+2017-07-07 01:03:22,191 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.modifiers.BSFPreProcessor
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2017-07-07 01:03:22,216 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2017-07-07 01:03:22,551 INFO o.a.j.e.KeyToolUtils: keytool found at 'keytool'
+2017-07-07 01:03:22,552 INFO o.a.j.p.h.p.ProxyControl: HTTP(S) Test Script Recorder SSL Proxy will use keys that support embedded 3rd party resources in file /Users/erikostermueller/Documents/src/jdist/JMeter/apache-jmeter-3.2/bin/proxyserver.jks
+2017-07-07 01:03:22,699 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.java.sampler.BSFSampler
+2017-07-07 01:03:22,734 INFO o.a.j.s.FileServer: Default base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:03:22,797 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.config.MongoSourceElement
+2017-07-07 01:03:22,797 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.protocol.mongodb.sampler.MongoScriptSampler
+2017-07-07 01:03:22,902 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.timers.BSFTimer
+2017-07-07 01:03:22,923 INFO o.a.j.g.u.MenuFactory: Skipping org.apache.jmeter.visualizers.BSFListener
+2017-07-07 01:03:23,061 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2017-07-07 01:03:23,062 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2017-07-07 01:03:23,062 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2017-07-07 01:03:23,062 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2017-07-07 01:03:35,843 INFO o.a.j.g.a.Load: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b.jmx
+2017-07-07 01:03:35,843 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:03:35,921 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2017-07-07 01:03:35,927 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2017-07-07 01:03:35,929 INFO o.a.j.s.SaveService: Using SaveService properties version 3.2
+2017-07-07 01:03:35,932 INFO o.a.j.s.SaveService: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b.jmx
+2017-07-07 01:03:36,066 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:05:04,731 INFO o.a.j.g.a.Load: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10a.jmx
+2017-07-07 01:05:04,731 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:05:04,731 INFO o.a.j.s.SaveService: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10a.jmx
+2017-07-07 01:05:04,809 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:40:42,110 INFO o.a.j.g.a.Load: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b.jmx
+2017-07-07 01:40:42,113 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 01:40:42,114 INFO o.a.j.s.SaveService: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b.jmx
+2017-07-07 01:40:42,222 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 02:08:20,671 INFO o.a.j.g.a.Load: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b_t.jmx
+2017-07-07 02:08:20,674 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
+2017-07-07 02:08:20,675 INFO o.a.j.s.SaveService: Loading file: /Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter/10b_t.jmx
+2017-07-07 02:08:20,791 INFO o.a.j.s.FileServer: Set new base='/Users/erikostermueller/Documents/src/jsource/performanceGolf/pg3/performanceGolf/src/test/jmeter'
