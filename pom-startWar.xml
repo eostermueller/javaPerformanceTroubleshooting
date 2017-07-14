@@ -65,7 +65,7 @@
 		<dependency>
 		    <groupId>org.glowroot</groupId>
 		    <artifactId>glowroot-agent</artifactId>
-		    <version>0.9.22-SNAPSHOT</version>
+		    <version>0.9.22</version>
 		</dependency>
 		
 		
