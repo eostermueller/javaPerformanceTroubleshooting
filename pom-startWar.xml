@@ -65,7 +65,7 @@
 		<dependency>
 		    <groupId>org.glowroot</groupId>
 		    <artifactId>glowroot-agent</artifactId>
-		    <version>0.9.14</version>
+		    <version>0.9.22</version>
 		</dependency>
 		
 		
@@ -86,8 +86,20 @@
         <profile> <id>05a</id> <properties> </properties> </profile>
         <profile> <id>05b</id> <properties> </properties> </profile>
 
-        <profile> <id>06a</id> <properties> </properties> </profile>
-        <profile> <id>06b</id> <properties> </properties> </profile>
+        <profile> <id>06a</id> <properties>
+                <profile.specific.arg.01>-Xmx2304m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
+        </properties> </profile>
+
+        <profile> <id>06b</id> <properties>
+                <profile.specific.arg.01>-Xmx3328m             </profile.specific.arg.01>
+                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
+                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
+                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
+        </properties> </profile>
+
 
         <profile> <id>07a</id> <properties> </properties> </profile>
         <profile> <id>07b</id> <properties> </properties> </profile>
@@ -97,10 +109,8 @@
 
         <profile> <id>09a</id> <properties> </properties> </profile>
         <profile> <id>09b</id> <properties> </properties> </profile>
-
-        <profile> <id>10a</id> <properties> </properties> </profile>
-        <profile> <id>10b</id> <properties> </properties> </profile>
-
+        <profile> <id>10a</id> <properties> </properties> </profile> 
+        <profile> <id>10b</id> <properties> </properties> </profile> 
         <profile> <id>11a</id> <properties> </properties> </profile>
         <profile> <id>11b</id> <properties> </properties> </profile>
       <profile> <id>12a</id> <properties>
@@ -117,21 +127,26 @@
                 <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
         </properties> </profile>
 
-        <profile> <id>13a</id> <properties>
-                <profile.specific.arg.01>-Xmx2304m             </profile.specific.arg.01>
-                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
-                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
-                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
-        </properties> </profile>
-
-        <profile> <id>13b</id> <properties>
-                <profile.specific.arg.01>-Xmx3328m             </profile.specific.arg.01>
-                <profile.specific.arg.02>-XX:NewSize=2048m     </profile.specific.arg.02>
-                <profile.specific.arg.03>-XX:MaxNewSize=2048m  </profile.specific.arg.03>
-                <profile.specific.arg.04>-XX:+UseParallelOldGC </profile.specific.arg.04>
-        </properties> </profile>
 
 	 <profile> <id>14</id> <properties> </properties> </profile>
+
+
+        <profile> <id>15a</id> 
+                <properties>
+                        <profile.specific.arg.03>-Djavax.xml.transform.TransformerFactory=com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl</profile.specific.arg.03>
+                        <profile.specific.arg.04>-Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</profile.specific.arg.04>
+                </properties>
+        </profile>
+
+
+
+         <profile> <id>15b</id>
+                 <properties>
+                         <profile.specific.arg.03>-Djavax.xml.transform.TransformerFactory=com.sun.org.apache.xalan.internal.xsltc.trax.TransformerFactoryImpl</profile.specific.arg.03>
+                        <profile.specific.arg.04>-Djavax.xml.parsers.DocumentBuilderFactory=org.apache.xerces.jaxp.DocumentBuilderFactoryImpl</profile.specific.arg.04>
+                 </properties>
+         </profile>
+
 	</profiles>
 	<build>
 		<!-- <defaultGoal>generate-sources</defaultGoal> -->

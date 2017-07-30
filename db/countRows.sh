@@ -11,6 +11,6 @@ echo "@@"
 
 read -p "Press any key to continue, or press Ctrl+C to abort."
 
-$dir/../load.sh countRows-01.jmx | grep S0
-$dir/../load.sh countRows-02.jmx | grep S0
+$dir/../load.sh countRows-01 | grep S0
+$dir/../load.sh countRows-02 | grep S0
 
