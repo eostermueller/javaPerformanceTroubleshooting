@@ -12,14 +12,17 @@ import javax.xml.parsers.ParserConfigurationException;
 import javax.xml.transform.TransformerException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.embedded.AnnotationConfigEmbeddedWebApplicationContext;
-import org.springframework.boot.context.embedded.EmbeddedServletContainer;
+import org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext;
+import org.springframework.boot.web.server.WebServer;
 import org.springframework.context.ApplicationContext;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.context.WebApplicationContext;
+import org.springframework.boot.web.servlet.context.ServletWebServerInitializedEvent;
+import org.springframework.context.ApplicationListener;
+
 
 import com.github.eostermueller.perfSandbox.dataaccess_1.AccountMgr1;
 import com.github.eostermueller.perfSandbox.dataaccess_2.AccountMgr2;
@@ -37,8 +40,9 @@ import com.github.eostermueller.perfSandbox.parse.UnpooledSaxParserWorker;
 
 
 @RestController
-public class Controller  {
+public class Controller implements ApplicationListener<ServletWebServerInitializedEvent>  {
 	private static final int DEFAULT_BRANCH_INQ_PER_ROUND_TRIP = 5;
+        private int port = -1;
 
 	@Autowired
 	public Controller(PerfSandboxSingleton val) throws PerfSandboxException {
@@ -78,18 +82,13 @@ public class Controller  {
     private String getServletContextPath() {
     	return this.getServletContext().getContextPath();
     }
+	@Override
+	public void onApplicationEvent(ServletWebServerInitializedEvent event) {
+		this.port = event.getSource().getPort();
+	}
     
-    private EmbeddedServletContainer getEmbeddedServletContainer() {
-    	ApplicationContext ac = PerformanceSandboxApp.applicationContext;
-    	EmbeddedServletContainer esc = null;
-		if (ac instanceof AnnotationConfigEmbeddedWebApplicationContext) {
-			AnnotationConfigEmbeddedWebApplicationContext acewac = (AnnotationConfigEmbeddedWebApplicationContext)ac;
-			esc = acewac.getEmbeddedServletContainer();
-		}   
-		return esc;
-    }
     private int getPort() {
-    	return this.getEmbeddedServletContainer().getPort();
+    	return port;
      }
     private String getBaseUrl() {
     	return "http://" + this.getServerAddress() + ":" + this.getPort() + this.getServletContextPath();
