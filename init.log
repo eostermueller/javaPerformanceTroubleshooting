@@ -1,0 +1,985 @@
+### init.sh start
+Sun, Apr 19, 2020  4:11:58 PM
+### WAR file build
+Sun, Apr 19, 2020  4:11:58 PM
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] --------------< com.github.eostermueller:performanceGolf >--------------
+[INFO] Building Performance Golf Sample Application 0.0.1-SNAPSHOT
+[INFO] --------------------------------[ war ]---------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:3.0.0:clean (default-clean) @ performanceGolf ---
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:resources (default-resources) @ performanceGolf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] Copying 1 resource
+[INFO] Copying 7 resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:compile (default-compile) @ performanceGolf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 44 source files to C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\target\classes
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/main/java/com/github/eostermueller/perfSandbox/Controller.java: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\src\main\java\com\github\eostermueller\perfSandbox\Controller.java uses or overrides a deprecated API.
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/main/java/com/github/eostermueller/perfSandbox/Controller.java: Recompile with -Xlint:deprecation for details.
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/main/java/com/github/eostermueller/perfSandbox/parse/SaxParserPool.java: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\src\main\java\com\github\eostermueller\perfSandbox\parse\SaxParserPool.java uses unchecked or unsafe operations.
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/main/java/com/github/eostermueller/perfSandbox/parse/SaxParserPool.java: Recompile with -Xlint:unchecked for details.
+[INFO] 
+[INFO] --- maven-resources-plugin:3.0.2:testResources (default-testResources) @ performanceGolf ---
+[INFO] Using 'UTF-8' encoding to copy filtered resources.
+[INFO] skip non existing resourceDirectory C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.5.1:testCompile (default-testCompile) @ performanceGolf ---
+[INFO] Changes detected - recompiling the module!
+[INFO] Compiling 7 source files to C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\target\test-classes
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/test/java/com/github/eostermueller/perfSandbox/SaxParserTest.java: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\src\test\java\com\github\eostermueller\perfSandbox\SaxParserTest.java uses or overrides a deprecated API.
+[INFO] /C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/src/test/java/com/github/eostermueller/perfSandbox/SaxParserTest.java: Recompile with -Xlint:deprecation for details.
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.21.0:test (default-test) @ performanceGolf ---
+[INFO] 
+[INFO] -------------------------------------------------------
+[INFO]  T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Running com.github.eostermueller.perfSandbox.CachedBranchInquiryTest
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (1, 1,'1x1x1x1')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (2, 2,'2x2x2x2')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (3, 3,'3x3x3x3')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (4, 4,'4x4x4x4')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (5, 5,'5x5x5x5')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (6, 6,'6x6x6x6')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (7, 7,'7x7x7x7')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (8, 8,'8x8x8x8')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (9, 9,'9x9x9x9')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (10, 10,'10x10x10x10')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (11, 11,'11x11x11x11')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (12, 12,'12x12x12x12')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (13, 13,'13x13x13x13')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (14, 14,'14x14x14x14')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (15, 15,'15x15x15x15')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (16, 16,'16x16x16x16')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (17, 17,'17x17x17x17')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (18, 18,'18x18x18x18')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (19, 19,'19x19x19x19')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (20, 20,'20x20x20x20')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (21, 21,'21x21x21x21')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (22, 22,'22x22x22x22')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (23, 23,'23x23x23x23')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (24, 24,'24x24x24x24')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (25, 25,'25x25x25x25')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (26, 26,'26x26x26x26')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (27, 27,'27x27x27x27')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (28, 28,'28x28x28x28')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (29, 29,'29x29x29x29')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (30, 30,'30x30x30x30')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (31, 31,'31x31x31x31')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (32, 32,'32x32x32x32')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (33, 33,'33x33x33x33')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (34, 34,'34x34x34x34')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (35, 35,'35x35x35x35')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (36, 36,'36x36x36x36')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (37, 37,'37x37x37x37')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (38, 38,'38x38x38x38')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (39, 39,'39x39x39x39')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (40, 40,'40x40x40x40')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (41, 41,'41x41x41x41')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (42, 42,'42x42x42x42')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (43, 43,'43x43x43x43')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (44, 44,'44x44x44x44')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (45, 45,'45x45x45x45')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (46, 46,'46x46x46x46')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (47, 47,'47x47x47x47')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (48, 48,'48x48x48x48')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (49, 49,'49x49x49x49')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (50, 50,'50x50x50x50')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (51, 51,'51x51x51x51')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (52, 52,'52x52x52x52')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (53, 53,'53x53x53x53')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (54, 54,'54x54x54x54')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (55, 55,'55x55x55x55')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (56, 56,'56x56x56x56')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (57, 57,'57x57x57x57')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (58, 58,'58x58x58x58')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (59, 59,'59x59x59x59')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (60, 60,'60x60x60x60')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (61, 61,'61x61x61x61')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (62, 62,'62x62x62x62')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (63, 63,'63x63x63x63')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (64, 64,'64x64x64x64')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (65, 65,'65x65x65x65')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (66, 66,'66x66x66x66')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (67, 67,'67x67x67x67')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (68, 68,'68x68x68x68')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (69, 69,'69x69x69x69')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (70, 70,'70x70x70x70')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (71, 71,'71x71x71x71')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (72, 72,'72x72x72x72')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (73, 73,'73x73x73x73')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (74, 74,'74x74x74x74')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (75, 75,'75x75x75x75')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (76, 76,'76x76x76x76')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (77, 77,'77x77x77x77')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (78, 78,'78x78x78x78')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (79, 79,'79x79x79x79')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (80, 80,'80x80x80x80')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (81, 81,'81x81x81x81')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (82, 82,'82x82x82x82')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (83, 83,'83x83x83x83')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (84, 84,'84x84x84x84')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (85, 85,'85x85x85x85')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (86, 86,'86x86x86x86')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (87, 87,'87x87x87x87')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (88, 88,'88x88x88x88')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (89, 89,'89x89x89x89')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (90, 90,'90x90x90x90')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (91, 91,'91x91x91x91')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (92, 92,'92x92x92x92')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (93, 93,'93x93x93x93')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (94, 94,'94x94x94x94')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (95, 95,'95x95x95x95')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (96, 96,'96x96x96x96')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (97, 97,'97x97x97x97')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (98, 98,'98x98x98x98')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (99, 99,'99x99x99x99')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (100, 100,'100x100x100x100')
+16:12:13.385 [main] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from ehcache.xml found in the classpath: file:/C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/target/classes/ehcache.xml
+16:12:13.388 [main] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from URL: file:/C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/warProject/target/classes/ehcache.xml
+16:12:13.391 [main] DEBUG net.sf.ehcache.config.ConfigurationFactory - Configuring ehcache from InputStream
+16:12:13.488 [main] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xmlns:xsi
+16:12:13.489 [main] DEBUG net.sf.ehcache.config.BeanHandler - Ignoring ehcache attribute xsi:noNamespaceSchemaLocation
+16:12:13.509 [main] DEBUG net.sf.ehcache.CacheManager - Creating new CacheManager with default config
+16:12:13.511 [main] DEBUG net.sf.ehcache.util.PropertyUtil - propertiesString is null.
+16:12:13.525 [main] WARN net.sf.ehcache.CacheManager - One or more caches require a DiskStore but there is no diskStore element configured. Using the default disk store path of C:\Users\eoste\AppData\Local\Temp\. Please explicitly configure the diskStore element in ehcache.xml.
+16:12:13.525 [main] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheManagerEventListenerFactory class specified. Skipping...
+16:12:13.784 [main] DEBUG net.sf.ehcache.Cache - No BootstrapCacheLoaderFactory class specified. Skipping...
+16:12:13.784 [main] DEBUG net.sf.ehcache.Cache - CacheWriter factory not configured. Skipping...
+16:12:13.784 [main] DEBUG net.sf.ehcache.config.ConfigurationHelper - No CacheExceptionHandlerFactory class specified. Skipping...
+16:12:13.785 [main] WARN net.sf.ehcache.config.CacheConfiguration - Configuration problem for cache BRANCH_CACHE: MaxEntriesLocalHeap equal or greater than MaxEntriesLocalDisk. This will result in useless disk storage.
+16:12:13.799 [main] DEBUG net.sf.ehcache.DiskStorePathManager - Using diskstore path C:\Users\eoste\AppData\Local\Temp
+16:12:13.799 [main] DEBUG net.sf.ehcache.DiskStorePathManager - Holding exclusive lock on C:\Users\eoste\AppData\Local\Temp\.ehcache-diskstore.lock
+16:12:13.801 [main] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file %0042%0052%0041%004e%0043%0048_%0043%0041%0043%0048%0045.index
+16:12:13.807 [main] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Matching data file missing (or empty) for index file. Deleting index file C:\Users\eoste\AppData\Local\Temp\%0042%0052%0041%004e%0043%0048_%0043%0041%0043%0048%0045.index
+16:12:13.807 [main] DEBUG net.sf.ehcache.store.disk.DiskStorageFactory - Failed to delete file %0042%0052%0041%004e%0043%0048_%0043%0041%0043%0048%0045.index
+16:12:13.871 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE
+16:12:13.873 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LOCAL_OFFHEAP_SIZE_BYTES
+16:12:13.873 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: WRITER_QUEUE_LENGTH
+16:12:13.874 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: REMOTE_SIZE
+16:12:13.874 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Pass-Through Statistic: LAST_REJOIN_TIMESTAMP
+16:12:13.902 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_GET
+16:12:13.903 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_PUT
+16:12:13.904 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: OFFHEAP_REMOVE
+16:12:13.905 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_COMMIT
+16:12:13.905 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_ROLLBACK
+16:12:13.906 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: XA_RECOVERY
+16:12:13.907 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: CLUSTER_EVENT
+16:12:13.908 [main] DEBUG net.sf.ehcache.statistics.extended.ExtendedStatisticsImpl - Mocking Operation Statistic: NONSTOP
+16:12:13.919 [main] DEBUG net.sf.ehcache.Cache - Initialised cache: BRANCH_CACHE
+16:12:13.919 [main] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured. Skipping for 'BRANCH_CACHE'.
+16:12:13.919 [main] DEBUG net.sf.ehcache.config.ConfigurationHelper - CacheDecoratorFactory not configured for defaultCache. Skipping for 'BRANCH_CACHE'.
+16:12:13.958 [main] DEBUG net.sf.ehcache.store.disk.Segment - put added 0 on heap
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.004 s - in com.github.eostermueller.perfSandbox.CachedBranchInquiryTest
+[INFO] Running com.github.eostermueller.perfSandbox.HttpServerTest
+16:12:13.970 [%0042%0052%0041%004e%0043%0048_%0043%0041%0043%0048%0045.data] DEBUG net.sf.ehcache.store.disk.Segment - fault removed 0 from heap
+16:12:13.970 [%0042%0052%0041%004e%0043%0048_%0043%0041%0043%0048%0045.data] DEBUG net.sf.ehcache.store.disk.Segment - fault added 0 on disk
+16:12:15.186 [__DEFAULT__] DEBUG net.sf.ehcache.util.UpdateChecker - Update check failed: 
+java.io.IOException: Server returned HTTP response code: 403 for URL: http://www.terracotta.org/kit/reflector?pageID=update.properties&patch=UNKNOWN&tc-product=ehcache-core+2.9.0&tc-version=2.9.0&uptime-secs=1&kitID=ehcache.default&jvm-version=9.0.4&os-name=Windows+10&id=-1062731296&source=ehcache-core&jvm-name=Java+HotSpot%28TM%29+64-Bit+Server+VM&platform=amd64
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream0(HttpURLConnection.java:1913)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getInputStream(HttpURLConnection.java:1509)
+	at net.sf.ehcache.util.UpdateChecker.getUpdateProperties(UpdateChecker.java:153)
+	at net.sf.ehcache.util.UpdateChecker.doCheck(UpdateChecker.java:117)
+	at net.sf.ehcache.util.UpdateChecker.checkForUpdate(UpdateChecker.java:104)
+	at net.sf.ehcache.util.UpdateChecker.run(UpdateChecker.java:95)
+	at java.base/java.util.TimerThread.mainLoop(Timer.java:556)
+	at java.base/java.util.TimerThread.run(Timer.java:506)
+16:12:18.441 [main] DEBUG wiremock.org.eclipse.jetty.util.log - Logging to Logger[wiremock.org.eclipse.jetty.util.log] via wiremock.org.eclipse.jetty.util.log.Slf4jLog
+16:12:18.443 [main] INFO wiremock.org.eclipse.jetty.util.log - Logging initialized @6091ms
+16:12:18.460 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.Server@4263b080 added {qtp1917562344{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+16:12:18.477 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1} added {HttpConfiguration@5a62b2a4{32768/8192,8192/8192,https://:0,[]},POJO}
+16:12:18.488 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{null}{0.0.0.0:0} added {wiremock.org.eclipse.jetty.server.Server@4263b080,UNMANAGED}
+16:12:18.488 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{null}{0.0.0.0:0} added {qtp1917562344{STOPPED,8<=0<=200,i=0,q=0},AUTO}
+16:12:18.489 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{null}{0.0.0.0:0} added {wiremock.org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2e8ab815,AUTO}
+16:12:18.489 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{null}{0.0.0.0:0} added {wiremock.org.eclipse.jetty.io.ArrayByteBufferPool@287f94b1,POJO}
+16:12:18.489 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{null}{0.0.0.0:0} added {FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1},AUTO}
+16:12:18.492 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:0} added {wiremock.org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5149f008,MANAGED}
+16:12:18.492 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.Server@4263b080 added {ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674},AUTO}
+16:12:18.514 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.Server@4263b080 added {w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null},AUTO}
+16:12:18.522 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null} added {wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7,AUTO}
+16:12:18.528 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7 added {com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false,AUTO}
+16:12:18.529 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7 added {[/]=>com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8,POJO}
+16:12:18.529 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.Server@4263b080 added {w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null},AUTO}
+16:12:18.529 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null} added {wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d,AUTO}
+16:12:18.532 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false,AUTO}
+16:12:18.533 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {[/__files/*]=>wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd,POJO}
+16:12:18.533 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false,AUTO}
+16:12:18.533 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {[/]=>com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86,POJO}
+16:12:18.553 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894,AUTO}
+16:12:18.557 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {[/__files/*]/[]==2=>com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894,POJO}
+16:12:18.557 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232,AUTO}
+16:12:18.557 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d added {[/__files/*]/[]==31=>com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232,POJO}
+16:12:18.559 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}] added {w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null},AUTO}
+16:12:18.559 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}] added {w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null},AUTO}
+16:12:18.559 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - wiremock.org.eclipse.jetty.server.Server@4263b080 added {wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}],AUTO}
+16:12:18.561 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.server.Server@4263b080
+16:12:18.566 [main] INFO wiremock.org.eclipse.jetty.server.Server - jetty-9.2.z-SNAPSHOT
+16:12:18.577 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting wiremock.org.eclipse.jetty.server.Server@4263b080
+16:12:18.577 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting qtp1917562344{STOPPED,8<=0<=200,i=0,q=0}
+16:12:18.578 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6226ms qtp1917562344{STARTED,8<=8<=200,i=6,q=0}
+16:12:18.579 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}]
+16:12:18.579 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}]
+16:12:18.579 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,null}
+16:12:18.581 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,STARTING}
+16:12:18.581 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:18.582 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - Chose path=/ mapped to servlet=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8 from default=false
+16:12:18.583 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - filterNameMap={}
+16:12:18.583 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - pathFilters=null
+16:12:18.583 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletFilterMap=null
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletPathMap={/=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false}
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletNameMap={com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false}
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6231ms wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:18.584 [main] DEBUG wiremock.org.eclipse.jetty.servlet.BaseHolder - Holding class com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet from jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde
+16:12:18.585 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6233ms com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:18.585 [main] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}
+16:12:18.585 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6233ms w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}
+16:12:18.586 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,null}
+16:12:18.586 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,STARTING}
+16:12:18.586 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:18.587 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - Chose path=/__files/* mapped to servlet=wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd from default=false
+16:12:18.587 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - Chose path=/ mapped to servlet=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86 from default=false
+16:12:18.587 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - filterNameMap={com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894=com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894, com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232=com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232}
+16:12:18.587 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - pathFilters=[[/__files/*]/[]==2=>com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894, [/__files/*]/[]==31=>com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232]
+16:12:18.587 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletFilterMap={}
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletPathMap={/__files/*=wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false, /=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false}
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servletNameMap={wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd=wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false, com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86=com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false}
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - starting wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6236ms wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894
+16:12:18.588 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6236ms com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.servlet.FilterHolder - Filter.init com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter@51b01960
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6237ms com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.servlet.FilterHolder - Filter.init com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter@27dc79f7
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.servlet.BaseHolder - Holding class com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet from jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6237ms com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false
+16:12:18.589 [main] DEBUG wiremock.org.eclipse.jetty.servlet.BaseHolder - Holding class wiremock.org.eclipse.jetty.servlet.DefaultServlet from jdk.internal.loader.ClassLoaders$AppClassLoader@4f8e5cde
+16:12:18.590 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6238ms wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false
+16:12:18.590 [main] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Started w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}
+16:12:18.590 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6238ms w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}
+16:12:18.590 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6238ms wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}]
+16:12:18.590 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:18.599 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674} added {sun.nio.ch.ServerSocketChannelImpl[/0:0:0:0:0:0:0:0:8674],POJO}
+16:12:18.599 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2e8ab815
+16:12:18.600 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6247ms wiremock.org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2e8ab815
+16:12:18.600 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1}
+16:12:18.600 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6248ms FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1}
+16:12:18.600 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5149f008
+16:12:18.603 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=-1 selected=-1
+16:12:18.612 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6260ms wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=0 selected=0
+16:12:18.613 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=-1 selected=-1
+16:12:18.614 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1917562344-23-selector-ServerConnectorManager@5149f008/0,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=0 selected=0
+16:12:18.615 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6263ms wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=0 selected=0
+16:12:18.615 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=-1 selected=-1
+16:12:18.616 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1917562344-24-selector-ServerConnectorManager@5149f008/1,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=0 selected=0
+16:12:18.616 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:18.616 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:18.616 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6264ms wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=0 selected=0
+16:12:18.616 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - starting wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=-1 selected=-1
+16:12:18.617 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1917562344-22-selector-ServerConnectorManager@5149f008/2,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=0 selected=0
+16:12:18.617 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:18.617 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6265ms wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=0 selected=0
+16:12:18.617 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6265ms wiremock.org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5149f008
+16:12:18.618 [qtp1917562344-26-selector-ServerConnectorManager@5149f008/3] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Starting Thread[qtp1917562344-26-selector-ServerConnectorManager@5149f008/3,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=0 selected=0
+16:12:18.618 [qtp1917562344-26-selector-ServerConnectorManager@5149f008/3] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:18.618 [main] DEBUG wiremock.org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674} added {acceptor-0@467f77a5,POJO}
+16:12:18.619 [main] INFO wiremock.org.eclipse.jetty.server.ServerConnector - Started ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:18.619 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6267ms ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:18.620 [main] INFO wiremock.org.eclipse.jetty.server.Server - Started @6267ms
+16:12:18.620 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @6268ms wiremock.org.eclipse.jetty.server.Server@4263b080
+16:12:21.023 [qtp1917562344-25-acceptor-0@467f77a5-ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@57726b8e
+16:12:21.024 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/0 selected
+16:12:21.024 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@57726b8e
+16:12:21.038 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onOpen SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,5/30000,null}{io=0,kio=0,kro=0}
+16:12:21.039 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.IdleTimeout - SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,6/30000,null}{io=0,kio=0,kro=0} idle timeout check, elapsed: 6 ms, remaining: 29994 ms
+16:12:21.109 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - new HttpChannelOverHttp@1a5f258{r=0,c=false,a=IDLE,uri=-} -> SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,75/30000,null}{io=0,kio=0,kro=0},null,HttpChannelState@37de0d0{s=IDLE i=true a=null}
+16:12:21.116 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - New HTTP Connection FaultInjectingHttpConnection@5209dd2d{IDLE}
+16:12:21.116 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onOpen FaultInjectingHttpConnection@5209dd2d{IDLE}
+16:12:21.117 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - fillInterested FaultInjectingHttpConnection@5209dd2d{IDLE}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - IDLE-->FILL_INTERESTED FaultInjectingHttpConnection@5209dd2d{FILL_INTERESTED}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 0 -> 1 for SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=0}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@323513c
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 0 -> 1 on SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Created SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 1/1 selected
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 1 -> 0 on SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=1}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 1 -> 0 for SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@323513c
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILL_INTERESTED-->FILLING FaultInjectingHttpConnection@5209dd2d{FILLING}
+16:12:21.118 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.118 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - FaultInjectingHttpConnection@5209dd2d{FILLING} onFillable HttpChannelState@37de0d0{s=IDLE i=true a=null}
+16:12:21.119 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 1385 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,0/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.119 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@238507da[p=0,l=1385,c=8192,r=1385]={<<<POST /__admin/map... : 1000\r\n  }\r\n}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.121 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - START --> SPACE1
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - SPACE1 --> URI
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - URI --> SPACE2
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - SPACE2 --> REQUEST_VERSION
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - REQUEST_VERSION --> HEADER
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.122 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_IN_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_IN_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.123 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.124 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> CONTENT
+16:12:21.125 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a5f258{r=1,c=false,a=IDLE,uri=-} handle enter
+16:12:21.125 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpChannelState - HttpChannelState@37de0d0{s=IDLE i=true a=null} handling IDLE
+16:12:21.126 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a5f258{r=1,c=false,a=DISPATCHED,uri=/__admin/mappings/new} action REQUEST_DISPATCH
+16:12:21.126 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.Server - REQUEST POST /__admin/mappings/new on HttpChannelOverHttp@1a5f258{r=1,c=false,a=DISPATCHED,uri=/__admin/mappings/new}
+16:12:21.127 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - scope null||/__admin/mappings/new @ w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}
+16:12:21.127 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - context=/__admin||/mappings/new @ w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}
+16:12:21.128 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servlet /__admin|/mappings/new|null -> com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:21.128 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - chain=null
+16:12:21.138 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHolder - Servlet.init com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet@13afa9fb for com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8
+16:12:21.138 [qtp1917562344-27 - /__admin/mappings/new] INFO /__admin - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.AdminRequestHandler. Normlized mapped under returned 'null'
+16:12:21.143 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=CONTENT HeapByteBuffer@238507da[p=202,l=1385,c=8192,r=1183]={POST /__admin/map...Java/9.0.4)\r\n\r\n<<<{\r\n  "request" : ... : 1000\r\n  }\r\n}>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a5f258{r=1,c=false,a=DISPATCHED,uri=/__admin/mappings/new} content java.nio.HeapByteBufferR[pos=202 lim=1385 cap=8192]
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=CONTENT HeapByteBuffer@238507da[p=1385,l=1385,c=8192,r=0]={POST /__admin/map... : 1000\r\n  }\r\n}<<<>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - CONTENT --> END
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a5f258{r=1,c=false,a=DISPATCHED,uri=/__admin/mappings/new} messageComplete
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@74a4125a EOF
+16:12:21.144 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 0 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,25/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.145 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - FaultInjectingHttpConnection@5209dd2d{FILLING} filled 0
+16:12:21.145 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@74a4125a eof EOF
+16:12:21.145 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@74a4125a eof EOF
+16:12:21.216 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=ResponseInfo{HTTP/1.1 201 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@701313b1] generate: NEED_HEADER (null,[p=0,l=0,c=0,r=0],false)@START
+16:12:21.216 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=ResponseInfo{HTTP/1.1 201 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@701313b1] generate: FLUSH ([p=0,l=152,c=8192,r=152],[p=0,l=0,c=0,r=0],false)@COMMITTED
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@5a882740{IDLE} [HeapByteBuffer@a5ed573f[p=0,l=152,c=8192,r=152]={<<<HTTP/1.1 201 Crea...z-SNAPSHOT)\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@5a882740{WRITING}:IDLE-->WRITING
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - flushed 152 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,W,98/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@5a882740{IDLE}:WRITING-->IDLE
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=ResponseInfo{HTTP/1.1 201 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@701313b1] generate: DONE ([p=152,l=152,c=8192,r=0],[p=0,l=0,c=0,r=0],false)@COMMITTED
+16:12:21.217 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=null,cb=Blocker@4b06eb26{null}] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:21.218 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=null,cb=Blocker@4b06eb26{null}] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:21.218 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=null,cb=Blocker@4b06eb26{null}] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:21.218 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@5a882740{IDLE} [HeapByteBuffer@567e1597[p=0,l=5,c=1024,r=5]={<<<0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+16:12:21.218 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@5a882740{WRITING}:IDLE-->WRITING
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - flushed 5 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,W,2/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@5a882740{IDLE}:WRITING-->IDLE
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@605d7b77[PROCESSING][i=null,cb=Blocker@4b06eb26{null}] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - scope null||/__admin/mappings/new @ w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.Server - RESPONSE /__admin/mappings/new  201 handled=true
+16:12:21.219 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.server.HttpChannelState - HttpChannelState@37de0d0{s=DISPATCHED i=true a=null} unhandle DISPATCHED
+16:12:21.223 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - reset HttpParser{s=END,1183 of 1183}
+16:12:21.223 [qtp1917562344-27 - /__admin/mappings/new] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - END --> START
+16:12:21.223 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a5f258{r=1,c=false,a=IDLE,uri=-} handle exit, result COMPLETE
+16:12:21.223 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 0 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,4/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.223 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 0 SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,-,-,4/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.223 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@a5ed573f[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 201 Crea...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - fillInterested FaultInjectingHttpConnection@5209dd2d{FILLING}
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILLING-->FILLING_FILL_INTERESTED FaultInjectingHttpConnection@5209dd2d{FILLING_FILL_INTERESTED}
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILLING_FILL_INTERESTED-->FILL_INTERESTED FaultInjectingHttpConnection@5209dd2d{FILL_INTERESTED}
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 0 -> 1 for SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=1}
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@323513c
+16:12:21.224 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 0 -> 1 on SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:21.225 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/1 selected
+16:12:21.225 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.232 [qtp1917562344-25-acceptor-0@467f77a5-ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@b402388
+16:12:21.233 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/0 selected
+16:12:21.233 [qtp1917562344-25-acceptor-0@467f77a5-ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@66efb99c
+16:12:21.233 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@b402388
+16:12:21.233 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/0 selected
+16:12:21.233 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Accept@66efb99c
+16:12:21.234 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onOpen SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,-,-,0/30000,null}{io=0,kio=0,kro=0}
+16:12:21.234 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onOpen SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,0/30000,null}{io=0,kio=0,kro=0}
+16:12:21.234 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.IdleTimeout - SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,-,-,1/30000,null}{io=0,kio=0,kro=0} idle timeout check, elapsed: 1 ms, remaining: 29999 ms
+16:12:21.234 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.IdleTimeout - SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,0/30000,null}{io=0,kio=0,kro=0} idle timeout check, elapsed: 0 ms, remaining: 30000 ms
+16:12:21.234 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - new HttpChannelOverHttp@4ed70d0d{r=0,c=false,a=IDLE,uri=-} -> SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,-,-,1/30000,null}{io=0,kio=0,kro=0},null,HttpChannelState@bd58ab3{s=IDLE i=true a=null}
+16:12:21.234 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - New HTTP Connection FaultInjectingHttpConnection@3476193a{IDLE}
+16:12:21.234 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - new HttpChannelOverHttp@1a58efdc{r=0,c=false,a=IDLE,uri=-} -> SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,0/30000,null}{io=0,kio=0,kro=0},null,HttpChannelState@5f5a72f3{s=IDLE i=true a=null}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - New HTTP Connection FaultInjectingHttpConnection@4bcb0850{IDLE}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onOpen FaultInjectingHttpConnection@4bcb0850{IDLE}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - fillInterested FaultInjectingHttpConnection@4bcb0850{IDLE}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - IDLE-->FILL_INTERESTED FaultInjectingHttpConnection@4bcb0850{FILL_INTERESTED}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 0 -> 1 for SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=0}
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@6ecf88d9
+16:12:21.235 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 0 -> 1 on SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Created SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 1/1 selected
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 1 -> 0 on SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=1}
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 1 -> 0 for SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@6ecf88d9
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILL_INTERESTED-->FILLING FaultInjectingHttpConnection@4bcb0850{FILLING}
+16:12:21.236 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.237 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - FaultInjectingHttpConnection@4bcb0850{FILLING} onFillable HttpChannelState@5f5a72f3{s=IDLE i=true a=null}
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 168 SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,3/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@7055466a[p=0,l=168,c=8192,r=168]={<<<GET /perfSandboxB... keep-alive\r\n\r\n>>>he-HttpClient/4.5...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - START --> SPACE1
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - SPACE1 --> URI
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - URI --> SPACE2
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - SPACE2 --> REQUEST_VERSION
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - REQUEST_VERSION --> HEADER
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_VALUE --> HEADER_IN_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> HEADER_IN_VALUE
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER_IN_VALUE --> HEADER
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - HEADER --> END
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a58efdc{r=1,c=false,a=IDLE,uri=-} messageComplete
+16:12:21.238 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onOpen FaultInjectingHttpConnection@3476193a{IDLE}
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@27974674 EOF
+16:12:21.238 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - fillInterested FaultInjectingHttpConnection@3476193a{IDLE}
+16:12:21.238 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a58efdc{r=1,c=false,a=IDLE,uri=-} handle enter
+16:12:21.238 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - IDLE-->FILL_INTERESTED FaultInjectingHttpConnection@3476193a{FILL_INTERESTED}
+16:12:21.238 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpChannelState - HttpChannelState@5f5a72f3{s=IDLE i=true a=null} handling IDLE
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a58efdc{r=1,c=false,a=DISPATCHED,uri=/perfSandboxBackend} action REQUEST_DISPATCH
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 0 -> 1 for SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=0}
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@3a9423fc
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.Server - REQUEST GET /perfSandboxBackend on HttpChannelOverHttp@1a58efdc{r=1,c=false,a=DISPATCHED,uri=/perfSandboxBackend}
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - scope null||/perfSandboxBackend @ w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,AVAILABLE}
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 0 -> 1 on SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - scope null||/perfSandboxBackend @ w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.handler.ContextHandler - context=||/perfSandboxBackend @ w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,AVAILABLE}
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Created SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=0}
+16:12:21.239 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - servlet |/perfSandboxBackend|null -> com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 1/1 selected
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 1 -> 0 on SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=1}
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 1 -> 0 for SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@3a9423fc
+16:12:21.239 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILL_INTERESTED-->FILLING FaultInjectingHttpConnection@3476193a{FILLING}
+16:12:21.240 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:21.240 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHandler - chain=null
+16:12:21.240 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.servlet.ServletHolder - Servlet.init com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet@75d4e952 for com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86
+16:12:21.240 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - FaultInjectingHttpConnection@3476193a{FILLING} onFillable HttpChannelState@bd58ab3{s=IDLE i=true a=null}
+16:12:21.240 [qtp1917562344-28 - /perfSandboxBackend] INFO / - RequestHandlerClass from context returned com.github.tomakehurst.wiremock.http.StubRequestHandler. Normlized mapped under returned 'null'
+16:12:21.240 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@27974674 eof EOF
+16:12:21.240 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled -1 SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,-,-,2/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.240 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@27974674 eof EOF
+16:12:21.240 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - ishut SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,Open,in,out,-,-,2/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.240 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - atEOF HttpParser{s=START,0 of 0}
+16:12:21.241 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@a5ed573f[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 201 Crea...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:21.241 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - START --> CLOSED
+16:12:21.241 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,CLOSED,ISHUT,out,-,-,3/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.241 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - close SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,CLOSED,ISHUT,out,-,-,3/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:21.242 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Destroyed SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,CLOSED,ISHUT,OSHUT,-,-,4/30000,FaultInjectingHttpConnection}{io=0,kio=-1,kro=-1}
+16:12:21.242 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onClose FaultInjectingHttpConnection@3476193a{FILLING}
+16:12:21.242 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@4ae88088{/127.0.0.1:52474<->8674,CLOSED,ISHUT,OSHUT,-,-,4/30000,FaultInjectingHttpConnection}{io=0,kio=-1,kro=-1}
+16:12:21.242 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILLING-->IDLE FaultInjectingHttpConnection@3476193a{IDLE}
+16:12:22.250 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=ResponseInfo{HTTP/1.1 200 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@71ef95a] generate: NEED_HEADER (null,[p=0,l=999,c=32768,r=999],false)@START
+16:12:22.250 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=ResponseInfo{HTTP/1.1 200 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@71ef95a] generate: FLUSH ([p=0,l=120,c=8192,r=120],[p=0,l=999,c=32768,r=999],false)@COMMITTED
+16:12:22.251 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@2169556b{IDLE} [HeapByteBuffer@89829fa7[p=0,l=120,c=8192,r=120]={<<<HTTP/1.1 200 OK\r\n...PSHOT)\r\n\r\n3E7\r\n>>>erver: Jetty(9.2....\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},HeapByteBuffer@fba6f371[p=0,l=999,c=32768,r=999]={<<<HelloWorldFromPer...LLO HELLO DONE >>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+16:12:22.251 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@2169556b{WRITING}:IDLE-->WRITING
+16:12:22.254 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - flushed 1119 SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,W,1016/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:22.254 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@2169556b{IDLE}:WRITING-->IDLE
+16:12:22.255 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=ResponseInfo{HTTP/1.1 200 null,-1,false},cb=wiremock.org.eclipse.jetty.server.HttpChannel$CommitCallback@71ef95a] generate: DONE ([p=120,l=120,c=8192,r=0],[p=999,l=999,c=32768,r=0],false)@COMMITTED
+16:12:22.255 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=null,cb=Blocker@134036c4{null}] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:22.255 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=null,cb=Blocker@134036c4{null}] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:22.255 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=null,cb=Blocker@134036c4{null}] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+16:12:22.255 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@2169556b{IDLE} [HeapByteBuffer@6239c7f4[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+16:12:22.256 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@2169556b{WRITING}:IDLE-->WRITING
+16:12:22.256 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - flushed 7 SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,W,2/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:22.256 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@2169556b{IDLE}:WRITING-->IDLE
+16:12:22.257 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpConnection - wiremock.org.eclipse.jetty.server.HttpConnection$SendCallback@55eefeff[PROCESSING][i=null,cb=Blocker@134036c4{null}] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+16:12:22.257 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.Server - RESPONSE /perfSandboxBackend  200 handled=true
+16:12:22.257 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.server.HttpChannelState - HttpChannelState@5f5a72f3{s=DISPATCHED i=true a=null} unhandle DISPATCHED
+16:12:22.258 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.server.Server@4263b080
+16:12:22.258 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - reset HttpParser{s=END,0 of 0}
+16:12:22.258 [qtp1917562344-28 - /perfSandboxBackend] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - END --> START
+16:12:22.258 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1a58efdc{r=1,c=false,a=IDLE,uri=-} handle exit, result COMPLETE
+16:12:22.259 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 0 SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,3/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:22.259 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - filled 0 SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,-,-,3/30000,FaultInjectingHttpConnection}{io=0,kio=0,kro=1}
+16:12:22.260 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@89829fa7[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+16:12:22.260 [main] DEBUG wiremock.org.eclipse.jetty.server.Server - Graceful shutdown wiremock.org.eclipse.jetty.server.Server@4263b080 by 
+16:12:22.260 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - fillInterested FaultInjectingHttpConnection@4bcb0850{FILLING}
+16:12:22.260 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILLING-->FILLING_FILL_INTERESTED FaultInjectingHttpConnection@4bcb0850{FILLING_FILL_INTERESTED}
+16:12:22.260 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:22.260 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILLING_FILL_INTERESTED-->FILL_INTERESTED FaultInjectingHttpConnection@4bcb0850{FILL_INTERESTED}
+16:12:22.261 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5149f008
+16:12:22.261 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Local interests updating 0 -> 1 for SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,0/30000,FaultInjectingHttpConnection}{io=1,kio=0,kro=1}
+16:12:22.261 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectChannelEndPoint$1@6ecf88d9
+16:12:22.261 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=1 selected=0
+16:12:22.261 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=1 selected=0
+16:12:22.262 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.SelectChannelEndPoint - Key interests updated 0 -> 1 on SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,Open,in,out,R,-,1/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:22.262 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/1 selected
+16:12:22.262 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop waiting on select
+16:12:22.264 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@5af97169
+16:12:22.264 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/1 selected
+16:12:22.264 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@5af97169
+16:12:22.266 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,CLOSED,in,out,R,-,1042/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:22.268 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILL_INTERESTED-->IDLE FaultInjectingHttpConnection@5209dd2d{IDLE}
+16:12:22.268 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - close SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,CLOSED,in,out,-,-,1044/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:22.268 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - close HttpParser{s=START,0 of -1}
+16:12:22.268 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - START --> CLOSED
+16:12:22.269 [qtp1917562344-29] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FaultInjectingHttpConnection@5209dd2d{IDLE} onFillInterestedFailed java.nio.channels.ClosedChannelException
+16:12:22.269 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Destroyed SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,CLOSED,ISHUT,OSHUT,-,-,1045/30000,FaultInjectingHttpConnection}{io=1,kio=-1,kro=-1}
+16:12:22.270 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onClose FaultInjectingHttpConnection@5209dd2d{IDLE}
+16:12:22.270 [qtp1917562344-27] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@79406167{/127.0.0.1:52473<->8674,CLOSED,ISHUT,OSHUT,-,-,1046/30000,FaultInjectingHttpConnection}{io=1,kio=-1,kro=-1}
+16:12:22.271 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=-1 selected=-1
+16:12:22.271 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=-1 selected=-1
+16:12:22.271 [qtp1917562344-23-selector-ServerConnectorManager@5149f008/0] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped Thread[qtp1917562344-23-selector-ServerConnectorManager@5149f008/0,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@22ee2d0 keys=-1 selected=-1
+16:12:22.271 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=1 selected=0
+16:12:22.271 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=1 selected=0
+16:12:22.271 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@99a78d7
+16:12:22.272 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/0 selected
+16:12:22.272 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@99a78d7
+16:12:22.273 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=-1 selected=-1
+16:12:22.273 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=-1 selected=-1
+16:12:22.273 [qtp1917562344-24-selector-ServerConnectorManager@5149f008/1] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped Thread[qtp1917562344-24-selector-ServerConnectorManager@5149f008/1,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@315df4bb keys=-1 selected=-1
+16:12:22.273 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=1 selected=0
+16:12:22.273 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=1 selected=0
+16:12:22.273 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@31da6b2e
+16:12:22.273 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/1 selected
+16:12:22.273 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@31da6b2e
+16:12:22.274 [qtp1917562344-25] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,CLOSED,in,out,R,-,13/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:22.274 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FILL_INTERESTED-->IDLE FaultInjectingHttpConnection@4bcb0850{IDLE}
+16:12:22.274 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - close HttpParser{s=START,0 of -1}
+16:12:22.274 [qtp1917562344-25] DEBUG wiremock.org.eclipse.jetty.io.ChannelEndPoint - close SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,CLOSED,in,out,-,-,14/30000,FaultInjectingHttpConnection}{io=1,kio=1,kro=1}
+16:12:22.274 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.http.HttpParser - START --> CLOSED
+16:12:22.274 [qtp1917562344-28] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - FaultInjectingHttpConnection@4bcb0850{IDLE} onFillInterestedFailed java.nio.channels.ClosedChannelException
+16:12:22.275 [qtp1917562344-25] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Destroyed SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,CLOSED,ISHUT,OSHUT,-,-,14/30000,FaultInjectingHttpConnection}{io=1,kio=-1,kro=-1}
+16:12:22.275 [qtp1917562344-25] DEBUG wiremock.org.eclipse.jetty.io.AbstractConnection - onClose FaultInjectingHttpConnection@4bcb0850{IDLE}
+16:12:22.275 [qtp1917562344-25] DEBUG wiremock.org.eclipse.jetty.io.AbstractEndPoint - onClose SelectChannelEndPoint@1e6778c8{/127.0.0.1:52475<->8674,CLOSED,ISHUT,OSHUT,-,-,15/30000,FaultInjectingHttpConnection}{io=1,kio=-1,kro=-1}
+16:12:22.276 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=-1 selected=-1
+16:12:22.276 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=-1 selected=-1
+16:12:22.276 [qtp1917562344-22-selector-ServerConnectorManager@5149f008/2] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped Thread[qtp1917562344-22-selector-ServerConnectorManager@5149f008/2,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@7b02e036 keys=-1 selected=-1
+16:12:22.276 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=0 selected=0
+16:12:22.276 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopping wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=0 selected=0
+16:12:22.276 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Queued change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@61c76850
+16:12:22.276 [qtp1917562344-26-selector-ServerConnectorManager@5149f008/3] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Selector loop woken up from select, 0/0 selected
+16:12:22.276 [qtp1917562344-26-selector-ServerConnectorManager@5149f008/3] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Running change wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector$Stop@61c76850
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=-1 selected=-1
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=-1 selected=-1
+16:12:22.277 [qtp1917562344-26-selector-ServerConnectorManager@5149f008/3] DEBUG wiremock.org.eclipse.jetty.io.SelectorManager - Stopped Thread[qtp1917562344-26-selector-ServerConnectorManager@5149f008/3,5,main] on wiremock.org.eclipse.jetty.io.SelectorManager$ManagedSelector@25243bc1 keys=-1 selected=-1
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.server.ServerConnector$ServerConnectorManager@5149f008
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1}
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED FaultInjectingHttpConnectionFactory@5ca17ab0{HTTP/1.1}
+16:12:22.277 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2e8ab815
+16:12:22.278 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.util.thread.ScheduledExecutorScheduler@2e8ab815
+16:12:22.278 [main] INFO wiremock.org.eclipse.jetty.server.ServerConnector - Stopped ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:22.278 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED ServerConnector@26b894bd{HTTP/1.1}{0.0.0.0:8674}
+16:12:22.278 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping wiremock.org.eclipse.jetty.server.Server@4263b080
+16:12:22.278 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,SHUTDOWN}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,SHUTDOWN}]
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,SHUTDOWN}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,SHUTDOWN}]
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,SHUTDOWN}
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,UNAVAILABLE}
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED com.github.tomakehurst.wiremock.servlet.TrailingSlashFilter-37d3d232
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894
+16:12:22.279 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED com.github.tomakehurst.wiremock.servlet.ContentTypeSettingFilter-72bca894
+16:12:22.280 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,true
+16:12:22.280 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-372b0d86@2eaae5e7==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:22.280 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false
+16:12:22.280 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.servlet.DefaultServlet-31c269fd@ff6339ce==wiremock.org.eclipse.jetty.servlet.DefaultServlet,-1,false
+16:12:22.282 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.servlet.ServletHandler@38875e7d
+16:12:22.283 [main] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,UNAVAILABLE}
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,UNAVAILABLE}
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,SHUTDOWN}
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,UNAVAILABLE}
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.server.handler.AbstractHandler - stopping wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,true
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet-7dac3fd8@6aeb4a77==com.github.tomakehurst.wiremock.jetty9.JettyHandlerDispatchingServlet,-1,false
+16:12:22.283 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.servlet.ServletHandler@1c25b8a7
+16:12:22.283 [main] INFO wiremock.org.eclipse.jetty.server.handler.ContextHandler - Stopped w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,UNAVAILABLE}
+16:12:22.284 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,UNAVAILABLE}
+16:12:22.284 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.server.handler.HandlerCollection@29caf222[w.o.e.j.s.ServletContextHandler@51650883{/__admin,null,UNAVAILABLE}, w.o.e.j.s.ServletContextHandler@6ce1f601{/,null,UNAVAILABLE}]
+16:12:22.284 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - stopping qtp1917562344{STARTED,8<=8<=200,i=8,q=0}
+16:12:22.285 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED qtp1917562344{STOPPED,8<=8<=200,i=0,q=0}
+16:12:22.285 [main] DEBUG wiremock.org.eclipse.jetty.util.component.AbstractLifeCycle - STOPPED wiremock.org.eclipse.jetty.server.Server@4263b080
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.299 s - in com.github.eostermueller.perfSandbox.HttpServerTest
+[INFO] Running com.github.eostermueller.perfSandbox.SaxEclipseEmfParserTest
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.001 s - in com.github.eostermueller.perfSandbox.SaxEclipseEmfParserTest
+[INFO] Running com.github.eostermueller.perfSandbox.SaxParserTest
+[INFO] Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.144 s - in com.github.eostermueller.perfSandbox.SaxParserTest
+[INFO] Running com.github.eostermueller.perfSandbox.Test1MbFileSystemRead
+[INFO] Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.036 s - in com.github.eostermueller.perfSandbox.Test1MbFileSystemRead
+[INFO] Running com.github.eostermueller.perfSandbox.TestBusyCpuProcessor
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.234 s - in com.github.eostermueller.perfSandbox.TestBusyCpuProcessor
+[INFO] Running com.github.eostermueller.perfSandbox.UncachedBranchInquiryTest
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (1, 1,'1x1x1x1')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (2, 2,'2x2x2x2')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (3, 3,'3x3x3x3')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (4, 4,'4x4x4x4')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (5, 5,'5x5x5x5')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (6, 6,'6x6x6x6')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (7, 7,'7x7x7x7')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (8, 8,'8x8x8x8')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (9, 9,'9x9x9x9')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (10, 10,'10x10x10x10')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (11, 11,'11x11x11x11')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (12, 12,'12x12x12x12')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (13, 13,'13x13x13x13')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (14, 14,'14x14x14x14')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (15, 15,'15x15x15x15')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (16, 16,'16x16x16x16')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (17, 17,'17x17x17x17')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (18, 18,'18x18x18x18')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (19, 19,'19x19x19x19')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (20, 20,'20x20x20x20')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (21, 21,'21x21x21x21')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (22, 22,'22x22x22x22')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (23, 23,'23x23x23x23')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (24, 24,'24x24x24x24')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (25, 25,'25x25x25x25')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (26, 26,'26x26x26x26')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (27, 27,'27x27x27x27')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (28, 28,'28x28x28x28')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (29, 29,'29x29x29x29')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (30, 30,'30x30x30x30')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (31, 31,'31x31x31x31')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (32, 32,'32x32x32x32')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (33, 33,'33x33x33x33')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (34, 34,'34x34x34x34')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (35, 35,'35x35x35x35')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (36, 36,'36x36x36x36')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (37, 37,'37x37x37x37')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (38, 38,'38x38x38x38')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (39, 39,'39x39x39x39')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (40, 40,'40x40x40x40')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (41, 41,'41x41x41x41')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (42, 42,'42x42x42x42')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (43, 43,'43x43x43x43')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (44, 44,'44x44x44x44')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (45, 45,'45x45x45x45')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (46, 46,'46x46x46x46')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (47, 47,'47x47x47x47')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (48, 48,'48x48x48x48')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (49, 49,'49x49x49x49')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (50, 50,'50x50x50x50')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (51, 51,'51x51x51x51')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (52, 52,'52x52x52x52')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (53, 53,'53x53x53x53')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (54, 54,'54x54x54x54')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (55, 55,'55x55x55x55')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (56, 56,'56x56x56x56')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (57, 57,'57x57x57x57')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (58, 58,'58x58x58x58')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (59, 59,'59x59x59x59')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (60, 60,'60x60x60x60')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (61, 61,'61x61x61x61')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (62, 62,'62x62x62x62')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (63, 63,'63x63x63x63')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (64, 64,'64x64x64x64')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (65, 65,'65x65x65x65')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (66, 66,'66x66x66x66')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (67, 67,'67x67x67x67')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (68, 68,'68x68x68x68')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (69, 69,'69x69x69x69')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (70, 70,'70x70x70x70')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (71, 71,'71x71x71x71')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (72, 72,'72x72x72x72')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (73, 73,'73x73x73x73')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (74, 74,'74x74x74x74')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (75, 75,'75x75x75x75')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (76, 76,'76x76x76x76')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (77, 77,'77x77x77x77')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (78, 78,'78x78x78x78')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (79, 79,'79x79x79x79')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (80, 80,'80x80x80x80')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (81, 81,'81x81x81x81')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (82, 82,'82x82x82x82')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (83, 83,'83x83x83x83')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (84, 84,'84x84x84x84')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (85, 85,'85x85x85x85')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (86, 86,'86x86x86x86')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (87, 87,'87x87x87x87')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (88, 88,'88x88x88x88')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (89, 89,'89x89x89x89')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (90, 90,'90x90x90x90')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (91, 91,'91x91x91x91')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (92, 92,'92x92x92x92')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (93, 93,'93x93x93x93')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (94, 94,'94x94x94x94')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (95, 95,'95x95x95x95')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (96, 96,'96x96x96x96')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (97, 97,'97x97x97x97')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (98, 98,'98x98x98x98')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (99, 99,'99x99x99x99')
+INSERT INTO BRANCHES (BID, BBALANCE, FILLER ) values (100, 100,'100x100x100x100')
+[INFO] Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.046 s - in com.github.eostermueller.perfSandbox.UncachedBranchInquiryTest
+[INFO] 
+[INFO] Results:
+[INFO] 
+[INFO] Tests run: 11, Failures: 0, Errors: 0, Skipped: 0
+[INFO] 
+[INFO] 
+[INFO] --- maven-war-plugin:3.1.0:war (default-war) @ performanceGolf ---
+[INFO] Packaging webapp
+[INFO] Assembling webapp [performanceGolf] in [C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\target\performanceGolf]
+[INFO] Processing war project
+[INFO] Webapp assembled in [501 msecs]
+[INFO] Building war: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\warProject\target\performanceGolf.war
+[INFO] 
+[INFO] --- spring-boot-maven-plugin:2.0.5.RELEASE:repackage (default) @ performanceGolf ---
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  26.829 s
+[INFO] Finished at: 2020-04-19T16:12:28-05:00
+[INFO] ------------------------------------------------------------------------
+Shutting down TCP Server at tcp://localhost:9092
+### Starting DB
+Sun, Apr 19, 2020  4:12:33 PM
+TCP server running at tcp://192.168.1.224:9092 (only local connections)
+Web Console server running at http://192.168.1.224:8082 (only local connections)
+### After DB start
+Sun, Apr 19, 2020  4:12:39 PM
+### DB Load 01
+Sun, Apr 19, 2020  4:12:39 PM
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:jmeter-demo >-----------------------
+[INFO] Building jmeter-demo 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jmeter-demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jmeter-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jmeter-demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jmeter-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jmeter-demo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jmeter-demo ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] Building jar: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter-demo-1.0-SNAPSHOT.jar
+[INFO] 
+[INFO] >>> jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) > :configure @ jmeter-demo >>>
+[INFO] 
+[INFO] --- jmeter-maven-plugin:2.1.0:configure (configure) @ jmeter-demo ---
+[INFO] -------------------------------------------------------
+[INFO]  Configuring JMeter...
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] <<< jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) < :configure @ jmeter-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) @ jmeter-demo ---
+[INFO]  
+[INFO] -------------------------------------------------------
+[INFO]  P E R F O R M A N C E    T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Invalid value detected for <postTestPauseInSeconds>.  Setting pause to 0...
+[INFO]  
+[INFO]  
+[INFO] Executing test: loadDb-01.jmx
+[INFO] Writing log file to: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter\logs\loadDb-01.jmx.log
+[INFO] WARNING: An illegal reflective access operation has occurred
+[INFO] WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/target/jmeter/lib/xstream-1.4.9.jar) to field java.util.TreeMap.comparator
+[INFO] WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+[INFO] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[INFO] WARNING: All illegal access operations will be denied in a future release
+[INFO] Creating summariser <summary>
+[INFO] Created the tree successfully using C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter\testFiles\loadDb-01.jmx
+[INFO] Starting the test @ Sun Apr 19 16:12:45 CDT 2020 (1587330765116)
+[INFO] Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+[INFO] summary +      1 in 00:00:00 =    3.6/s Avg:   261 Min:   261 Max:   261 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary +  12126 in 00:00:05 = 2238.9/s Avg:     0 Min:     0 Max:    19 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary =  12127 in 00:00:06 = 2129.0/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  31506 in 00:00:09 = 3500.7/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary =  43633 in 00:00:15 = 2969.0/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  36853 in 00:00:10 = 3685.3/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary =  80486 in 00:00:25 = 3259.1/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  36724 in 00:00:10 = 3672.4/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 117210 in 00:00:35 = 3378.2/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  37215 in 00:00:10 = 3721.5/s Avg:     0 Min:     0 Max:    18 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 154425 in 00:00:45 = 3455.0/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  37512 in 00:00:10 = 3751.2/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 191937 in 00:00:55 = 3509.2/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  37006 in 00:00:10 = 3700.6/s Avg:     0 Min:     0 Max:    12 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 228943 in 00:01:05 = 3538.8/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  37202 in 00:00:10 = 3720.2/s Avg:     0 Min:     0 Max:    12 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 266145 in 00:01:15 = 3563.0/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  36989 in 00:00:10 = 3698.9/s Avg:     0 Min:     0 Max:    13 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 303134 in 00:01:25 = 3579.1/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] summary +  37610 in 00:00:10 = 3761.0/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+[INFO] summary = 340744 in 00:01:35 = 3598.3/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] 
+[INFO] S01.BRANCHES=25
+[INFO] S01.ACCOUNTS=31250
+[INFO] S01.HISTORY=312500
+[INFO] #####END OF DB LOAD #####
+[INFO] summary +   3037 in 00:00:01 = 3311.9/s Avg:     0 Min:     0 Max:    41 Err:     0 (0.00%) Active: 0 Started: 2 Finished: 2
+[INFO] summary = 343781 in 00:01:36 = 3595.5/s Avg:     0 Min:     0 Max:   261 Err:     0 (0.00%)
+[INFO] Tidying up ...    @ Sun Apr 19 16:14:20 CDT 2020 (1587330860917)
+[INFO] ... end of run
+[INFO] Completed Test: loadDb-01.jmx
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ jmeter-demo ---
+[INFO] Installing C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter-demo-1.0-SNAPSHOT.jar to C:\Users\eoste\.m2\repository\com\example\jmeter-demo\1.0-SNAPSHOT\jmeter-demo-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\pom-load.xml to C:\Users\eoste\.m2\repository\com\example\jmeter-demo\1.0-SNAPSHOT\jmeter-demo-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  01:40 min
+[INFO] Finished at: 2020-04-19T16:14:21-05:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Shutdown detected, destroying JMeter process...
+### DB Load 02
+Sun, Apr 19, 2020  4:14:21 PM
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ----------------------< com.example:jmeter-demo >-----------------------
+[INFO] Building jmeter-demo 1.0-SNAPSHOT
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ jmeter-demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:compile (default-compile) @ jmeter-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:testResources (default-testResources) @ jmeter-demo ---
+[WARNING] Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\src\test\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:3.1:testCompile (default-testCompile) @ jmeter-demo ---
+[INFO] No sources to compile
+[INFO] 
+[INFO] --- maven-surefire-plugin:2.12.4:test (default-test) @ jmeter-demo ---
+[INFO] No tests to run.
+[INFO] 
+[INFO] --- maven-jar-plugin:2.4:jar (default-jar) @ jmeter-demo ---
+[WARNING] JAR will be empty - no content was marked for inclusion!
+[INFO] 
+[INFO] >>> jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) > :configure @ jmeter-demo >>>
+[INFO] 
+[INFO] --- jmeter-maven-plugin:2.1.0:configure (configure) @ jmeter-demo ---
+[INFO] -------------------------------------------------------
+[INFO]  Configuring JMeter...
+[INFO] -------------------------------------------------------
+[INFO] 
+[INFO] <<< jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) < :configure @ jmeter-demo <<<
+[INFO] 
+[INFO] 
+[INFO] --- jmeter-maven-plugin:2.1.0:jmeter (jmeter-tests) @ jmeter-demo ---
+[INFO]  
+[INFO] -------------------------------------------------------
+[INFO]  P E R F O R M A N C E    T E S T S
+[INFO] -------------------------------------------------------
+[INFO] Invalid value detected for <postTestPauseInSeconds>.  Setting pause to 0...
+[INFO]  
+[INFO]  
+[INFO] Executing test: loadDb-02.jmx
+[INFO] Writing log file to: C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter\logs\loadDb-02.jmx.log
+[INFO] WARNING: An illegal reflective access operation has occurred
+[INFO] WARNING: Illegal reflective access by com.thoughtworks.xstream.core.util.Fields (file:/C:/Users/eoste/Documents/src/s4j/javaPerformanceTroubleshooting/target/jmeter/lib/xstream-1.4.9.jar) to field java.util.TreeMap.comparator
+[INFO] WARNING: Please consider reporting this to the maintainers of com.thoughtworks.xstream.core.util.Fields
+[INFO] WARNING: Use --illegal-access=warn to enable warnings of further illegal reflective access operations
+[INFO] WARNING: All illegal access operations will be denied in a future release
+[INFO] Creating summariser <summary>
+[INFO] Created the tree successfully using C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter\testFiles\loadDb-02.jmx
+[INFO] Starting the test @ Sun Apr 19 16:14:26 CDT 2020 (1587330866710)
+[INFO] Waiting for possible Shutdown/StopTestNow/Heapdump message on port 4445
+[INFO] summary +  20026 in 00:00:03 = 6343.4/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary +  89447 in 00:00:10 = 8944.7/s Avg:     0 Min:     0 Max:    18 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 109473 in 00:00:13 = 8320.5/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  84072 in 00:00:10 = 8407.2/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 193545 in 00:00:23 = 8357.9/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83543 in 00:00:10 = 8354.3/s Avg:     0 Min:     0 Max:    13 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 277088 in 00:00:33 = 8356.8/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  86334 in 00:00:10 = 8633.4/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 363422 in 00:00:43 = 8420.9/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81378 in 00:00:10 = 8137.8/s Avg:     0 Min:     0 Max:    14 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 444800 in 00:00:53 = 8367.7/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  80919 in 00:00:10 = 8091.9/s Avg:     0 Min:     0 Max:    13 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 525719 in 00:01:03 = 8324.0/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81341 in 00:00:10 = 8134.1/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 607060 in 00:01:13 = 8298.0/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81087 in 00:00:10 = 8108.7/s Avg:     0 Min:     0 Max:    14 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 688147 in 00:01:23 = 8275.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83441 in 00:00:10 = 8344.1/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 771588 in 00:01:33 = 8282.7/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81489 in 00:00:10 = 8148.9/s Avg:     0 Min:     0 Max:    13 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 853077 in 00:01:43 = 8269.7/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  80334 in 00:00:10 = 8033.4/s Avg:     0 Min:     0 Max:    15 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 933411 in 00:01:53 = 8248.8/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  80182 in 00:00:10 = 8018.2/s Avg:     0 Min:     0 Max:    16 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1013593 in 00:02:03 = 8230.1/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81886 in 00:00:10 = 8188.6/s Avg:     0 Min:     0 Max:    13 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1095479 in 00:02:13 = 8227.0/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  87293 in 00:00:10 = 8729.3/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1182772 in 00:02:23 = 8262.1/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  84243 in 00:00:10 = 8423.5/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1267015 in 00:02:33 = 8272.6/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  86769 in 00:00:10 = 8677.8/s Avg:     0 Min:     0 Max:    12 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1353784 in 00:02:43 = 8297.4/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  90784 in 00:00:10 = 9078.4/s Avg:     0 Min:     0 Max:    14 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1444568 in 00:02:53 = 8342.5/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  90556 in 00:00:10 = 9055.6/s Avg:     0 Min:     0 Max:    10 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1535124 in 00:03:03 = 8381.5/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  82846 in 00:00:10 = 8284.6/s Avg:     0 Min:     0 Max:    11 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1617970 in 00:03:13 = 8376.5/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  93348 in 00:00:10 = 9334.8/s Avg:     0 Min:     0 Max:    14 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1711318 in 00:03:23 = 8423.6/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83495 in 00:00:10 = 8349.5/s Avg:     0 Min:     0 Max:    24 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1794813 in 00:03:33 = 8420.1/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  82887 in 00:00:10 = 8288.7/s Avg:     0 Min:     0 Max:    26 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1877700 in 00:03:43 = 8414.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83687 in 00:00:10 = 8368.7/s Avg:     0 Min:     0 Max:    24 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 1961387 in 00:03:53 = 8412.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83352 in 00:00:10 = 8335.2/s Avg:     0 Min:     0 Max:    21 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2044739 in 00:04:03 = 8409.1/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  79427 in 00:00:10 = 7942.7/s Avg:     0 Min:     0 Max:    25 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2124166 in 00:04:13 = 8390.7/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  81561 in 00:00:10 = 8156.1/s Avg:     0 Min:     0 Max:    21 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2205727 in 00:04:23 = 8381.8/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  82694 in 00:00:10 = 8269.4/s Avg:     0 Min:     0 Max:    22 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2288421 in 00:04:33 = 8377.7/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  79997 in 00:00:10 = 7999.7/s Avg:     0 Min:     0 Max:    22 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2368418 in 00:04:43 = 8364.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  83968 in 00:00:10 = 8396.8/s Avg:     0 Min:     0 Max:    24 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2452386 in 00:04:53 = 8365.4/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  82718 in 00:00:10 = 8271.8/s Avg:     0 Min:     0 Max:    21 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2535104 in 00:05:03 = 8362.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  79800 in 00:00:10 = 7980.0/s Avg:     0 Min:     0 Max:    25 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2614904 in 00:05:13 = 8350.1/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] summary +  90492 in 00:00:10 = 9049.2/s Avg:     0 Min:     0 Max:    22 Err:     0 (0.00%) Active: 4 Started: 4 Finished: 0
+[INFO] summary = 2705396 in 00:05:23 = 8371.8/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] 
+[INFO] S02.BRANCHES=100
+[INFO] S02.ACCOUNTS=250000
+[INFO] S02.HISTORY=2500000
+[INFO] #####END OF DB LOAD #####
+[INFO] summary +  44710 in 00:00:06 = 7515.5/s Avg:     0 Min:     0 Max:   106 Err:     0 (0.00%) Active: 0 Started: 5 Finished: 5
+[INFO] summary = 2750106 in 00:05:29 = 8356.3/s Avg:     0 Min:     0 Max:   178 Err:     0 (0.00%)
+[INFO] Tidying up ...    @ Sun Apr 19 16:19:55 CDT 2020 (1587331195950)
+[INFO] ... end of run
+[INFO] Completed Test: loadDb-02.jmx
+[INFO] 
+[INFO] --- maven-install-plugin:2.4:install (default-install) @ jmeter-demo ---
+[INFO] Installing C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\target\jmeter-demo-1.0-SNAPSHOT.jar to C:\Users\eoste\.m2\repository\com\example\jmeter-demo\1.0-SNAPSHOT\jmeter-demo-1.0-SNAPSHOT.jar
+[INFO] Installing C:\Users\eoste\Documents\src\s4j\javaPerformanceTroubleshooting\pom-load.xml to C:\Users\eoste\.m2\repository\com\example\jmeter-demo\1.0-SNAPSHOT\jmeter-demo-1.0-SNAPSHOT.pom
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  05:32 min
+[INFO] Finished at: 2020-04-19T16:19:56-05:00
+[INFO] ------------------------------------------------------------------------
+[INFO] Shutdown detected, destroying JMeter process...
