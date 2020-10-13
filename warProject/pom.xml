@@ -80,7 +80,7 @@ xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xs
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>4.12</version>
+      <version>4.13.1</version>
     </dependency>
 	<!-- http://mvnrepository.com/artifact/org.eclipse.emf/org.eclipse.emf.ecore.xmi -->
 	<dependency>
